@@ -14,20 +14,22 @@ This project showcases an evolving digital artwork that improves itself every ho
 
 1. The artwork state is stored in `src/artwork-state.ts` as structured data
 2. The React Canvas component renders the artwork based on this data
-3. Every hour, the `improve-artwork.js` script runs and applies random improvements:
-   - Adds new shapes (rectangles) with random colors and positions
-   - Changes colors of existing elements
-   - Adds text elements with inspirational words
-   - Moves elements to new positions
+3. Every hour, the `improve-artwork.js` script runs and applies intelligent improvements:
+   - **Analyzes** the current artwork for visual balance, color harmony, and element distribution
+   - **Applies intelligent heuristics** to choose the most appropriate improvements
+   - **Positions elements** using composition principles like rule of thirds and density analysis
+   - **Selects harmonious colors** from curated palettes that work well together
+   - **Provides AI feedback** (when OpenAI API key is available) for even smarter improvements
 4. The changes are automatically committed and pushed to the repository
-5. The artwork continues to evolve indefinitely
+5. The artwork continues to evolve with increasingly sophisticated improvements
 
-## Improvement Types
+## Intelligent Improvement Types
 
-- **Add Rectangle**: Creates new colored rectangles at random positions
-- **Change Color**: Updates the color of existing elements
-- **Add Text**: Places inspirational text at random locations
-- **Move Element**: Repositions existing elements
+- **Smart Rectangle Addition**: Places new rectangles in optimal positions based on visual balance analysis
+- **Color Harmonization**: Updates existing element colors to create better color harmony using curated palettes
+- **Meaningful Text**: Adds art-related text with better positioning and harmonious colors
+- **Intelligent Rebalancing**: Repositions elements to improve overall visual balance and composition
+- **AI-Guided Enhancements**: Optional OpenAI integration for advanced artwork analysis and suggestions
 
 ## Development
 
@@ -55,9 +57,20 @@ npm run build
 node improve-artwork.js
 \`\`\`
 
+### AI-Enhanced Improvements
+To enable AI-guided improvements, set your OpenAI API key:
+\`\`\`bash
+OPENAI_API_KEY=your-api-key node improve-artwork.js
+\`\`\`
+
+The AI integration provides:
+- Advanced artwork analysis
+- Intelligent improvement suggestions  
+- Weighted decision making for better visual outcomes
+
 ## Current Generation
 
-The artwork is currently at generation 4 and continues to evolve automatically.
+The artwork is currently at generation 10 and continues to evolve automatically with intelligent improvements.
 
 ## Automation
 
