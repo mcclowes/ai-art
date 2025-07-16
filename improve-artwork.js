@@ -16,6 +16,62 @@ if (!match) {
 
 const currentState = eval(`(${match[1]})`);
 
+// Check if we need to start a new cycle (after a week)
+function shouldStartNewCycle(state) {
+  const cycleStarted = new Date(state.cycleStarted);
+  const oneWeekAgo = new Date();
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+  
+  return cycleStarted < oneWeekAgo;
+}
+
+// Save current artwork to archive
+function saveArtworkToArchive(state) {
+  const archiveDir = path.join(__dirname, 'archive');
+  if (!fs.existsSync(archiveDir)) {
+    fs.mkdirSync(archiveDir);
+  }
+  
+  const cycleStarted = new Date(state.cycleStarted);
+  const filename = `artwork-cycle-${cycleStarted.toISOString().split('T')[0]}-gen${state.generation}.json`;
+  const archivePath = path.join(archiveDir, filename);
+  
+  fs.writeFileSync(archivePath, JSON.stringify(state, null, 2));
+  console.log(`Saved artwork cycle to archive: ${filename}`);
+}
+
+// Reset artwork to start a new cycle
+function resetArtwork(state) {
+  const now = new Date().toISOString();
+  
+  // Keep the canvas settings but reset elements to initial state
+  state.elements = [
+    {
+      type: 'rectangle',
+      x: 50,
+      y: 50,
+      width: 200,
+      height: 100,
+      fillStyle: '#e67e22',
+      id: 'rect1'
+    },
+    {
+      type: 'text',
+      x: 416,
+      y: 334,
+      text: 'Hello Canvas!',
+      font: '24px Arial',
+      fillStyle: '#fff',
+      id: 'text1'
+    }
+  ];
+  
+  state.generation = 1;
+  state.lastUpdated = now;
+  state.cycleStarted = now;
+  
+  console.log('Reset artwork to start new cycle');
+}
 // Enhanced color palettes with better harmony
 const colorPalettes = {
   warm: ['#e74c3c', '#f39c12', '#f1c40f', '#e67e22', '#d35400'],
@@ -329,8 +385,16 @@ async function enhancedIntelligentImproveArtwork(state) {
 
 // Apply intelligent improvements with optional AI enhancement
 async function main() {
-  const improvements = await enhancedIntelligentImproveArtwork(currentState);
-  console.log('Applied intelligent improvements:', improvements);
+  // Check if we need to start a new cycle
+  if (shouldStartNewCycle(currentState)) {
+    console.log('Week has passed - starting new artwork cycle');
+    saveArtworkToArchive(currentState);
+    resetArtwork(currentState);
+  } else {
+    // Apply normal improvements
+    const improvements = await enhancedIntelligentImproveArtwork(currentState);
+    console.log('Applied intelligent improvements:', improvements);
+  }
 
   // Display analysis for debugging
   const analysis = analyzeArtwork(currentState);
@@ -338,7 +402,8 @@ async function main() {
     elements: analysis.elementCount,
     coverage: `${(analysis.coverage * 100).toFixed(1)}%`,
     colors: Object.keys(analysis.colorDistribution).length,
-    generation: currentState.generation
+    generation: currentState.generation,
+    cycleStarted: currentState.cycleStarted
   });
 
   // Write back the updated state to the TypeScript file
@@ -363,6 +428,7 @@ export interface ArtworkState {
   elements: ArtworkElement[];
   generation: number;
   lastUpdated: string;
+  cycleStarted: string;
 }
 
 // Artwork state data
