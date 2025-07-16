@@ -40,8 +40,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 70,
-      "y": 120,
+      "x": 416,
+      "y": 334,
       "text": "Hello Canvas!",
       "font": "24px Arial",
       "fillStyle": "#fff",
@@ -147,6 +147,6 @@ export const artworkState: ArtworkState = {
       "id": "element_1752678828823"
     }
   ],
-  "generation": 13,
-  "lastUpdated": "2025-07-16T15:13:48.823Z"
+  "generation": 14,
+  "lastUpdated": "2025-07-16T16:06:17.401Z"
 };
