@@ -85,8 +85,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "rectangle",
-      "x": 16,
-      "y": 191,
+      "x": 682,
+      "y": 141,
       "width": 98.37053890677569,
       "height": 115.92081874275152,
       "fillStyle": "#f39c12",
@@ -165,6 +165,6 @@ export const artworkState: ArtworkState = {
       "id": "text_1752689220358"
     }
   ],
-  "generation": 17,
-  "lastUpdated": "2025-07-16T19:05:34.918Z"
+  "generation": 18,
+  "lastUpdated": "2025-07-16T20:05:53.735Z"
 };
