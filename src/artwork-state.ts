@@ -154,8 +154,17 @@ export const artworkState: ArtworkState = {
       "font": "25.051557322945882px Arial",
       "fillStyle": "#e74c3c",
       "id": "text_1752685614252"
+    },
+    {
+      "type": "text",
+      "x": 682,
+      "y": 34,
+      "text": "Create",
+      "font": "25.854166087398973px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1752689220358"
     }
   ],
-  "generation": 15,
-  "lastUpdated": "2025-07-16T17:06:54.252Z"
+  "generation": 16,
+  "lastUpdated": "2025-07-16T18:07:00.358Z"
 };
