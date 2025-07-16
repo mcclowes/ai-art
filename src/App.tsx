@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { artworkState, ArtworkElement } from "./artwork-state";
 
 const Canvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -9,21 +10,31 @@ const Canvas: React.FC = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Draw a simple rectangle
-    ctx.fillStyle = "#3498db";
-    ctx.fillRect(50, 50, 200, 100);
+    // Clear canvas and set background
+    ctx.fillStyle = artworkState.canvas.background;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Draw some text
-    ctx.font = "24px Arial";
-    ctx.fillStyle = "#fff";
-    ctx.fillText("Hello Canvas!", 70, 120);
+    // Render each element
+    artworkState.elements.forEach((element: ArtworkElement) => {
+      ctx.fillStyle = element.fillStyle;
+      
+      switch (element.type) {
+        case "rectangle":
+          ctx.fillRect(element.x, element.y, element.width || 0, element.height || 0);
+          break;
+        case "text":
+          if (element.font) ctx.font = element.font;
+          ctx.fillText(element.text || "", element.x, element.y);
+          break;
+      }
+    });
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      width={300}
-      height={200}
+      width={artworkState.canvas.width}
+      height={artworkState.canvas.height}
       style={{ border: "1px solid #ccc" }}
     />
   );
@@ -32,7 +43,8 @@ const Canvas: React.FC = () => {
 function App() {
   return (
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
-      <h1>Simple HTML Canvas Example</h1>
+      <h1>AI Art - Generation {artworkState.generation}</h1>
+      <p>Last updated: {artworkState.lastUpdated}</p>
       <Canvas />
     </div>
   );
