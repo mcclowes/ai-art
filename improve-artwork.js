@@ -64,13 +64,18 @@ function analyzeArtwork(state) {
       analysis.elementDensity[sectionKey]++;
     }
 
-    // Calculate area for rectangles
+    // Calculate area for different shapes
     if (element.type === 'rectangle' && element.width && element.height) {
       totalArea += element.width * element.height;
+    } else if (element.type === 'circle' && element.radius) {
+      totalArea += Math.PI * element.radius * element.radius;
+    } else if (element.type === 'triangle' && element.size) {
+      totalArea += (Math.sqrt(3) / 4) * element.size * element.size;
     }
   });
 
-  analysis.averageSize = state.elements.length > 0 ? totalArea / state.elements.filter(e => e.type === 'rectangle').length : 0;
+  const shapeElements = state.elements.filter(e => e.type !== 'text');
+  analysis.averageSize = shapeElements.length > 0 ? totalArea / shapeElements.length : 0;
   analysis.coverage = totalArea / (state.canvas.width * state.canvas.height);
 
   return analysis;
@@ -207,10 +212,10 @@ async function enhancedIntelligentImproveArtwork(state) {
   
   // Define improvement strategies with AI-influenced weights
   const improvements = [
-    // Add a new shape with optimal positioning and color harmony
+    // Add a new rectangle with optimal positioning and color harmony
     {
       name: 'add_rectangle',
-      weight: (analysis.elementCount < 8 ? 3 : 1) * addWeight,
+      weight: (analysis.elementCount < 8 ? 2 : 1) * addWeight,
       action: () => {
         const width = 60 + Math.random() * 80;
         const height = 60 + Math.random() * 80;
@@ -228,6 +233,50 @@ async function enhancedIntelligentImproveArtwork(state) {
         };
         state.elements.push(newElement);
         return `Added harmonious rectangle (${color}) at optimal position (${pos.x}, ${pos.y})`;
+      }
+    },
+    
+    // Add a new circle with optimal positioning and color harmony
+    {
+      name: 'add_circle',
+      weight: (analysis.elementCount < 8 ? 2 : 1) * addWeight,
+      action: () => {
+        const radius = 30 + Math.random() * 50;
+        const pos = getOptimalPosition(state, radius * 2, radius * 2);
+        const color = getHarmoniousColor(existingColors);
+        
+        const newElement = {
+          type: 'circle',
+          x: pos.x + radius, // Center the circle
+          y: pos.y + radius,
+          radius: radius,
+          fillStyle: color,
+          id: `circle_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added harmonious circle (${color}) at optimal position (${pos.x + radius}, ${pos.y + radius})`;
+      }
+    },
+    
+    // Add a new triangle with optimal positioning and color harmony
+    {
+      name: 'add_triangle',
+      weight: (analysis.elementCount < 8 ? 2 : 1) * addWeight,
+      action: () => {
+        const size = 40 + Math.random() * 60;
+        const pos = getOptimalPosition(state, size * 2, size * 2);
+        const color = getHarmoniousColor(existingColors);
+        
+        const newElement = {
+          type: 'triangle',
+          x: pos.x + size, // Center the triangle
+          y: pos.y + size,
+          size: size,
+          fillStyle: color,
+          id: `triangle_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added harmonious triangle (${color}) at optimal position (${pos.x + size}, ${pos.y + size})`;
       }
     },
     
@@ -352,6 +401,8 @@ async function main() {
   id: string;
   text?: string;
   font?: string;
+  radius?: number; // for circles
+  size?: number; // for triangles
 }
 
 export interface ArtworkState {

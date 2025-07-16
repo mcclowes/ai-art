@@ -8,6 +8,8 @@ export interface ArtworkElement {
   id: string;
   text?: string;
   font?: string;
+  radius?: number; // for circles
+  size?: number; // for triangles
 }
 
 export interface ArtworkState {
@@ -35,7 +37,7 @@ export const artworkState: ArtworkState = {
       "y": 50,
       "width": 200,
       "height": 100,
-      "fillStyle": "#e67e22",
+      "fillStyle": "#f39c12",
       "id": "rect1"
     },
     {
@@ -116,7 +118,7 @@ export const artworkState: ArtworkState = {
       "y": 0,
       "width": 130.75257804378685,
       "height": 124.80549969187908,
-      "fillStyle": "#f1c40f",
+      "fillStyle": "#d35400",
       "id": "element_1752678626908"
     },
     {
@@ -143,7 +145,7 @@ export const artworkState: ArtworkState = {
       "y": 10,
       "width": 101.88088346876697,
       "height": 77.30921311476395,
-      "fillStyle": "#e67e22",
+      "fillStyle": "#f39c12",
       "id": "element_1752678828823"
     },
     {
@@ -163,8 +165,50 @@ export const artworkState: ArtworkState = {
       "font": "25.854166087398973px Arial",
       "fillStyle": "#f39c12",
       "id": "text_1752689220358"
+    },
+    {
+      "type": "rectangle",
+      "x": 618,
+      "y": 150,
+      "width": 94.08935817893527,
+      "height": 98.65275433137222,
+      "fillStyle": "#e74c3c",
+      "id": "element_1752693102482"
+    },
+    {
+      "type": "triangle",
+      "x": 665.1800296757956,
+      "y": 349.1800296757956,
+      "size": 69.1800296757956,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1752693102538"
+    },
+    {
+      "type": "circle",
+      "x": 665.3477698069298,
+      "y": 499.3477698069298,
+      "radius": 31.34776980692979,
+      "fillStyle": "#f1c40f",
+      "id": "circle_1752693111154"
+    },
+    {
+      "type": "rectangle",
+      "x": 90,
+      "y": 136,
+      "width": 83.8110939719955,
+      "height": 126.74889178014682,
+      "fillStyle": "#e67e22",
+      "id": "element_1752693142929"
+    },
+    {
+      "type": "circle",
+      "x": 131.5982731237979,
+      "y": 248.5982731237979,
+      "radius": 76.5982731237979,
+      "fillStyle": "#d35400",
+      "id": "circle_1752693142985"
     }
   ],
-  "generation": 17,
-  "lastUpdated": "2025-07-16T19:05:34.918Z"
+  "generation": 25,
+  "lastUpdated": "2025-07-16T19:12:22.985Z"
 };
