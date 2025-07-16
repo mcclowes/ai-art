@@ -1,0 +1,37 @@
+name: Improve Artwork
+
+on:
+  schedule:
+    # Run every hour
+    - cron: '0 * * * *'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  improve-artwork:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Run artwork improvement script
+      run: node improve-artwork.js
+      
+    - name: Build project to validate changes
+      run: npm run build
+      
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add src/artwork-state.ts
+        git commit -m "Improve artwork - Generation $(node -e 'const fs = require("fs"); const content = fs.readFileSync("src/artwork-state.ts", "utf8"); const match = content.match(/"generation": (\d+)/); console.log(match ? match[1] : "unknown");')" || exit 0
+        git push
