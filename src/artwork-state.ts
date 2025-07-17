@@ -56,7 +56,7 @@ export const artworkState: ArtworkState = {
       "y": 113.67673561458005,
       "width": 67.1886292641572,
       "height": 41.52257288524915,
-      "fillStyle": "#f39c12",
+      "fillStyle": "#3498db",
       "id": "copilot_complement_1752726527796"
     },
     {
