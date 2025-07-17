@@ -1,29 +1,4 @@
-export interface ArtworkElement {
-  type: string;
-  x: number;
-  y: number;
-  width?: number;
-  height?: number;
-  fillStyle: string;
-  id: string;
-  text?: string;
-  font?: string;
-}
-
-export interface ArtworkState {
-  canvas: {
-    width: number;
-    height: number;
-    background: string;
-  };
-  elements: ArtworkElement[];
-  generation: number;
-  lastUpdated: string;
-  cycleStarted: string;
-}
-
-// Artwork state data
-export const artworkState: ArtworkState = {
+{
   "canvas": {
     "width": 800,
     "height": 600,
@@ -36,7 +11,7 @@ export const artworkState: ArtworkState = {
       "y": 50,
       "width": 200,
       "height": 100,
-      "fillStyle": "#e74c3c",
+      "fillStyle": "#e67e22",
       "id": "rect1"
     },
     {
@@ -50,11 +25,11 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "rectangle",
-      "x": 600,
-      "y": 370,
+      "x": 151,
+      "y": 82,
       "width": 130.12145536400706,
       "height": 57.07535692995391,
-      "fillStyle": "#f39c12",
+      "fillStyle": "#e74c3c",
       "id": "element_1752677536165"
     },
     {
@@ -63,7 +38,7 @@ export const artworkState: ArtworkState = {
       "y": 310,
       "width": 67.28405940904902,
       "height": 77.70774308605628,
-      "fillStyle": "#d35400",
+      "fillStyle": "#e74c3c",
       "id": "element_1752677671341"
     },
     {
@@ -77,8 +52,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "rectangle",
-      "x": 491,
-      "y": 0,
+      "x": 91,
+      "y": 144,
       "width": 80.27450640700856,
       "height": 109.96077453880888,
       "fillStyle": "#d35400",
@@ -86,44 +61,62 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "rectangle",
-      "x": 682,
-      "y": 141,
+      "x": 16,
+      "y": 191,
       "width": 98.37053890677569,
       "height": 115.92081874275152,
-      "fillStyle": "#e67e22",
+      "fillStyle": "#f39c12",
       "id": "element_1752678617268"
     },
     {
       "type": "text",
       "x": 82,
-      "y": 234,
+      "y": 384,
       "text": "Harmony",
-      "font": "28.716736283626187px Arial",
-      "fillStyle": "#d35400",
-      "id": "text_1752693209564"
+      "font": "26.541380780013792px Arial",
+      "fillStyle": "#f1c40f",
+      "id": "text_1752678626808"
+    },
+    {
+      "type": "rectangle",
+      "x": 71,
+      "y": 463,
+      "width": 120.33619369416976,
+      "height": 136.10498470106728,
+      "fillStyle": "#f39c12",
+      "id": "element_1752678626808"
+    },
+    {
+      "type": "rectangle",
+      "x": 200,
+      "y": 0,
+      "width": 130.75257804378685,
+      "height": 124.80549969187908,
+      "fillStyle": "#f1c40f",
+      "id": "element_1752678626908"
     },
     {
       "type": "text",
-      "x": 82,
-      "y": 334,
+      "x": 282,
+      "y": 234,
       "text": "Transform",
-      "font": "18.291152273185766px Arial",
-      "fillStyle": "#f1c40f",
-      "id": "text_1752693380957"
+      "font": "27.232682721401194px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1752678820257"
+    },
+    {
+      "type": "text",
+      "x": 282,
+      "y": 534,
+      "text": "Evolve",
+      "font": "23.5078118063695px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1752678828772"
     },
     {
       "type": "rectangle",
-      "x": 90,
-      "y": 467,
-      "width": 82.68673677472988,
-      "height": 63.77004872932473,
-      "fillStyle": "#f1c40f",
-      "id": "element_1752693380957"
-    },
-    {
-      "type": "rectangle",
-      "x": 15,
-      "y": 210,
+      "x": 481,
+      "y": 10,
       "width": 101.88088346876697,
       "height": 77.30921311476395,
       "fillStyle": "#e67e22",
@@ -141,23 +134,23 @@ export const artworkState: ArtworkState = {
     {
       "type": "text",
       "x": 682,
-      "y": 484,
+      "y": 34,
       "text": "Create",
       "font": "25.854166087398973px Arial",
       "fillStyle": "#f39c12",
       "id": "text_1752689220358"
     },
     {
-      "type": "rectangle",
-      "x": 620,
-      "y": 188,
-      "width": 90.33560451220565,
-      "height": 121.43060221977358,
-      "fillStyle": "#e74c3c",
-      "id": "element_1752720106434"
+      "type": "text",
+      "x": 616,
+      "y": 184,
+      "text": "Harmony",
+      "font": "21.258599221908472px Arial",
+      "fillStyle": "#d35400",
+      "id": "text_1752693145151"
     }
   ],
-  "generation": 26,
-  "lastUpdated": "2025-07-17T04:17:26.312Z",
-  "cycleStarted": "2025-07-16T19:12:58.892Z"
-};
+  "generation": 19,
+  "lastUpdated": "2025-07-16T19:12:25.151Z",
+  "cycleStarted": "2025-07-09T19:10:08.316Z"
+}
