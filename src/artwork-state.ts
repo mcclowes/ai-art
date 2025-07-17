@@ -8,6 +8,8 @@ export interface ArtworkElement {
   id: string;
   text?: string;
   font?: string;
+  radius?: number; // for circles
+  size?: number; // for triangles
 }
 
 export interface ArtworkState {
@@ -19,6 +21,7 @@ export interface ArtworkState {
   elements: ArtworkElement[];
   generation: number;
   lastUpdated: string;
+  cycleStarted: string;
 }
 
 // Artwork state data
@@ -55,9 +58,25 @@ export const artworkState: ArtworkState = {
       "height": 41.52257288524915,
       "fillStyle": "#f39c12",
       "id": "copilot_complement_1752726527796"
+    },
+    {
+      "type": "triangle",
+      "x": 84.22294213343332,
+      "y": 199.22294213343332,
+      "size": 84.22294213343332,
+      "fillStyle": "#9b59b6",
+      "id": "triangle_1752745596492"
+    },
+    {
+      "type": "circle",
+      "x": 65.49117662105412,
+      "y": 548.4911766210541,
+      "radius": 42.49117662105412,
+      "fillStyle": "#3498db",
+      "id": "circle_1752745596492"
     }
   ],
-  "generation": 2,
-  "lastUpdated": "2025-07-17T04:28:47.797Z",
+  "generation": 3,
+  "lastUpdated": "2025-07-17T09:46:36.492Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
