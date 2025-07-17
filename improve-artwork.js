@@ -78,7 +78,34 @@ const colorPalettes = {
   warm: ['#e74c3c', '#f39c12', '#f1c40f', '#e67e22', '#d35400'],
   cool: ['#2ecc71', '#3498db', '#9b59b6', '#1abc9c', '#34495e'],
   monochrome: ['#2c3e50', '#34495e', '#7f8c8d', '#95a5a6', '#bdc3c7'],
-  vibrant: ['#e74c3c', '#f39c12', '#2ecc71', '#3498db', '#9b59b6']
+  vibrant: ['#e74c3c', '#f39c12', '#2ecc71', '#3498db', '#9b59b6'],
+  earth: ['#8B4513', '#A0522D', '#D2B48C', '#F5DEB3', '#DEB887'],
+  ocean: ['#006994', '#4682B4', '#87CEEB', '#20B2AA', '#008B8B'],
+  sunset: ['#FF6B35', '#F7931E', '#FFD23F', '#C5DB8C', '#87CEEB']
+};
+
+// Advanced gradient combinations
+const gradientCombinations = {
+  warm: [
+    ['#FF6B35', '#F7931E', '#FFD23F'],
+    ['#e74c3c', '#f39c12', '#f1c40f'],
+    ['#d35400', '#e67e22', '#f39c12']
+  ],
+  cool: [
+    ['#2ecc71', '#3498db', '#9b59b6'],
+    ['#1abc9c', '#34495e', '#2c3e50'],
+    ['#006994', '#4682B4', '#87CEEB']
+  ],
+  sunset: [
+    ['#FF6B35', '#F7931E', '#FFD23F'],
+    ['#FF4500', '#FF8C00', '#FFA500'],
+    ['#DC143C', '#FF69B4', '#FF1493']
+  ],
+  ocean: [
+    ['#006994', '#4682B4', '#87CEEB'],
+    ['#20B2AA', '#008B8B', '#2F4F4F'],
+    ['#0077BE', '#0099CC', '#66CCFF']
+  ]
 };
 
 // Artwork analysis functions
@@ -164,6 +191,56 @@ function getHarmoniousColor(existingColors) {
   return unusedColors.length > 0 ? 
     unusedColors[Math.floor(Math.random() * unusedColors.length)] :
     paletteColors[Math.floor(Math.random() * paletteColors.length)];
+}
+
+// Generate sophisticated gradient
+function generateGradient(dominantPalette) {
+  const paletteGradients = gradientCombinations[dominantPalette] || gradientCombinations.warm;
+  const gradientColors = paletteGradients[Math.floor(Math.random() * paletteGradients.length)];
+  
+  return {
+    type: Math.random() > 0.5 ? 'linear' : 'radial',
+    colors: gradientColors,
+    direction: Math.random() * 360, // Random angle for linear gradients
+    centerX: 0.3 + Math.random() * 0.4, // Center point for radial gradients
+    centerY: 0.3 + Math.random() * 0.4
+  };
+}
+
+// Generate sophisticated shadow
+function generateShadow(color) {
+  return {
+    blur: 5 + Math.random() * 15,
+    color: color + '40', // Add alpha for transparency
+    offsetX: -5 + Math.random() * 10,
+    offsetY: -5 + Math.random() * 10
+  };
+}
+
+// Golden ratio and fibonacci sequence for mathematical beauty
+const goldenRatio = 1.618;
+const fibonacciSequence = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+
+function getGoldenRatioPosition(state, elementWidth, elementHeight) {
+  const width = state.canvas.width;
+  const height = state.canvas.height;
+  
+  // Use golden ratio for positioning
+  const goldenX = [width / goldenRatio, width - (width / goldenRatio)];
+  const goldenY = [height / goldenRatio, height - (height / goldenRatio)];
+  
+  const x = goldenX[Math.floor(Math.random() * goldenX.length)] - elementWidth / 2;
+  const y = goldenY[Math.floor(Math.random() * goldenY.length)] - elementHeight / 2;
+  
+  return {
+    x: Math.max(0, Math.min(x, width - elementWidth)),
+    y: Math.max(0, Math.min(y, height - elementHeight))
+  };
+}
+
+function getFibonacciSize() {
+  const index = Math.floor(Math.random() * (fibonacciSequence.length - 3)) + 2;
+  return fibonacciSequence[index];
 }
 
 function getOptimalPosition(state, elementWidth = 100, elementHeight = 100) {
@@ -253,10 +330,14 @@ async function enhancedIntelligentImproveArtwork(state) {
   // Get AI feedback if available
   const aiFeedback = await getAIFeedback(state);
   
+  // Determine dominant palette for gradient generation
+  const dominantPalette = getDominantPalette(existingColors);
+  
   // Adjust improvement weights based on AI feedback
   let balanceWeight = 1.5;
   let colorWeight = 1;
   let addWeight = 2;
+  let advancedWeight = 1.5; // Weight for advanced visual effects
   
   if (aiFeedback) {
     console.log('AI feedback:', aiFeedback);
@@ -269,6 +350,191 @@ async function enhancedIntelligentImproveArtwork(state) {
   
   // Define improvement strategies with AI-influenced weights
   const improvements = [
+    // Add sophisticated gradient rectangle
+    {
+      name: 'add_gradient_rectangle',
+      weight: (analysis.elementCount < 10 ? 2 : 1) * advancedWeight,
+      action: () => {
+        const width = getFibonacciSize() * 8;
+        const height = getFibonacciSize() * 6;
+        const pos = getGoldenRatioPosition(state, width, height);
+        const gradient = generateGradient(dominantPalette);
+        
+        const newElement = {
+          type: 'rectangle',
+          x: pos.x,
+          y: pos.y,
+          width: width,
+          height: height,
+          fillStyle: gradient.colors[0], // Fallback color
+          gradient: gradient,
+          shadow: generateShadow(gradient.colors[0]),
+          opacity: 0.7 + Math.random() * 0.3,
+          id: `gradient_rect_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added gradient rectangle with ${gradient.type} gradient at golden ratio position (${pos.x}, ${pos.y})`;
+      }
+    },
+    
+    // Add sophisticated gradient circle
+    {
+      name: 'add_gradient_circle',
+      weight: (analysis.elementCount < 10 ? 2 : 1) * advancedWeight,
+      action: () => {
+        const radius = getFibonacciSize() * 4;
+        const pos = getGoldenRatioPosition(state, radius * 2, radius * 2);
+        const gradient = generateGradient(dominantPalette);
+        
+        const newElement = {
+          type: 'circle',
+          x: pos.x + radius,
+          y: pos.y + radius,
+          radius: radius,
+          fillStyle: gradient.colors[0], // Fallback color
+          gradient: gradient,
+          shadow: generateShadow(gradient.colors[0]),
+          opacity: 0.6 + Math.random() * 0.4,
+          id: `gradient_circle_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added gradient circle with ${gradient.type} gradient at golden ratio position (${pos.x + radius}, ${pos.y + radius})`;
+      }
+    },
+    
+    // Add mathematical curve
+    {
+      name: 'add_curve',
+      weight: (analysis.elementCount < 12 ? 1.5 : 0.5) * advancedWeight,
+      action: () => {
+        const pos = getGoldenRatioPosition(state, 200, 100);
+        const color = getHarmoniousColor(existingColors);
+        
+        const newElement = {
+          type: 'curve',
+          x: pos.x,
+          y: pos.y,
+          width: 150 + Math.random() * 100,
+          height: 50 + Math.random() * 50,
+          fillStyle: color,
+          strokeStyle: color,
+          strokeWidth: 2 + Math.random() * 3,
+          opacity: 0.8,
+          id: `curve_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added mathematical curve at golden ratio position (${pos.x}, ${pos.y})`;
+      }
+    },
+    
+    // Add spiral pattern
+    {
+      name: 'add_spiral',
+      weight: (analysis.elementCount < 8 ? 1.5 : 0.5) * advancedWeight,
+      action: () => {
+        const radius = getFibonacciSize() * 3;
+        const pos = getGoldenRatioPosition(state, radius * 2, radius * 2);
+        const color = getHarmoniousColor(existingColors);
+        
+        const newElement = {
+          type: 'spiral',
+          x: pos.x + radius,
+          y: pos.y + radius,
+          radius: radius,
+          fillStyle: color,
+          strokeStyle: color,
+          strokeWidth: 1 + Math.random() * 2,
+          opacity: 0.7,
+          id: `spiral_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added mathematical spiral at golden ratio position (${pos.x + radius}, ${pos.y + radius})`;
+      }
+    },
+    
+    // Add patterned rectangle
+    {
+      name: 'add_pattern_rectangle',
+      weight: (analysis.elementCount < 10 ? 1.5 : 0.5) * advancedWeight,
+      action: () => {
+        const width = getFibonacciSize() * 10;
+        const height = getFibonacciSize() * 8;
+        const pos = getGoldenRatioPosition(state, width, height);
+        const color = getHarmoniousColor(existingColors);
+        const patterns = ['dots', 'stripes', 'waves'];
+        const pattern = patterns[Math.floor(Math.random() * patterns.length)];
+        
+        const newElement = {
+          type: 'rectangle',
+          x: pos.x,
+          y: pos.y,
+          width: width,
+          height: height,
+          fillStyle: color,
+          pattern: pattern,
+          opacity: 0.6 + Math.random() * 0.3,
+          id: `pattern_rect_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added ${pattern} patterned rectangle at golden ratio position (${pos.x}, ${pos.y})`;
+      }
+    },
+    
+    // Add rotated triangle with effects
+    {
+      name: 'add_rotated_triangle',
+      weight: (analysis.elementCount < 10 ? 1.5 : 0.5) * advancedWeight,
+      action: () => {
+        const size = getFibonacciSize() * 5;
+        const pos = getGoldenRatioPosition(state, size * 2, size * 2);
+        const color = getHarmoniousColor(existingColors);
+        
+        const newElement = {
+          type: 'triangle',
+          x: pos.x + size,
+          y: pos.y + size,
+          size: size,
+          fillStyle: color,
+          strokeStyle: color,
+          strokeWidth: 1 + Math.random() * 2,
+          rotation: Math.random() * 360,
+          opacity: 0.7 + Math.random() * 0.3,
+          shadow: generateShadow(color),
+          id: `rotated_triangle_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added rotated triangle with effects at golden ratio position (${pos.x + size}, ${pos.y + size})`;
+      }
+    },
+    
+    // Add sophisticated text with gradient
+    {
+      name: 'add_gradient_text',
+      weight: (state.elements.filter(e => e.type === 'text').length < 4 ? 1.5 : 0.5) * advancedWeight,
+      action: () => {
+        const pos = getGoldenRatioPosition(state, 120, 40);
+        const artWords = ['EVOLVE', 'TRANSCEND', 'HARMONY', 'SYNTHESIS', 'EMERGENCE', 'METAMORPHOSIS'];
+        const text = artWords[Math.floor(Math.random() * artWords.length)];
+        const fontSize = 20 + Math.random() * 20;
+        const gradient = generateGradient(dominantPalette);
+        
+        const newElement = {
+          type: 'text',
+          x: pos.x,
+          y: pos.y,
+          text: text,
+          font: `bold ${fontSize}px Arial`,
+          fillStyle: gradient.colors[0], // Fallback color
+          gradient: gradient,
+          shadow: generateShadow(gradient.colors[0]),
+          opacity: 0.8 + Math.random() * 0.2,
+          id: `gradient_text_${Date.now()}`
+        };
+        state.elements.push(newElement);
+        return `Added gradient text "${text}" at golden ratio position (${pos.x}, ${pos.y})`;
+      }
+    },
+    
     // Add a new rectangle with optimal positioning and color harmony
     {
       name: 'add_rectangle',
@@ -402,6 +668,37 @@ async function enhancedIntelligentImproveArtwork(state) {
         }
         return null;
       }
+    },
+    
+    // Add advanced visual effects to existing elements
+    {
+      name: 'add_visual_effects',
+      weight: 1.5 * advancedWeight,
+      action: () => {
+        const nonTextElements = state.elements.filter(e => e.type !== 'text' && !e.gradient && !e.shadow);
+        if (nonTextElements.length > 0) {
+          const elementIndex = Math.floor(Math.random() * nonTextElements.length);
+          const element = nonTextElements[elementIndex];
+          
+          // Add gradient
+          if (Math.random() > 0.5) {
+            element.gradient = generateGradient(dominantPalette);
+          }
+          
+          // Add shadow
+          if (Math.random() > 0.5) {
+            element.shadow = generateShadow(element.fillStyle);
+          }
+          
+          // Add opacity
+          if (Math.random() > 0.5) {
+            element.opacity = 0.7 + Math.random() * 0.3;
+          }
+          
+          return `Added visual effects to ${element.id}`;
+        }
+        return null;
+      }
     }
   ];
   
@@ -431,6 +728,27 @@ async function enhancedIntelligentImproveArtwork(state) {
   state.lastUpdated = new Date().toISOString();
   
   return appliedImprovements;
+}
+
+// Helper function to determine dominant palette
+function getDominantPalette(existingColors) {
+  const colorCounts = {};
+  
+  Object.keys(colorPalettes).forEach(palette => {
+    colorCounts[palette] = 0;
+    colorPalettes[palette].forEach(color => {
+      if (existingColors.includes(color)) {
+        colorCounts[palette]++;
+      }
+    });
+  });
+
+  // Find the most used palette
+  const dominantPalette = Object.keys(colorCounts).reduce((a, b) => 
+    colorCounts[a] > colorCounts[b] ? a : b
+  );
+  
+  return dominantPalette || 'warm';
 }
 
 // Apply intelligent improvements with optional AI enhancement
