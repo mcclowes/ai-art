@@ -1,6 +1,6 @@
 /**
  * @fileoverview Centralized Color Palette Definitions
- * 
+ *
  * This module provides a single source of truth for all color palettes
  * and gradient combinations used throughout the AI art generation system.
  */

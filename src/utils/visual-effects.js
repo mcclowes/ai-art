@@ -1,11 +1,11 @@
 /**
  * @fileoverview Visual Effects Utilities for AI Art Generation
- * 
+ *
  * This module provides functions for generating sophisticated gradients,
  * shadows, and other visual effects used in artwork elements.
  */
 
-import { getGradientCombinations } from './color-palettes.js';
+import { getGradientCombinations } from "./color-palettes.js";
 
 /**
  * Generate sophisticated gradient
@@ -91,7 +91,7 @@ export function applyVisualEffects(element, dominantPalette, options = {}) {
     includeOpacity = true,
     includeRotation = false,
     includeStroke = false,
-    includePattern = false
+    includePattern = false,
   } = options;
 
   const enhancedElement = { ...element };

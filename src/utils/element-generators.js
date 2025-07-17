@@ -1,13 +1,18 @@
 /**
  * @fileoverview Element Generation Utilities
- * 
+ *
  * This module provides functions for creating different types of artwork elements
  * with sophisticated positioning and visual effects.
  */
 
-import { getHarmoniousColor, getPaletteColors } from './color-palettes.js';
-import { getGoldenRatioPosition, getFibonacciSize } from './math-utils.js';
-import { generateGradient, generateShadow, generatePattern, generateOpacity } from './visual-effects.js';
+import { getHarmoniousColor, getPaletteColors } from "./color-palettes.js";
+import { getGoldenRatioPosition, getFibonacciSize } from "./math-utils.js";
+import {
+  generateGradient,
+  generateShadow,
+  generatePattern,
+  generateOpacity,
+} from "./visual-effects.js";
 
 /**
  * Create an intelligent element with optimal positioning and styling
@@ -23,7 +28,8 @@ export function createIntelligentElement(state, palette, purpose) {
 
   // Choose element type based on purpose and randomness
   const elementTypes = ["rectangle", "circle", "triangle"];
-  const elementType = elementTypes[Math.floor(Math.random() * elementTypes.length)];
+  const elementType =
+    elementTypes[Math.floor(Math.random() * elementTypes.length)];
 
   const baseElement = {
     type: elementType,
@@ -45,7 +51,11 @@ export function createIntelligentElement(state, palette, purpose) {
  * @param {string} elementType - Type of element to create
  * @returns {Object} Generated gradient element
  */
-export function createGradientElement(state, dominantPalette, elementType = "rectangle") {
+export function createGradientElement(
+  state,
+  dominantPalette,
+  elementType = "rectangle"
+) {
   const size = getFibonacciSize() * 6;
   const pos = getGoldenRatioPosition(state, size * 1.5, size);
   const gradient = generateGradient(dominantPalette);
@@ -89,7 +99,9 @@ export function createIntelligentText(state, palette, text) {
 
   // Add advanced text effects randomly
   if (Math.random() > 0.6) {
-    textElement.gradient = generateGradient(determinePaletteFromColors(palette));
+    textElement.gradient = generateGradient(
+      determinePaletteFromColors(palette)
+    );
   }
   if (Math.random() > 0.7) {
     textElement.shadow = generateShadow(color);
@@ -109,7 +121,11 @@ export function createIntelligentText(state, palette, text) {
  * @param {string} enhancementType - Type of enhancement
  * @returns {Object} Generated enhancement element
  */
-export function createArtisticEnhancement(state, palette, enhancementType = null) {
+export function createArtisticEnhancement(
+  state,
+  palette,
+  enhancementType = null
+) {
   const color = palette[Math.floor(Math.random() * palette.length)];
   const baseSize = getFibonacciSize() * 6;
   const pos = getGoldenRatioPosition(state, baseSize * 2, baseSize * 2);
@@ -120,8 +136,9 @@ export function createArtisticEnhancement(state, palette, enhancementType = null
     "curve",
     "pattern_circle",
   ];
-  
-  const selectedType = enhancementType || 
+
+  const selectedType =
+    enhancementType ||
     enhancementTypes[Math.floor(Math.random() * enhancementTypes.length)];
 
   switch (selectedType) {
@@ -254,7 +271,9 @@ function enhanceElementByType(element, size, color) {
 
       // Add visual effects
       if (Math.random() > 0.6) {
-        enhanced.gradient = generateGradient(determinePaletteFromColors([color]));
+        enhanced.gradient = generateGradient(
+          determinePaletteFromColors([color])
+        );
       }
       if (Math.random() > 0.7) {
         enhanced.shadow = generateShadow(color);
@@ -271,7 +290,9 @@ function enhanceElementByType(element, size, color) {
 
       // Add gradient effects to circles
       if (Math.random() > 0.5) {
-        enhanced.gradient = generateGradient(determinePaletteFromColors([color]));
+        enhanced.gradient = generateGradient(
+          determinePaletteFromColors([color])
+        );
       }
       if (Math.random() > 0.7) {
         enhanced.shadow = generateShadow(color);
@@ -305,10 +326,14 @@ function enhanceElementByType(element, size, color) {
  */
 function determinePaletteFromColors(colors) {
   // Simple heuristic to determine palette
-  if (colors.some(c => c.includes("ff") || c.includes("e7") || c.includes("f3"))) {
+  if (
+    colors.some(c => c.includes("ff") || c.includes("e7") || c.includes("f3"))
+  ) {
     return "warm";
   }
-  if (colors.some(c => c.includes("2e") || c.includes("34") || c.includes("9b"))) {
+  if (
+    colors.some(c => c.includes("2e") || c.includes("34") || c.includes("9b"))
+  ) {
     return "cool";
   }
   return "vibrant";

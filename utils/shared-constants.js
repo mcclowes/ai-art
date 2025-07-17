@@ -1,6 +1,6 @@
 /**
  * @fileoverview Shared Constants and Simple Utilities (CommonJS)
- * 
+ *
  * This module provides basic constants and simple utility functions
  * that can be used by Node.js scripts without ES module imports.
  */

@@ -1,6 +1,6 @@
 /**
  * @fileoverview Artwork Analysis Utilities
- * 
+ *
  * This module provides functions for analyzing artwork composition,
  * color distribution, density, and other properties.
  */
@@ -18,7 +18,7 @@ export function analyzeArtwork(state) {
     averageSize: 0,
     coverage: 0,
     hasText: state.elements.some(el => el.type === "text"),
-    hasShapes: state.elements.some(el => 
+    hasShapes: state.elements.some(el =>
       ["rectangle", "circle", "triangle"].includes(el.type)
     ),
     colorDiversity: [...new Set(state.elements.map(el => el.fillStyle))].length,
@@ -77,7 +77,8 @@ export function analyzeArtwork(state) {
 
   // Calculate density score
   analysis.densityScore =
-    analysis.elementCount / ((state.canvas.width * state.canvas.height) / 10000);
+    analysis.elementCount /
+    ((state.canvas.width * state.canvas.height) / 10000);
 
   return analysis;
 }
@@ -125,8 +126,10 @@ export function analyzeSpatialDistribution(state) {
 
     // Check if element is in center area (middle third)
     if (
-      element.x > width / 3 && element.x < (2 * width) / 3 &&
-      element.y > height / 3 && element.y < (2 * height) / 3
+      element.x > width / 3 &&
+      element.x < (2 * width) / 3 &&
+      element.y > height / 3 &&
+      element.y < (2 * height) / 3
     ) {
       center++;
     }
@@ -159,7 +162,9 @@ export function suggestImprovements(analysis) {
   }
 
   if (analysis.coverage < 0.1) {
-    suggestions.push("Increase element sizes or add more elements for better coverage");
+    suggestions.push(
+      "Increase element sizes or add more elements for better coverage"
+    );
   }
 
   if (analysis.colorDiversity > 6) {
@@ -174,11 +179,11 @@ export function suggestImprovements(analysis) {
     suggestions.push("Consider adding meaningful text elements");
   }
 
-  const spatialAnalysis = analyzeSpatialDistribution({ 
-    elements: [], 
-    canvas: { width: 800, height: 600 } 
+  const spatialAnalysis = analyzeSpatialDistribution({
+    elements: [],
+    canvas: { width: 800, height: 600 },
   });
-  
+
   if (spatialAnalysis.leftRightBalance > 0.3) {
     suggestions.push("Improve left-right balance of elements");
   }
@@ -219,7 +224,9 @@ function calculateColorBalance(colors) {
 
   const counts = Object.values(colorCounts);
   const avg = counts.reduce((sum, count) => sum + count, 0) / counts.length;
-  const variance = counts.reduce((sum, count) => sum + Math.pow(count - avg, 2), 0) / counts.length;
+  const variance =
+    counts.reduce((sum, count) => sum + Math.pow(count - avg, 2), 0) /
+    counts.length;
 
   // Lower variance means better balance
   return 1 / (1 + variance);

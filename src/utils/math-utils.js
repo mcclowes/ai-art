@@ -1,6 +1,6 @@
 /**
  * @fileoverview Mathematical Utilities for AI Art Generation
- * 
+ *
  * This module provides mathematical constants and positioning functions
  * used throughout the artwork generation system.
  */
@@ -51,7 +51,11 @@ export function getGoldenRatioPosition(state, elementWidth, elementHeight) {
  * @param {number} elementHeight - Height of the element (default: 100)
  * @returns {Object} Position object with x and y coordinates
  */
-export function getOptimalPosition(state, elementWidth = 100, elementHeight = 100) {
+export function getOptimalPosition(
+  state,
+  elementWidth = 100,
+  elementHeight = 100
+) {
   const analysis = analyzeElementDensity(state);
   const gridSize = 4;
   const sectionWidth = state.canvas.width / gridSize;
