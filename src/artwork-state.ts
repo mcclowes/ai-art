@@ -34,8 +34,8 @@ export const artworkState: ArtworkState = {
   "elements": [
     {
       "type": "rectangle",
-      "x": 280.05487600148825,
-      "y": 431.5488320650072,
+      "x": 261.3638306631034,
+      "y": 385.4542918798041,
       "width": 200,
       "height": 100,
       "fillStyle": "#9b59b6",
@@ -43,8 +43,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 301.09906648305645,
-      "y": 422.49455448587605,
+      "x": 236.67417993231635,
+      "y": 405.1731590551641,
       "text": "Making",
       "font": "26.82886155053166px Arial",
       "fillStyle": "#e74c3c",
@@ -719,7 +719,7 @@ export const artworkState: ArtworkState = {
       "id": "curve_1752746941820"
     }
   ],
-  "generation": 59,
-  "lastUpdated": "2025-07-17T13:37:38.349Z",
+  "generation": 60,
+  "lastUpdated": "2025-07-17T13:38:46.625Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
