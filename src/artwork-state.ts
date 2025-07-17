@@ -57,9 +57,25 @@ export const artworkState: ArtworkState = {
       "height": 39.18512233900472,
       "fillStyle": "#e74c3c",
       "id": "copilot_complement_1752727229153"
+    },
+    {
+      "type": "triangle",
+      "x": 65.43510986076092,
+      "y": 349.4351098607609,
+      "size": 62.43510986076092,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1752727309721"
+    },
+    {
+      "type": "triangle",
+      "x": 131.2030768365079,
+      "y": 499.2030768365079,
+      "size": 86.2030768365079,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1752727309721"
     }
   ],
-  "generation": 3,
-  "lastUpdated": "2025-07-17T04:40:29.153Z",
+  "generation": 4,
+  "lastUpdated": "2025-07-17T04:41:49.721Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };

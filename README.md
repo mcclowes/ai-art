@@ -58,6 +58,30 @@ This project showcases an evolving digital artwork that improves itself every ho
 - **Artistic Enhancement**: Adds elements with improved proportions and styling
 - **Visual Analysis**: Evaluates density, color diversity, and composition before improvements
 
+## Conflict Resolution
+
+To minimize PR conflicts, this project implements several strategies:
+
+### Build Artifacts Management
+- **Build artifacts are not committed**: The `dist/` directory is excluded from git via `.gitignore`
+- **Hash-based filenames**: Vite generates files like `index-0RHxSTq_.js` that change with each build
+- **Workflows validate builds**: GitHub Actions run `npm run build` to ensure changes are valid, but don't commit the output
+
+### Artwork State Management
+- **Standardized file writing**: Both improvement scripts use a shared utility (`utils/artwork-writer.js`) 
+- **Consistent interface definitions**: TypeScript interfaces are identical across all scripts
+- **Atomic updates**: Each script updates the artwork state file completely to avoid partial conflicts
+
+### Automated Commit Strategy
+- **Selective commits**: GitHub Actions only commit source files (`src/artwork-state.ts`, `archive/`)
+- **Frequent small changes**: Hourly improvements make small, incremental changes
+- **Generation tracking**: Each change increments the generation counter for easy conflict resolution
+
+This approach ensures that:
+1. Build artifacts don't create false conflicts between PRs
+2. Artwork state modifications are predictable and consistent
+3. Manual PRs can be merged without conflicts from automated systems
+
 ## Development
 
 ### Prerequisites
