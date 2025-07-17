@@ -243,49 +243,64 @@ export function renderSvg(
     // Fallback: render a placeholder rectangle if no SVG content
     ctx.save();
     ctx.fillStyle = element.fillStyle;
-    ctx.fillRect(element.x, element.y, element.width || 100, element.height || 100);
+    ctx.fillRect(
+      element.x,
+      element.y,
+      element.width || 100,
+      element.height || 100
+    );
     ctx.restore();
     return;
   }
 
   try {
     // Create an Image object from the SVG content
-    const svgBlob = new Blob([element.svgContent], { type: 'image/svg+xml' });
+    const svgBlob = new Blob([element.svgContent], { type: "image/svg+xml" });
     const svgUrl = URL.createObjectURL(svgBlob);
-    
+
     const img = new Image();
     img.onload = () => {
       // Draw the SVG image on the canvas
       const width = element.width || img.width || 100;
       const height = element.height || img.height || 100;
       ctx.drawImage(img, element.x, element.y, width, height);
-      
+
       // Clean up the object URL
       URL.revokeObjectURL(svgUrl);
-      
+
       // Trigger re-render if callback provided
       if (onSvgLoad) {
         setTimeout(onSvgLoad, 10); // Small delay to ensure image is drawn
       }
     };
-    
+
     img.onerror = () => {
       // Fallback: render a placeholder rectangle if SVG fails to load
-      console.warn('Failed to load SVG content, rendering placeholder');
+      console.warn("Failed to load SVG content, rendering placeholder");
       ctx.save();
       ctx.fillStyle = element.fillStyle;
-      ctx.fillRect(element.x, element.y, element.width || 100, element.height || 100);
+      ctx.fillRect(
+        element.x,
+        element.y,
+        element.width || 100,
+        element.height || 100
+      );
       ctx.restore();
       URL.revokeObjectURL(svgUrl);
     };
-    
+
     img.src = svgUrl;
   } catch (error) {
-    console.warn('Error rendering SVG:', error);
+    console.warn("Error rendering SVG:", error);
     // Fallback: render a placeholder rectangle
     ctx.save();
     ctx.fillStyle = element.fillStyle;
-    ctx.fillRect(element.x, element.y, element.width || 100, element.height || 100);
+    ctx.fillRect(
+      element.x,
+      element.y,
+      element.width || 100,
+      element.height || 100
+    );
     ctx.restore();
   }
 }
