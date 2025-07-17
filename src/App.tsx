@@ -22,6 +22,20 @@ const Canvas: React.FC = () => {
         case "rectangle":
           ctx.fillRect(element.x, element.y, element.width || 0, element.height || 0);
           break;
+        case "circle":
+          ctx.beginPath();
+          ctx.arc(element.x, element.y, element.radius || 50, 0, Math.PI * 2);
+          ctx.fill();
+          break;
+        case "triangle":
+          const size = element.size || 50;
+          ctx.beginPath();
+          ctx.moveTo(element.x, element.y - size);
+          ctx.lineTo(element.x - size * 0.866, element.y + size * 0.5);
+          ctx.lineTo(element.x + size * 0.866, element.y + size * 0.5);
+          ctx.closePath();
+          ctx.fill();
+          break;
         case "text":
           if (element.font) ctx.font = element.font;
           ctx.fillText(element.text || "", element.x, element.y);
