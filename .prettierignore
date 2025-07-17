@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Archive files (generated artwork data)
+archive/
+
+# Config files that shouldn't be formatted
+.git/
+.github/
+*.log

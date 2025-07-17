@@ -17,10 +17,15 @@ function App() {
     // Render each element
     artworkState.elements.forEach((element: ArtworkElement) => {
       ctx.fillStyle = element.fillStyle;
-      
+
       switch (element.type) {
         case "rectangle":
-          ctx.fillRect(element.x, element.y, element.width || 0, element.height || 0);
+          ctx.fillRect(
+            element.x,
+            element.y,
+            element.width || 0,
+            element.height || 0
+          );
           break;
         case "circle":
           ctx.beginPath();
@@ -47,15 +52,15 @@ function App() {
   const downloadCanvas = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
+
     // Convert canvas to data URL
-    const dataURL = canvas.toDataURL('image/png');
-    
+    const dataURL = canvas.toDataURL("image/png");
+
     // Create a temporary link element to trigger download
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.download = `ai-art-generation-${artworkState.generation}.png`;
     link.href = dataURL;
-    
+
     // Trigger download
     document.body.appendChild(link);
     link.click();
@@ -73,7 +78,7 @@ function App() {
         style={{ border: "1px solid #ccc" }}
       />
       <div style={{ marginTop: "1rem" }}>
-        <button 
+        <button
           onClick={downloadCanvas}
           style={{
             padding: "10px 20px",
@@ -82,7 +87,7 @@ function App() {
             color: "white",
             border: "none",
             borderRadius: "4px",
-            cursor: "pointer"
+            cursor: "pointer",
           }}
         >
           Download as PNG
