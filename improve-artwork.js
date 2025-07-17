@@ -75,40 +75,18 @@ function resetArtwork(state) {
 
   console.log("Reset artwork to start new cycle");
 }
-// Enhanced color palettes with better harmony
-const colorPalettes = {
-  warm: ["#e74c3c", "#f39c12", "#f1c40f", "#e67e22", "#d35400"],
-  cool: ["#2ecc71", "#3498db", "#9b59b6", "#1abc9c", "#34495e"],
-  monochrome: ["#2c3e50", "#34495e", "#7f8c8d", "#95a5a6", "#bdc3c7"],
-  vibrant: ["#e74c3c", "#f39c12", "#2ecc71", "#3498db", "#9b59b6"],
-  earth: ["#8B4513", "#A0522D", "#D2B48C", "#F5DEB3", "#DEB887"],
-  ocean: ["#006994", "#4682B4", "#87CEEB", "#20B2AA", "#008B8B"],
-  sunset: ["#FF6B35", "#F7931E", "#FFD23F", "#C5DB8C", "#87CEEB"],
-};
-
-// Advanced gradient combinations
-const gradientCombinations = {
-  warm: [
-    ["#FF6B35", "#F7931E", "#FFD23F"],
-    ["#e74c3c", "#f39c12", "#f1c40f"],
-    ["#d35400", "#e67e22", "#f39c12"],
-  ],
-  cool: [
-    ["#2ecc71", "#3498db", "#9b59b6"],
-    ["#1abc9c", "#34495e", "#2c3e50"],
-    ["#006994", "#4682B4", "#87CEEB"],
-  ],
-  sunset: [
-    ["#FF6B35", "#F7931E", "#FFD23F"],
-    ["#FF4500", "#FF8C00", "#FFA500"],
-    ["#DC143C", "#FF69B4", "#FF1493"],
-  ],
-  ocean: [
-    ["#006994", "#4682B4", "#87CEEB"],
-    ["#20B2AA", "#008B8B", "#2F4F4F"],
-    ["#0077BE", "#0099CC", "#66CCFF"],
-  ],
-};
+// Import shared utilities
+const {
+  colorPalettes,
+  gradientCombinations,
+  goldenRatio,
+  fibonacciSequence,
+  getFibonacciSize,
+  generateGradient,
+  generateShadow,
+  getGoldenRatioPosition,
+  getHarmoniousColor,
+} = require("./utils/shared-constants");
 
 // Artwork analysis functions
 function analyzeArtwork(state) {
@@ -169,89 +147,13 @@ function analyzeArtwork(state) {
   return analysis;
 }
 
-function getHarmoniousColor(existingColors) {
-  // Determine the dominant color palette
-  const allColors = Object.values(colorPalettes).flat();
-  const colorCounts = {};
+// getHarmoniousColor is now imported from shared-constants
 
-  Object.keys(colorPalettes).forEach(palette => {
-    colorCounts[palette] = 0;
-    colorPalettes[palette].forEach(color => {
-      if (existingColors.includes(color)) {
-        colorCounts[palette]++;
-      }
-    });
-  });
+// generateGradient is now imported from shared-constants
 
-  // Find the most used palette
-  const dominantPalette = Object.keys(colorCounts).reduce((a, b) =>
-    colorCounts[a] > colorCounts[b] ? a : b
-  );
+// generateShadow is now imported from shared-constants
 
-  // Select a color from the dominant palette that's not overused
-  const paletteColors = colorPalettes[dominantPalette];
-  const unusedColors = paletteColors.filter(
-    color => !existingColors.includes(color)
-  );
-
-  return unusedColors.length > 0
-    ? unusedColors[Math.floor(Math.random() * unusedColors.length)]
-    : paletteColors[Math.floor(Math.random() * paletteColors.length)];
-}
-
-// Generate sophisticated gradient
-function generateGradient(dominantPalette) {
-  const paletteGradients =
-    gradientCombinations[dominantPalette] || gradientCombinations.warm;
-  const gradientColors =
-    paletteGradients[Math.floor(Math.random() * paletteGradients.length)];
-
-  return {
-    type: Math.random() > 0.5 ? "linear" : "radial",
-    colors: gradientColors,
-    direction: Math.random() * 360, // Random angle for linear gradients
-    centerX: 0.3 + Math.random() * 0.4, // Center point for radial gradients
-    centerY: 0.3 + Math.random() * 0.4,
-  };
-}
-
-// Generate sophisticated shadow
-function generateShadow(color) {
-  return {
-    blur: 5 + Math.random() * 15,
-    color: color + "40", // Add alpha for transparency
-    offsetX: -5 + Math.random() * 10,
-    offsetY: -5 + Math.random() * 10,
-  };
-}
-
-// Golden ratio and fibonacci sequence for mathematical beauty
-const goldenRatio = 1.618;
-const fibonacciSequence = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
-
-function getGoldenRatioPosition(state, elementWidth, elementHeight) {
-  const width = state.canvas.width;
-  const height = state.canvas.height;
-
-  // Use golden ratio for positioning
-  const goldenX = [width / goldenRatio, width - width / goldenRatio];
-  const goldenY = [height / goldenRatio, height - height / goldenRatio];
-
-  const x =
-    goldenX[Math.floor(Math.random() * goldenX.length)] - elementWidth / 2;
-  const y =
-    goldenY[Math.floor(Math.random() * goldenY.length)] - elementHeight / 2;
-
-  return {
-    x: Math.max(0, Math.min(x, width - elementWidth)),
-    y: Math.max(0, Math.min(y, height - elementHeight)),
-  };
-}
-
-function getFibonacciSize() {
-  const index = Math.floor(Math.random() * (fibonacciSequence.length - 3)) + 2;
-  return fibonacciSequence[index];
-}
+// Mathematical utilities are now imported from shared-constants
 
 function getOptimalPosition(state, elementWidth = 100, elementHeight = 100) {
   const analysis = analyzeArtwork(state);

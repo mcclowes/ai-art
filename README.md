@@ -163,7 +163,7 @@ The project features two automated improvement systems running in parallel:
 
 ### Codebase Evolution (`.github/workflows/improve-codebase.yml`)
 
-- Runs every 6 hours via cron schedule  
+- Runs every 6 hours via cron schedule
 - Can be triggered manually or on pull requests
 - Applies code quality improvements using `improve-codebase.js`
 - Includes formatting, type safety, performance optimizations
@@ -184,7 +184,7 @@ The project features two automated improvement systems running in parallel:
 This project now features an **automated codebase improvement system** that works alongside the artwork evolution. Just like the artwork gets better over time, the codebase continuously improves through:
 
 - **Code Quality**: Formatting, TypeScript enhancements, documentation
-- **Performance**: React optimizations, canvas rendering improvements  
+- **Performance**: React optimizations, canvas rendering improvements
 - **Features**: Undo/redo, accessibility, testing infrastructure
 - **Developer Experience**: Better tooling, error handling, build optimizations
 
