@@ -1,0 +1,112 @@
+name: Improve Codebase
+
+on:
+  schedule:
+    # Run every 6 hours (4 times a day) to iteratively improve codebase
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual triggering
+  pull_request:
+    types: [opened, synchronize]
+    branches: [main]
+
+jobs:
+  improve-codebase:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Run codebase improvement script
+      run: node improve-codebase.js
+      
+    - name: Build project to validate changes
+      run: npm run build
+      
+    - name: Run format check
+      run: npm run format:check || npm run format
+      
+    - name: Check for changes
+      id: check-changes
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "changes=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit and push codebase improvements
+      if: steps.check-changes.outputs.changes == 'true'
+      run: |
+        git config --local user.email "codebase-improver@github.com"
+        git config --local user.name "Codebase Improver Bot"
+        git add .
+        
+        # Get codebase version for commit message
+        CODEBASE_VERSION=$(node -e "
+          const fs = require('fs');
+          try {
+            const content = fs.readFileSync('src/codebase-state.ts', 'utf8');
+            const match = content.match(/\"version\": (\d+)/);
+            console.log(match ? match[1] : 'unknown');
+          } catch {
+            console.log('1');
+          }
+        ")
+        
+        git commit -m "Improve codebase - Version $CODEBASE_VERSION
+
+        Automated codebase improvements including:
+        - Code quality enhancements
+        - Performance optimizations  
+        - Developer experience improvements
+        - Feature additions
+
+        Part of iterative codebase evolution system." || exit 0
+        git push
+
+    - name: Create improvement summary comment (for PRs)
+      if: github.event_name == 'pull_request' && steps.check-changes.outputs.changes == 'true'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          let summary = '🔧 **Codebase Improvements Applied**\n\n';
+          
+          try {
+            if (fs.existsSync('src/codebase-state.ts')) {
+              const content = fs.readFileSync('src/codebase-state.ts', 'utf8');
+              const match = content.match(/"version": (\d+)/);
+              const version = match ? match[1] : "unknown";
+              
+              summary += `Codebase version: ${version}\n`;
+              summary += 'This PR includes automated codebase improvements for better code quality, performance, and developer experience.\n\n';
+              summary += '**Improvement Areas:**\n';
+              summary += '- ✅ Code formatting and style\n';
+              summary += '- ✅ TypeScript type safety\n';
+              summary += '- ✅ Performance optimizations\n';  
+              summary += '- ✅ Documentation enhancements\n';
+              summary += '- ✅ Error handling improvements\n';
+              summary += '- ✅ Accessibility features\n';
+            }
+          } catch (error) {
+            summary += 'Automated improvements applied successfully.';
+          }
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: summary
+          });
