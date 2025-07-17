@@ -825,9 +825,36 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.9949771884661359,
       "id": "gradient_circle_1752779135651"
+    },
+    {
+      "type": "rectangle",
+      "x": 442.4375772558714,
+      "y": 205.17181705809645,
+      "width": 104,
+      "height": 48,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 259.3828083338696,
+        "centerX": 0.37585656967634035,
+        "centerY": 0.5399586710016264
+      },
+      "shadow": {
+        "blur": 19.853623504423474,
+        "color": "#e74c3c40",
+        "offsetX": 1.8805537569092978,
+        "offsetY": -4.579908515349342
+      },
+      "opacity": 0.9201880098796656,
+      "id": "gradient_rect_1752782743714"
     }
   ],
-  "generation": 69,
-  "lastUpdated": "2025-07-17T19:05:35.651Z",
+  "generation": 70,
+  "lastUpdated": "2025-07-17T20:05:43.714Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
