@@ -34,20 +34,20 @@ export const artworkState: ArtworkState = {
   "elements": [
     {
       "type": "rectangle",
-      "x": 50,
-      "y": 50,
+      "x": 236.66194633099866,
+      "y": 385.057183942567,
       "width": 200,
       "height": 100,
-      "fillStyle": "#e74c3c",
+      "fillStyle": "#9b59b6",
       "id": "rect1"
     },
     {
       "type": "text",
-      "x": 50.15825594441219,
-      "y": 403.9367413233695,
+      "x": 490.0905702236091,
+      "y": 424.7746259211353,
       "text": "Making",
       "font": "26.82886155053166px Arial",
-      "fillStyle": "#2ecc71",
+      "fillStyle": "#e74c3c",
       "id": "copilot_text_1752726527797"
     },
     {
@@ -72,7 +72,14 @@ export const artworkState: ArtworkState = {
       "y": 248.22134177946546,
       "size": 85.22134177946546,
       "fillStyle": "#2ecc71",
-      "id": "triangle_1752727221786"
+      "id": "triangle_1752727221786",
+      "shadow": {
+        "blur": 10.118539585123605,
+        "color": "#2ecc7140",
+        "offsetX": -4.659596985112209,
+        "offsetY": -1.679589697497832
+      },
+      "opacity": 0.8576269564102721
     },
     {
       "type": "rectangle",
@@ -712,7 +719,7 @@ export const artworkState: ArtworkState = {
       "id": "curve_1752746941820"
     }
   ],
-  "generation": 56,
-  "lastUpdated": "2025-07-17T10:09:01.820Z",
+  "generation": 58,
+  "lastUpdated": "2025-07-17T10:13:02.231Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
