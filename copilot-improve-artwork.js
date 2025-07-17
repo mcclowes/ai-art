@@ -21,13 +21,103 @@ const currentState = eval(`(${match[1]})`);
 
 // Intelligent color palette suggestions based on color theory
 const colorPalettes = {
-  warm: ["#ff6b6b", "#feca57", "#ff9ff3", "#54a0ff", "#5f27cd"],
-  cool: ["#00d2d3", "#1dd1a1", "#341f97", "#706fd3", "#40407a"],
-  earth: ["#8e44ad", "#27ae60", "#e67e22", "#f39c12", "#d35400"],
-  monochrome: ["#2f3640", "#57606f", "#a4b0be", "#fff", "#000"],
-  pastel: ["#ffb3ba", "#ffdfba", "#ffffba", "#baffc9", "#bae1ff"],
-  vibrant: ["#e74c3c", "#f39c12", "#f1c40f", "#2ecc71", "#3498db", "#9b59b6"],
+  warm: ['#ff6b6b', '#feca57', '#ff9ff3', '#54a0ff', '#5f27cd'],
+  cool: ['#00d2d3', '#1dd1a1', '#341f97', '#706fd3', '#40407a'],
+  earth: ['#8e44ad', '#27ae60', '#e67e22', '#f39c12', '#d35400'],
+  monochrome: ['#2f3640', '#57606f', '#a4b0be', '#fff', '#000'],
+  pastel: ['#ffb3ba', '#ffdfba', '#ffffba', '#baffc9', '#bae1ff'],
+  vibrant: ['#e74c3c', '#f39c12', '#f1c40f', '#2ecc71', '#3498db', '#9b59b6'],
+  ocean: ['#006994', '#4682B4', '#87CEEB', '#20B2AA', '#008B8B'],
+  sunset: ['#FF6B35', '#F7931E', '#FFD23F', '#C5DB8C', '#87CEEB']
 };
+
+// Advanced gradient combinations
+const gradientCombinations = {
+  warm: [
+    ['#FF6B35', '#F7931E', '#FFD23F'],
+    ['#e74c3c', '#f39c12', '#f1c40f'],
+    ['#d35400', '#e67e22', '#f39c12']
+  ],
+  cool: [
+    ['#2ecc71', '#3498db', '#9b59b6'],
+    ['#1abc9c', '#34495e', '#2c3e50'],
+    ['#006994', '#4682B4', '#87CEEB']
+  ],
+  sunset: [
+    ['#FF6B35', '#F7931E', '#FFD23F'],
+    ['#FF4500', '#FF8C00', '#FFA500'],
+    ['#DC143C', '#FF69B4', '#FF1493']
+  ],
+  ocean: [
+    ['#006994', '#4682B4', '#87CEEB'],
+    ['#20B2AA', '#008B8B', '#2F4F4F'],
+    ['#0077BE', '#0099CC', '#66CCFF']
+  ],
+  vibrant: [
+    ['#e74c3c', '#f39c12', '#f1c40f'],
+    ['#2ecc71', '#3498db', '#9b59b6'],
+    ['#FF6B35', '#F7931E', '#FFD23F']
+  ],
+  earth: [
+    ['#8B4513', '#A0522D', '#D2B48C'],
+    ['#8e44ad', '#27ae60', '#e67e22'],
+    ['#654321', '#8B4513', '#A0522D']
+  ],
+  pastel: [
+    ['#ffb3ba', '#ffdfba', '#ffffba'],
+    ['#baffc9', '#bae1ff', '#c9baff'],
+    ['#f8d7da', '#d4edda', '#d1ecf1']
+  ]
+};
+
+// Generate sophisticated gradient
+function generateGradient(palette) {
+  const paletteGradients = gradientCombinations[palette] || gradientCombinations.warm;
+  const gradientColors = paletteGradients[Math.floor(Math.random() * paletteGradients.length)];
+  
+  return {
+    type: Math.random() > 0.5 ? 'linear' : 'radial',
+    colors: gradientColors,
+    direction: Math.random() * 360,
+    centerX: 0.3 + Math.random() * 0.4,
+    centerY: 0.3 + Math.random() * 0.4
+  };
+}
+
+// Generate sophisticated shadow
+function generateShadow(color) {
+  return {
+    blur: 5 + Math.random() * 15,
+    color: color + '40',
+    offsetX: -5 + Math.random() * 10,
+    offsetY: -5 + Math.random() * 10
+  };
+}
+
+// Golden ratio and fibonacci sequence
+const goldenRatio = 1.618;
+const fibonacciSequence = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+
+function getGoldenRatioPosition(state, elementWidth, elementHeight) {
+  const width = state.canvas.width;
+  const height = state.canvas.height;
+  
+  const goldenX = [width / goldenRatio, width - (width / goldenRatio)];
+  const goldenY = [height / goldenRatio, height - (height / goldenRatio)];
+  
+  const x = goldenX[Math.floor(Math.random() * goldenX.length)] - elementWidth / 2;
+  const y = goldenY[Math.floor(Math.random() * goldenY.length)] - elementHeight / 2;
+  
+  return {
+    x: Math.max(0, Math.min(x, width - elementWidth)),
+    y: Math.max(0, Math.min(y, height - elementHeight))
+  };
+}
+
+function getFibonacciSize() {
+  const index = Math.floor(Math.random() * (fibonacciSequence.length - 3)) + 2;
+  return fibonacciSequence[index];
+}
 
 // Analyze current artwork and suggest improvements
 function analyzeArtwork(state) {
@@ -56,27 +146,21 @@ function generateCopilotImprovements(state, analysis) {
   const issueBody = process.env.ISSUE_BODY || "";
 
   // Choose color palette based on issue context or current state
-  let selectedPalette = "vibrant";
-  if (
-    issueTitle.toLowerCase().includes("calm") ||
-    issueBody.toLowerCase().includes("peaceful")
-  ) {
-    selectedPalette = "pastel";
-  } else if (
-    issueTitle.toLowerCase().includes("nature") ||
-    issueBody.toLowerCase().includes("organic")
-  ) {
-    selectedPalette = "earth";
-  } else if (
-    issueTitle.toLowerCase().includes("cool") ||
-    issueBody.toLowerCase().includes("blue")
-  ) {
-    selectedPalette = "cool";
-  } else if (
-    issueTitle.toLowerCase().includes("warm") ||
-    issueBody.toLowerCase().includes("fire")
-  ) {
-    selectedPalette = "warm";
+  let selectedPalette = 'vibrant';
+  if (issueTitle.toLowerCase().includes('calm') || issueBody.toLowerCase().includes('peaceful')) {
+    selectedPalette = 'pastel';
+  } else if (issueTitle.toLowerCase().includes('nature') || issueBody.toLowerCase().includes('organic')) {
+    selectedPalette = 'earth';
+  } else if (issueTitle.toLowerCase().includes('cool') || issueBody.toLowerCase().includes('blue')) {
+    selectedPalette = 'cool';
+  } else if (issueTitle.toLowerCase().includes('warm') || issueBody.toLowerCase().includes('fire')) {
+    selectedPalette = 'warm';
+  } else if (issueTitle.toLowerCase().includes('ocean') || issueBody.toLowerCase().includes('water')) {
+    selectedPalette = 'ocean';
+  } else if (issueTitle.toLowerCase().includes('sunset') || issueBody.toLowerCase().includes('golden')) {
+    selectedPalette = 'sunset';
+  } else if (issueTitle.toLowerCase().includes('vibrant') || issueBody.toLowerCase().includes('colorful')) {
+    selectedPalette = 'vibrant';
   }
 
   const palette = colorPalettes[selectedPalette];
@@ -141,52 +225,176 @@ function generateCopilotImprovements(state, analysis) {
 function createIntelligentElement(state, palette, purpose) {
   const { width, height } = state.canvas;
   const color = palette[Math.floor(Math.random() * palette.length)];
-
-  // Create element with golden ratio proportions
-  const size = Math.min(width, height) * 0.1 * (1 + Math.random() * 0.618);
-
-  return {
-    type: "rectangle",
-    x: Math.random() * (width - size),
-    y: Math.random() * (height - size),
-    width: size,
-    height: size * 0.618, // Golden ratio
+  
+  // Create element with golden ratio proportions and positioning
+  const size = getFibonacciSize() * 8;
+  const pos = getGoldenRatioPosition(state, size, size * 0.618);
+  
+  // Choose element type based on purpose
+  const elementTypes = ['rectangle', 'circle', 'triangle'];
+  const elementType = elementTypes[Math.floor(Math.random() * elementTypes.length)];
+  
+  const baseElement = {
+    type: elementType,
+    x: pos.x,
+    y: pos.y,
     fillStyle: color,
     id: `copilot_${purpose}_${Date.now()}`,
+    opacity: 0.7 + Math.random() * 0.3
   };
+  
+  // Add type-specific properties
+  if (elementType === 'rectangle') {
+    baseElement.width = size;
+    baseElement.height = size * 0.618; // Golden ratio
+    
+    // Add advanced visual effects
+    if (Math.random() > 0.6) {
+      baseElement.gradient = generateGradient(getSelectedPalette(palette));
+    }
+    if (Math.random() > 0.7) {
+      baseElement.shadow = generateShadow(color);
+    }
+    if (Math.random() > 0.8) {
+      const patterns = ['dots', 'stripes', 'waves'];
+      baseElement.pattern = patterns[Math.floor(Math.random() * patterns.length)];
+    }
+  } else if (elementType === 'circle') {
+    baseElement.radius = size * 0.5;
+    baseElement.x = pos.x + baseElement.radius;
+    baseElement.y = pos.y + baseElement.radius;
+    
+    // Add gradient effects to circles
+    if (Math.random() > 0.5) {
+      baseElement.gradient = generateGradient(getSelectedPalette(palette));
+    }
+    if (Math.random() > 0.7) {
+      baseElement.shadow = generateShadow(color);
+    }
+  } else if (elementType === 'triangle') {
+    baseElement.size = size * 0.8;
+    baseElement.x = pos.x + baseElement.size;
+    baseElement.y = pos.y + baseElement.size;
+    
+    // Add rotation and effects
+    if (Math.random() > 0.6) {
+      baseElement.rotation = Math.random() * 360;
+    }
+    if (Math.random() > 0.7) {
+      baseElement.shadow = generateShadow(color);
+      baseElement.strokeStyle = color;
+      baseElement.strokeWidth = 1 + Math.random() * 2;
+    }
+  }
+  
+  return baseElement;
 }
 
 function createIntelligentText(state, palette, text) {
   const { width, height } = state.canvas;
   const color = palette[Math.floor(Math.random() * palette.length)];
-
-  return {
-    type: "text",
-    x: Math.random() * (width - 100),
-    y: 50 + Math.random() * (height - 100),
+  
+  // Use golden ratio positioning for text
+  const pos = getGoldenRatioPosition(state, 120, 40);
+  
+  const textElement = {
+    type: 'text',
+    x: pos.x,
+    y: pos.y,
     text: text,
     font: `${18 + Math.random() * 16}px Arial`,
     fillStyle: color,
     id: `copilot_text_${Date.now()}`,
+    opacity: 0.8 + Math.random() * 0.2
   };
+  
+  // Add advanced text effects
+  if (Math.random() > 0.6) {
+    textElement.gradient = generateGradient(getSelectedPalette(palette));
+  }
+  if (Math.random() > 0.7) {
+    textElement.shadow = generateShadow(color);
+  }
+  if (Math.random() > 0.8) {
+    textElement.strokeStyle = color;
+    textElement.strokeWidth = 1;
+  }
+  
+  return textElement;
 }
 
 function createArtisticEnhancement(state, palette) {
   const { width, height } = state.canvas;
   const color = palette[Math.floor(Math.random() * palette.length)];
+  
+  // Create sophisticated artistic elements
+  const enhancementTypes = ['gradient_rectangle', 'spiral', 'curve', 'pattern_circle'];
+  const enhancementType = enhancementTypes[Math.floor(Math.random() * enhancementTypes.length)];
+  
+  const baseSize = getFibonacciSize() * 6;
+  const pos = getGoldenRatioPosition(state, baseSize * 2, baseSize * 2);
+  
+  if (enhancementType === 'gradient_rectangle') {
+    return {
+      type: 'rectangle',
+      x: pos.x,
+      y: pos.y,
+      width: baseSize * 1.5,
+      height: baseSize,
+      fillStyle: color,
+      gradient: generateGradient(getSelectedPalette(palette)),
+      shadow: generateShadow(color),
+      opacity: 0.6 + Math.random() * 0.4,
+      id: `copilot_enhancement_${Date.now()}`
+    };
+  } else if (enhancementType === 'spiral') {
+    return {
+      type: 'spiral',
+      x: pos.x + baseSize,
+      y: pos.y + baseSize,
+      radius: baseSize,
+      fillStyle: color,
+      strokeStyle: color,
+      strokeWidth: 2,
+      opacity: 0.7,
+      id: `copilot_spiral_${Date.now()}`
+    };
+  } else if (enhancementType === 'curve') {
+    return {
+      type: 'curve',
+      x: pos.x,
+      y: pos.y,
+      width: baseSize * 2,
+      height: baseSize,
+      fillStyle: color,
+      strokeStyle: color,
+      strokeWidth: 3,
+      opacity: 0.8,
+      id: `copilot_curve_${Date.now()}`
+    };
+  } else {
+    return {
+      type: 'circle',
+      x: pos.x + baseSize,
+      y: pos.y + baseSize,
+      radius: baseSize,
+      fillStyle: color,
+      pattern: 'dots',
+      opacity: 0.6,
+      id: `copilot_pattern_${Date.now()}`
+    };
+  }
+}
 
-  // Create an artistic element with interesting proportions
-  const baseSize = Math.min(width, height) * 0.08;
-
-  return {
-    type: "rectangle",
-    x: Math.random() * (width - baseSize * 2),
-    y: Math.random() * (height - baseSize * 2),
-    width: baseSize * (1 + Math.random()),
-    height: baseSize * (0.5 + Math.random() * 1.5),
-    fillStyle: color,
-    id: `copilot_enhancement_${Date.now()}`,
-  };
+function getSelectedPalette(palette) {
+  // Determine palette name from colors
+  const paletteNames = Object.keys(colorPalettes);
+  for (const name of paletteNames) {
+    if (colorPalettes[name].includes(palette[0])) {
+      return name;
+    }
+  }
+  return 'vibrant';
 }
 
 function generateContextualText(title, body) {
