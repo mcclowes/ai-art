@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { writeArtworkState } = require('./utils/artwork-writer');
 
 // Read the current artwork state from the TypeScript file
 const artworkTsPath = path.join(__dirname, 'src', 'artwork-state.ts');
@@ -238,31 +239,5 @@ currentState.lastUpdated = new Date().toISOString();
 console.log('Applied Copilot improvements:', appliedImprovements);
 
 // Write back the updated state to the TypeScript file
-const newContent = `export interface ArtworkElement {
-  type: string;
-  x: number;
-  y: number;
-  width?: number;
-  height?: number;
-  fillStyle: string;
-  id: string;
-  text?: string;
-  font?: string;
-}
-
-export interface ArtworkState {
-  canvas: {
-    width: number;
-    height: number;
-    background: string;
-  };
-  elements: ArtworkElement[];
-  generation: number;
-  lastUpdated: string;
-}
-
-// Artwork state data
-export const artworkState: ArtworkState = ${JSON.stringify(currentState, null, 2)};`;
-
-fs.writeFileSync(artworkTsPath, newContent);
+writeArtworkState(currentState, artworkTsPath);
 console.log(`✅ Copilot updated artwork to generation ${currentState.generation}`);
