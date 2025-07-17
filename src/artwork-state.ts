@@ -10,6 +10,7 @@ export interface ArtworkElement {
   font?: string;
   radius?: number; // for circles
   size?: number; // for triangles
+  svgContent?: string; // for SVG elements
 }
 
 export interface ArtworkState {
