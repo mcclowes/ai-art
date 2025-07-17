@@ -8,8 +8,6 @@ export interface ArtworkElement {
   id: string;
   text?: string;
   font?: string;
-  radius?: number; // for circles
-  size?: number; // for triangles
 }
 
 export interface ArtworkState {
@@ -21,7 +19,6 @@ export interface ArtworkState {
   elements: ArtworkElement[];
   generation: number;
   lastUpdated: string;
-  cycleStarted: string;
 }
 
 // Artwork state data
@@ -41,8 +38,26 @@ export const artworkState: ArtworkState = {
       "fillStyle": "#e74c3c",
       "id": "rect1"
     },
+    {
+      "type": "text",
+      "x": 50.15825594441219,
+      "y": 403.9367413233695,
+      "text": "Making",
+      "font": "26.82886155053166px Arial",
+      "fillStyle": "#2ecc71",
+      "id": "copilot_text_1752726527797"
+    },
+    {
+      "type": "rectangle",
+      "x": 4.878862579303302,
+      "y": 113.67673561458005,
+      "width": 67.1886292641572,
+      "height": 41.52257288524915,
+      "fillStyle": "#f39c12",
+      "id": "copilot_complement_1752726527796"
+    }
   ],
-  "generation": 1,
-  "lastUpdated": "2025-07-17T04:17:26.312Z",
+  "generation": 2,
+  "lastUpdated": "2025-07-17T04:28:47.797Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
