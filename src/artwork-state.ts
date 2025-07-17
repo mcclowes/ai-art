@@ -8,6 +8,8 @@ export interface ArtworkElement {
   id: string;
   text?: string;
   font?: string;
+  radius?: number; // for circles
+  size?: number; // for triangles
 }
 
 export interface ArtworkState {
@@ -19,6 +21,7 @@ export interface ArtworkState {
   elements: ArtworkElement[];
   generation: number;
   lastUpdated: string;
+  cycleStarted: string;
 }
 
 // Artwork state data
@@ -35,64 +38,11 @@ export const artworkState: ArtworkState = {
       "y": 50,
       "width": 200,
       "height": 100,
-      "fillStyle": "#e67e22",
+      "fillStyle": "#e74c3c",
       "id": "rect1"
     },
-    {
-      "type": "text",
-      "x": 70,
-      "y": 120,
-      "text": "Hello Canvas!",
-      "font": "24px Arial",
-      "fillStyle": "#fff",
-      "id": "text1"
-    },
-    {
-      "type": "rectangle",
-      "x": 151,
-      "y": 82,
-      "width": 130.12145536400706,
-      "height": 57.07535692995391,
-      "fillStyle": "#e74c3c",
-      "id": "element_1752677536165"
-    },
-    {
-      "type": "rectangle",
-      "x": 217,
-      "y": 310,
-      "width": 67.28405940904902,
-      "height": 77.70774308605628,
-      "fillStyle": "#f1c40f",
-      "id": "element_1752677671341"
-    },
-    {
-      "type": "rectangle",
-      "x": 54.23366851182683,
-      "y": 140.6746934995571,
-      "width": 81.29490744144758,
-      "height": 50.2402527988146,
-      "fillStyle": "#9b59b6",
-      "id": "copilot_complement_1752678664165"
-    },
-    {
-      "type": "rectangle",
-      "x": 118.98124351050551,
-      "y": 276.12132749996175,
-      "width": 64.48094524919311,
-      "height": 26.9898246271802,
-      "fillStyle": "#ffdfba",
-      "id": "copilot_enhancement_1752678811064"
-    },
-    {
-      "type": "text",
-      "x": 256.84133930653235,
-      "y": 252.79028124875654,
-      "text": "Peaceful",
-      "font": "23.94508437175195px Arial",
-      "fillStyle": "#ffdfba",
-      "id": "copilot_text_1752678811064"
-    }
   ],
-  "generation": 7,
-  "lastUpdated": "2025-07-16T15:13:31.064Z"
+  "generation": 1,
+  "lastUpdated": "2025-07-17T04:17:26.312Z",
+  "cycleStarted": "2025-07-16T19:12:58.892Z"
 };

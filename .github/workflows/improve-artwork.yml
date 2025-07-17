@@ -33,5 +33,6 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add src/artwork-state.ts
+        git add archive/
         git commit -m "Improve artwork - Generation $(node -e 'const fs = require("fs"); const content = fs.readFileSync("src/artwork-state.ts", "utf8"); const match = content.match(/"generation": (\d+)/); console.log(match ? match[1] : "unknown");')" || exit 0
         git push
