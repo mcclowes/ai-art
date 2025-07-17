@@ -56,7 +56,7 @@ export const artworkState: ArtworkState = {
       "y": 113.67673561458005,
       "width": 67.1886292641572,
       "height": 41.52257288524915,
-      "fillStyle": "#f39c12",
+      "fillStyle": "#3498db",
       "id": "copilot_complement_1752726527796"
     },
     {
@@ -64,7 +64,7 @@ export const artworkState: ArtworkState = {
       "x": 84.22294213343332,
       "y": 199.22294213343332,
       "size": 84.22294213343332,
-      "fillStyle": "#9b59b6",
+      "fillStyle": "#3498db",
       "id": "triangle_1752745596492"
     },
     {
@@ -76,7 +76,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1752745596492"
     }
   ],
-  "generation": 3,
-  "lastUpdated": "2025-07-17T09:46:36.492Z",
+  "generation": 4,
+  "lastUpdated": "2025-07-17T09:48:47.939Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
