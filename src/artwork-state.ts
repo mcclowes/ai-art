@@ -89,7 +89,7 @@ export const artworkState: ArtworkState = {
       "y": 141,
       "width": 98.37053890677569,
       "height": 115.92081874275152,
-      "fillStyle": "#f39c12",
+      "fillStyle": "#e67e22",
       "id": "element_1752678617268"
     },
     {
@@ -165,6 +165,6 @@ export const artworkState: ArtworkState = {
       "id": "text_1752689220358"
     }
   ],
-  "generation": 22,
-  "lastUpdated": "2025-07-17T00:23:57.406Z"
+  "generation": 23,
+  "lastUpdated": "2025-07-17T01:33:53.529Z"
 };
