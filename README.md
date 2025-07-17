@@ -32,18 +32,18 @@ This project showcases an evolving digital artwork that improves itself every ho
    - Applies intelligent improvements based on color theory, composition, and issue context
    - Uses contextual color palettes and meaningful text based on the issue description
    - Automatically commits changes and comments on the issue
-4. After a week, the current artwork is saved to the `archive/` directory and a new cycle begins
-5. The changes are automatically committed and pushed to the repository
-6. The artwork continues to evolve with increasingly sophisticated improvements in weekly cycles
+5. After a week, the current artwork is saved to the `archive/` directory and a new cycle begins
+6. The changes are automatically committed and pushed to the repository
+7. The artwork continues to evolve with increasingly sophisticated improvements in weekly cycles
 
 ## Intelligent Improvement Types
 
 ### Automated Random Improvements (Hourly)
+
 - **Add Rectangle**: Creates new colored rectangles at random positions
 - **Change Color**: Updates the color of existing elements
 - **Add Text**: Places inspirational text at random locations
 - **Move Element**: Repositions existing elements
-
 
 - **Smart Rectangle Addition**: Places new rectangles in optimal positions based on visual balance analysis
 - **Color Harmonization**: Updates existing element colors to create better color harmony using curated palettes
@@ -52,6 +52,7 @@ This project showcases an evolving digital artwork that improves itself every ho
 - **AI-Guided Enhancements**: Optional OpenAI integration for advanced artwork analysis and suggestions
 
 ### Copilot AI Improvements (Issue-Triggered)
+
 - **Intelligent Color Harmony**: Applies color theory with contextual palettes (warm, cool, earth, pastel, vibrant)
 - **Compositional Balance**: Uses rule of thirds and golden ratio for better visual arrangement
 - **Contextual Text**: Generates meaningful text based on issue titles and descriptions
@@ -63,21 +64,25 @@ This project showcases an evolving digital artwork that improves itself every ho
 To minimize PR conflicts, this project implements several strategies:
 
 ### Build Artifacts Management
+
 - **Build artifacts are not committed**: The `dist/` directory is excluded from git via `.gitignore`
 - **Hash-based filenames**: Vite generates files like `index-0RHxSTq_.js` that change with each build
 - **Workflows validate builds**: GitHub Actions run `npm run build` to ensure changes are valid, but don't commit the output
 
 ### Artwork State Management
-- **Standardized file writing**: Both improvement scripts use a shared utility (`utils/artwork-writer.js`) 
+
+- **Standardized file writing**: Both improvement scripts use a shared utility (`utils/artwork-writer.js`)
 - **Consistent interface definitions**: TypeScript interfaces are identical across all scripts
 - **Atomic updates**: Each script updates the artwork state file completely to avoid partial conflicts
 
 ### Automated Commit Strategy
+
 - **Selective commits**: GitHub Actions only commit source files (`src/artwork-state.ts`, `archive/`)
 - **Frequent small changes**: Hourly improvements make small, incremental changes
 - **Generation tracking**: Each change increments the generation counter for easy conflict resolution
 
 This approach ensures that:
+
 1. Build artifacts don't create false conflicts between PRs
 2. Artwork state modifications are predictable and consistent
 3. Manual PRs can be merged without conflicts from automated systems
@@ -85,59 +90,70 @@ This approach ensures that:
 ## Development
 
 ### Prerequisites
+
 - Node.js 18 or higher
 - npm
 
 ### Setup
+
 \`\`\`bash
 npm install
 \`\`\`
 
 ### Run Development Server
+
 \`\`\`bash
 npm start
 \`\`\`
 
 ### Build
+
 \`\`\`bash
 npm run build
 \`\`\`
 
 ### Manual Improvement
+
 \`\`\`bash
 node improve-artwork.js
 \`\`\`
 
 ### Copilot Improvement
+
 \`\`\`bash
+
 # Test Copilot improvements with context
+
 ISSUE_TITLE="Make it more vibrant" ISSUE_BODY="Add warm colors and inspiring text" node copilot-improve-artwork.js
 \`\`\`
 
 ## Current Generation
 
 The artwork is currently at generation 5 and continues to evolve automatically through both hourly random improvements and Copilot AI enhancements.
+
 ### AI-Enhanced Improvements
+
 To enable AI-guided improvements, set your OpenAI API key:
 \`\`\`bash
 OPENAI_API_KEY=your-api-key node improve-artwork.js
 \`\`\`
 
 The AI integration provides:
+
 - Advanced artwork analysis
-- Intelligent improvement suggestions  
+- Intelligent improvement suggestions
 - Weighted decision making for better visual outcomes
 
 ## Current Generation
 
 The artwork is currently at generation 2 and continues to evolve automatically with intelligent improvements in weekly cycles. Previous completed cycles are archived in the `archive/` directory.
 
-
 ## Automation
 
 The artwork improves automatically through two GitHub Actions workflows:
 
 ### Hourly Random Improvements (`.github/workflows/improve-artwork.yml`)
+
 - Runs every hour via cron schedule
 - Can be triggered manually
 - Applies random improvements using `improve-artwork.js`
@@ -145,6 +161,7 @@ The artwork improves automatically through two GitHub Actions workflows:
 - Commits improvements automatically
 
 ### Copilot AI Improvements (`.github/workflows/copilot-improve-artwork.yml`)
+
 - Triggered when issues are assigned to the GitHub Copilot agent
 - Analyzes current artwork and applies intelligent improvements
 - Uses contextual information from issue titles and descriptions

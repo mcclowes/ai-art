@@ -165,8 +165,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "rectangle",
-      "x": 256.8760006002757,
-      "y": 372.8400869636817,
+      "x": 236,
+      "y": 518,
       "width": 58.64674671197657,
       "height": 61.37420944744174,
       "fillStyle": "#9b59b6",
