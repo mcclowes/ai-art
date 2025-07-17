@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { artworkState, ArtworkElement } from "./artwork-state";
 
-const Canvas: React.FC = () => {
+function App() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -30,22 +30,50 @@ const Canvas: React.FC = () => {
     });
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      width={artworkState.canvas.width}
-      height={artworkState.canvas.height}
-      style={{ border: "1px solid #ccc" }}
-    />
-  );
-};
+  const downloadCanvas = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    
+    // Convert canvas to data URL
+    const dataURL = canvas.toDataURL('image/png');
+    
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.download = `ai-art-generation-${artworkState.generation}.png`;
+    link.href = dataURL;
+    
+    // Trigger download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
-function App() {
   return (
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
       <h1>AI Art - Generation {artworkState.generation}</h1>
       <p>Last updated: {artworkState.lastUpdated}</p>
-      <Canvas />
+      <canvas
+        ref={canvasRef}
+        width={artworkState.canvas.width}
+        height={artworkState.canvas.height}
+        style={{ border: "1px solid #ccc" }}
+      />
+      <div style={{ marginTop: "1rem" }}>
+        <button 
+          onClick={downloadCanvas}
+          style={{
+            padding: "10px 20px",
+            fontSize: "16px",
+            backgroundColor: "#3498db",
+            color: "white",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer"
+          }}
+        >
+          Download as PNG
+        </button>
+      </div>
     </div>
   );
 }
