@@ -158,7 +158,7 @@ export const artworkState: ArtworkState = {
     {
       "type": "text",
       "x": 682,
-      "y": 34,
+      "y": 484,
       "text": "Create",
       "font": "25.854166087398973px Arial",
       "fillStyle": "#f39c12",
@@ -174,6 +174,6 @@ export const artworkState: ArtworkState = {
       "id": "element_1752720106434"
     }
   ],
-  "generation": 25,
-  "lastUpdated": "2025-07-17T03:32:50.987Z"
+  "generation": 26,
+  "lastUpdated": "2025-07-17T04:17:26.312Z"
 };
