@@ -5,6 +5,7 @@ This project showcases an evolving digital artwork that improves itself every ho
 ## Features
 
 - **Automated Evolution**: GitHub Actions runs every hour to enhance the artwork
+- **Codebase Improvement**: Automated system that iteratively improves code quality, features, and performance
 - **Copilot Integration**: GitHub Copilot can intelligently improve artwork when assigned to issues
 - **Weekly Cycles**: After a week, the artwork is archived and a new cycle begins
 - **Data-Driven Rendering**: Canvas rendering based on structured data in `src/artwork-state.ts`
@@ -150,13 +151,23 @@ The artwork is currently at generation 2 and continues to evolve automatically w
 
 ## Automation
 
-The artwork improves automatically through two GitHub Actions workflows:
+The project features two automated improvement systems running in parallel:
 
-### Hourly Random Improvements (`.github/workflows/improve-artwork.yml`)
+### Artwork Evolution (`.github/workflows/improve-artwork.yml`)
 
 - Runs every hour via cron schedule
 - Can be triggered manually
 - Applies random improvements using `improve-artwork.js`
+- Validates changes by building the project
+- Commits improvements automatically
+
+### Codebase Evolution (`.github/workflows/improve-codebase.yml`)
+
+- Runs every 6 hours via cron schedule  
+- Can be triggered manually or on pull requests
+- Applies code quality improvements using `improve-codebase.js`
+- Includes formatting, type safety, performance optimizations
+- Tracks codebase version and quality metrics
 - Validates changes by building the project
 - Commits improvements automatically
 
@@ -167,6 +178,36 @@ The artwork improves automatically through two GitHub Actions workflows:
 - Uses contextual information from issue titles and descriptions
 - Automatically commits changes and comments on the issue
 - Validates changes by building the project
+
+## Iterative Codebase Improvements
+
+This project now features an **automated codebase improvement system** that works alongside the artwork evolution. Just like the artwork gets better over time, the codebase continuously improves through:
+
+- **Code Quality**: Formatting, TypeScript enhancements, documentation
+- **Performance**: React optimizations, canvas rendering improvements  
+- **Features**: Undo/redo, accessibility, testing infrastructure
+- **Developer Experience**: Better tooling, error handling, build optimizations
+
+See [CODEBASE_IMPROVEMENTS.md](./CODEBASE_IMPROVEMENTS.md) for detailed information about the codebase improvement system.
+
+### Running Codebase Improvements Manually
+
+```bash
+# Analyze and improve the codebase
+node improve-codebase.js
+
+# Check current codebase status
+node -e "
+  const fs = require('fs');
+  if (fs.existsSync('src/codebase-state.ts')) {
+    const content = fs.readFileSync('src/codebase-state.ts', 'utf8');
+    const match = content.match(/version: (\d+)/);
+    const scoreMatch = content.match(/codeQualityScore: (\d+)/);
+    console.log(\`Codebase Version: \${match ? match[1] : 'unknown'}\`);
+    console.log(\`Quality Score: \${scoreMatch ? scoreMatch[1] : 'unknown'}/100\`);
+  }
+"
+```
 
 ## Using Copilot for Artwork Improvements
 
