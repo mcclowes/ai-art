@@ -21,6 +21,7 @@ export interface ArtworkState {
   elements: ArtworkElement[];
   generation: number;
   lastUpdated: string;
+  cycleStarted: string;
 }
 
 // Artwork state data
@@ -37,178 +38,11 @@ export const artworkState: ArtworkState = {
       "y": 50,
       "width": 200,
       "height": 100,
-      "fillStyle": "#f39c12",
+      "fillStyle": "#e74c3c",
       "id": "rect1"
     },
-    {
-      "type": "text",
-      "x": 416,
-      "y": 334,
-      "text": "Hello Canvas!",
-      "font": "24px Arial",
-      "fillStyle": "#fff",
-      "id": "text1"
-    },
-    {
-      "type": "rectangle",
-      "x": 151,
-      "y": 82,
-      "width": 130.12145536400706,
-      "height": 57.07535692995391,
-      "fillStyle": "#e74c3c",
-      "id": "element_1752677536165"
-    },
-    {
-      "type": "rectangle",
-      "x": 217,
-      "y": 310,
-      "width": 67.28405940904902,
-      "height": 77.70774308605628,
-      "fillStyle": "#d35400",
-      "id": "element_1752677671341"
-    },
-    {
-      "type": "rectangle",
-      "x": 568,
-      "y": 209,
-      "width": 128.45533399862614,
-      "height": 108.66204749049913,
-      "fillStyle": "#e74c3c",
-      "id": "element_1752678460915"
-    },
-    {
-      "type": "rectangle",
-      "x": 91,
-      "y": 144,
-      "width": 80.27450640700856,
-      "height": 109.96077453880888,
-      "fillStyle": "#d35400",
-      "id": "element_1752678617268"
-    },
-    {
-      "type": "rectangle",
-      "x": 16,
-      "y": 191,
-      "width": 98.37053890677569,
-      "height": 115.92081874275152,
-      "fillStyle": "#f39c12",
-      "id": "element_1752678617268"
-    },
-    {
-      "type": "text",
-      "x": 82,
-      "y": 384,
-      "text": "Harmony",
-      "font": "26.541380780013792px Arial",
-      "fillStyle": "#f1c40f",
-      "id": "text_1752678626808"
-    },
-    {
-      "type": "rectangle",
-      "x": 71,
-      "y": 463,
-      "width": 120.33619369416976,
-      "height": 136.10498470106728,
-      "fillStyle": "#f39c12",
-      "id": "element_1752678626808"
-    },
-    {
-      "type": "rectangle",
-      "x": 200,
-      "y": 0,
-      "width": 130.75257804378685,
-      "height": 124.80549969187908,
-      "fillStyle": "#d35400",
-      "id": "element_1752678626908"
-    },
-    {
-      "type": "text",
-      "x": 282,
-      "y": 234,
-      "text": "Transform",
-      "font": "27.232682721401194px Arial",
-      "fillStyle": "#f39c12",
-      "id": "text_1752678820257"
-    },
-    {
-      "type": "text",
-      "x": 282,
-      "y": 534,
-      "text": "Evolve",
-      "font": "23.5078118063695px Arial",
-      "fillStyle": "#f39c12",
-      "id": "text_1752678828772"
-    },
-    {
-      "type": "rectangle",
-      "x": 481,
-      "y": 10,
-      "width": 101.88088346876697,
-      "height": 77.30921311476395,
-      "fillStyle": "#f39c12",
-      "id": "element_1752678828823"
-    },
-    {
-      "type": "text",
-      "x": 482,
-      "y": 484,
-      "text": "Vision",
-      "font": "25.051557322945882px Arial",
-      "fillStyle": "#e74c3c",
-      "id": "text_1752685614252"
-    },
-    {
-      "type": "text",
-      "x": 682,
-      "y": 34,
-      "text": "Create",
-      "font": "25.854166087398973px Arial",
-      "fillStyle": "#f39c12",
-      "id": "text_1752689220358"
-    },
-    {
-      "type": "rectangle",
-      "x": 618,
-      "y": 150,
-      "width": 94.08935817893527,
-      "height": 98.65275433137222,
-      "fillStyle": "#e74c3c",
-      "id": "element_1752693102482"
-    },
-    {
-      "type": "triangle",
-      "x": 665.1800296757956,
-      "y": 349.1800296757956,
-      "size": 69.1800296757956,
-      "fillStyle": "#f39c12",
-      "id": "triangle_1752693102538"
-    },
-    {
-      "type": "circle",
-      "x": 665.3477698069298,
-      "y": 499.3477698069298,
-      "radius": 31.34776980692979,
-      "fillStyle": "#f1c40f",
-      "id": "circle_1752693111154"
-    },
-    {
-      "type": "rectangle",
-      "x": 90,
-      "y": 136,
-      "width": 83.8110939719955,
-      "height": 126.74889178014682,
-      "fillStyle": "#e67e22",
-      "id": "element_1752693142929"
-    },
-    {
-      "type": "circle",
-      "x": 131.5982731237979,
-      "y": 248.5982731237979,
-      "radius": 76.5982731237979,
-      "fillStyle": "#d35400",
-      "id": "circle_1752693142985"
-    }
   ],
-  "generation": 25,
-  "lastUpdated": "2025-07-16T19:12:22.985Z"
+  "generation": 1,
+  "lastUpdated": "2025-07-17T04:17:26.312Z",
+  "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
