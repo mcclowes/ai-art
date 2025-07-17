@@ -3,11 +3,17 @@ import { artworkState, ArtworkElement } from "./artwork-state";
 
 function App() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [elements, setElements] = useState<ArtworkElement[]>(artworkState.elements);
-  const [selectedElementId, setSelectedElementId] = useState<string | null>(null);
+  const [elements, setElements] = useState<ArtworkElement[]>(
+    artworkState.elements
+  );
+  const [selectedElementId, setSelectedElementId] = useState<string | null>(
+    null
+  );
   const [isInteractive, setIsInteractive] = useState(false);
-  const [currentTool, setCurrentTool] = useState<'rectangle' | 'circle' | 'triangle' | 'text' | 'select'>('select');
-  const [currentColor, setCurrentColor] = useState('#3498db');
+  const [currentTool, setCurrentTool] = useState<
+    "rectangle" | "circle" | "triangle" | "text" | "select"
+  >("select");
+  const [currentColor, setCurrentColor] = useState("#3498db");
 
   const drawCanvas = useCallback(() => {
     const canvas = canvasRef.current;
@@ -22,21 +28,25 @@ function App() {
     // Render each element
     artworkState.elements.forEach((element: ArtworkElement) => {
       ctx.save(); // Save the current state
-      
+
       // Apply rotation if specified
       if (element.rotation) {
-        const centerX = element.x + (element.width || element.radius || element.size || 0) / 2;
-        const centerY = element.y + (element.height || element.radius || element.size || 0) / 2;
+        const centerX =
+          element.x +
+          (element.width || element.radius || element.size || 0) / 2;
+        const centerY =
+          element.y +
+          (element.height || element.radius || element.size || 0) / 2;
         ctx.translate(centerX, centerY);
         ctx.rotate((element.rotation * Math.PI) / 180);
         ctx.translate(-centerX, -centerY);
       }
-      
+
       // Apply opacity if specified
       if (element.opacity !== undefined) {
         ctx.globalAlpha = element.opacity;
       }
-      
+
       // Apply shadow if specified
       if (element.shadow) {
         ctx.shadowBlur = element.shadow.blur;
@@ -44,46 +54,82 @@ function App() {
         ctx.shadowOffsetX = element.shadow.offsetX;
         ctx.shadowOffsetY = element.shadow.offsetY;
       }
-      
+
       // Set up fill style (gradient or solid color)
       if (element.gradient) {
         let gradient;
-        if (element.gradient.type === 'linear') {
-          const angle = (element.gradient.direction || 0) * Math.PI / 180;
+        if (element.gradient.type === "linear") {
+          const angle = ((element.gradient.direction || 0) * Math.PI) / 180;
           const x1 = element.x;
           const y1 = element.y;
-          const x2 = element.x + Math.cos(angle) * (element.width || element.radius || element.size || 100);
-          const y2 = element.y + Math.sin(angle) * (element.height || element.radius || element.size || 100);
+          const x2 =
+            element.x +
+            Math.cos(angle) *
+              (element.width || element.radius || element.size || 100);
+          const y2 =
+            element.y +
+            Math.sin(angle) *
+              (element.height || element.radius || element.size || 100);
           gradient = ctx.createLinearGradient(x1, y1, x2, y2);
         } else {
-          const centerX = element.gradient.centerX || element.x + (element.width || element.radius || element.size || 100) / 2;
-          const centerY = element.gradient.centerY || element.y + (element.height || element.radius || element.size || 100) / 2;
-          const radius = Math.max(element.width || element.radius || element.size || 100, element.height || element.radius || element.size || 100) / 2;
-          gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius);
+          const centerX =
+            element.gradient.centerX ||
+            element.x +
+              (element.width || element.radius || element.size || 100) / 2;
+          const centerY =
+            element.gradient.centerY ||
+            element.y +
+              (element.height || element.radius || element.size || 100) / 2;
+          const radius =
+            Math.max(
+              element.width || element.radius || element.size || 100,
+              element.height || element.radius || element.size || 100
+            ) / 2;
+          gradient = ctx.createRadialGradient(
+            centerX,
+            centerY,
+            0,
+            centerX,
+            centerY,
+            radius
+          );
         }
-        
+
         element.gradient.colors.forEach((color, index) => {
-          gradient.addColorStop(index / (element.gradient!.colors.length - 1), color);
+          gradient.addColorStop(
+            index / (element.gradient!.colors.length - 1),
+            color
+          );
         });
         ctx.fillStyle = gradient;
       } else {
         ctx.fillStyle = element.fillStyle;
       }
-      
+
       // Set up stroke if specified
       if (element.strokeStyle) {
         ctx.strokeStyle = element.strokeStyle;
         ctx.lineWidth = element.strokeWidth || 1;
       }
-      
+
       switch (element.type) {
         case "rectangle":
           if (element.pattern) {
             drawPattern(ctx, element, element.pattern);
           } else {
-            ctx.fillRect(element.x, element.y, element.width || 0, element.height || 0);
+            ctx.fillRect(
+              element.x,
+              element.y,
+              element.width || 0,
+              element.height || 0
+            );
             if (element.strokeStyle) {
-              ctx.strokeRect(element.x, element.y, element.width || 0, element.height || 0);
+              ctx.strokeRect(
+                element.x,
+                element.y,
+                element.width || 0,
+                element.height || 0
+              );
             }
           }
           break;
@@ -129,25 +175,29 @@ function App() {
           drawSpiral(ctx, element);
           break;
       }
-      
+
       ctx.restore(); // Restore the previous state
     });
-    
+
     // Pattern drawing function
-    function drawPattern(ctx: CanvasRenderingContext2D, element: ArtworkElement, pattern: string) {
+    function drawPattern(
+      ctx: CanvasRenderingContext2D,
+      element: ArtworkElement,
+      pattern: string
+    ) {
       const x = element.x;
       const y = element.y;
       const width = element.width || element.radius || element.size || 100;
       const height = element.height || element.radius || element.size || 100;
-      
+
       ctx.save();
-      
+
       // Create clipping path for the shape
-      if (element.type === 'rectangle') {
+      if (element.type === "rectangle") {
         ctx.rect(x, y, width, height);
-      } else if (element.type === 'circle') {
+      } else if (element.type === "circle") {
         ctx.arc(x, y, element.radius || 50, 0, Math.PI * 2);
-      } else if (element.type === 'triangle') {
+      } else if (element.type === "triangle") {
         const size = element.size || 50;
         ctx.moveTo(x, y - size);
         ctx.lineTo(x - size * 0.866, y + size * 0.5);
@@ -155,9 +205,9 @@ function App() {
         ctx.closePath();
       }
       ctx.clip();
-      
+
       switch (pattern) {
-        case 'dots':
+        case "dots":
           for (let i = 0; i < width; i += 20) {
             for (let j = 0; j < height; j += 20) {
               ctx.beginPath();
@@ -166,7 +216,7 @@ function App() {
             }
           }
           break;
-        case 'stripes':
+        case "stripes":
           for (let i = 0; i < width + height; i += 10) {
             ctx.beginPath();
             ctx.moveTo(x + i, y);
@@ -175,9 +225,10 @@ function App() {
             ctx.stroke();
           }
           break;
-        case 'waves':
+        case "waves":
           for (let i = 0; i < width; i += 2) {
-            const waveY = y + height / 2 + Math.sin((i / width) * Math.PI * 4) * 20;
+            const waveY =
+              y + height / 2 + Math.sin((i / width) * Math.PI * 4) * 20;
             ctx.beginPath();
             ctx.moveTo(x + i, y);
             ctx.lineTo(x + i, waveY);
@@ -185,24 +236,24 @@ function App() {
             ctx.stroke();
           }
           break;
-        case 'spiral':
+        case "spiral":
           drawSpiral(ctx, element);
           break;
       }
-      
+
       ctx.restore();
     }
-    
+
     // Curve drawing function
     function drawCurve(ctx: CanvasRenderingContext2D, element: ArtworkElement) {
       const x = element.x;
       const y = element.y;
       const width = element.width || 200;
       const height = element.height || 100;
-      
+
       ctx.beginPath();
       ctx.moveTo(x, y);
-      
+
       // Create a smooth curve
       const controlX1 = x + width * 0.25;
       const controlY1 = y - height * 0.5;
@@ -210,26 +261,29 @@ function App() {
       const controlY2 = y + height * 0.5;
       const endX = x + width;
       const endY = y;
-      
+
       ctx.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
-      
+
       if (element.strokeStyle) {
         ctx.stroke();
       } else {
         ctx.fill();
       }
     }
-    
+
     // Spiral drawing function
-    function drawSpiral(ctx: CanvasRenderingContext2D, element: ArtworkElement) {
+    function drawSpiral(
+      ctx: CanvasRenderingContext2D,
+      element: ArtworkElement
+    ) {
       const x = element.x;
       const y = element.y;
       const radius = element.radius || 50;
       const turns = 3;
-      
+
       ctx.beginPath();
       ctx.moveTo(x, y);
-      
+
       for (let i = 0; i < turns * 360; i++) {
         const angle = (i * Math.PI) / 180;
         const spiralRadius = (radius * i) / (turns * 360);
@@ -237,7 +291,7 @@ function App() {
         const spiralY = y + Math.sin(angle) * spiralRadius;
         ctx.lineTo(spiralX, spiralY);
       }
-      
+
       if (element.strokeStyle) {
         ctx.stroke();
       } else {
@@ -251,20 +305,34 @@ function App() {
   }, [drawCanvas]);
 
   // Check if a point is inside an element
-  const isPointInElement = (x: number, y: number, element: ArtworkElement): boolean => {
+  const isPointInElement = (
+    x: number,
+    y: number,
+    element: ArtworkElement
+  ): boolean => {
     switch (element.type) {
       case "rectangle":
-        return x >= element.x && x <= element.x + (element.width || 0) &&
-               y >= element.y && y <= element.y + (element.height || 0);
+        return (
+          x >= element.x &&
+          x <= element.x + (element.width || 0) &&
+          y >= element.y &&
+          y <= element.y + (element.height || 0)
+        );
       case "circle":
         const radius = element.radius || 50;
-        const distance = Math.sqrt(Math.pow(x - element.x, 2) + Math.pow(y - element.y, 2));
+        const distance = Math.sqrt(
+          Math.pow(x - element.x, 2) + Math.pow(y - element.y, 2)
+        );
         return distance <= radius;
       case "triangle":
         const size = element.size || 50;
         // Simple triangle bounds check (could be more precise)
-        return x >= element.x - size && x <= element.x + size &&
-               y >= element.y - size && y <= element.y + size;
+        return (
+          x >= element.x - size &&
+          x <= element.x + size &&
+          y >= element.y - size &&
+          y <= element.y + size
+        );
       case "text":
         const canvas = canvasRef.current;
         if (!canvas) return false;
@@ -272,8 +340,12 @@ function App() {
         if (!ctx) return false;
         if (element.font) ctx.font = element.font;
         const metrics = ctx.measureText(element.text || "");
-        return x >= element.x && x <= element.x + metrics.width &&
-               y >= element.y - parseInt(element.font || "16px") && y <= element.y;
+        return (
+          x >= element.x &&
+          x <= element.x + metrics.width &&
+          y >= element.y - parseInt(element.font || "16px") &&
+          y <= element.y
+        );
       default:
         return false;
     }
@@ -282,15 +354,15 @@ function App() {
   // Handle canvas click
   const handleCanvasClick = (event: React.MouseEvent<HTMLCanvasElement>) => {
     if (!isInteractive) return;
-    
+
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
+
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-    
-    if (currentTool === 'select') {
+
+    if (currentTool === "select") {
       // Find clicked element (check from top to bottom)
       let clickedElement = null;
       for (let i = elements.length - 1; i >= 0; i--) {
@@ -299,7 +371,7 @@ function App() {
           break;
         }
       }
-      
+
       if (clickedElement) {
         setSelectedElementId(clickedElement.id);
       } else {
@@ -313,12 +385,12 @@ function App() {
         x: x,
         y: y,
         fillStyle: currentColor,
-        ...(currentTool === 'rectangle' && { width: 100, height: 60 }),
-        ...(currentTool === 'circle' && { radius: 40 }),
-        ...(currentTool === 'triangle' && { size: 50 }),
-        ...(currentTool === 'text' && { text: 'New Text', font: '20px Arial' }),
+        ...(currentTool === "rectangle" && { width: 100, height: 60 }),
+        ...(currentTool === "circle" && { radius: 40 }),
+        ...(currentTool === "triangle" && { size: 50 }),
+        ...(currentTool === "text" && { text: "New Text", font: "20px Arial" }),
       };
-      
+
       setElements([...elements, newElement]);
       setSelectedElementId(newElement.id);
     }
@@ -335,9 +407,11 @@ function App() {
   // Change selected element color
   const changeSelectedElementColor = (color: string) => {
     if (selectedElementId) {
-      setElements(elements.map(el => 
-        el.id === selectedElementId ? { ...el, fillStyle: color } : el
-      ));
+      setElements(
+        elements.map(el =>
+          el.id === selectedElementId ? { ...el, fillStyle: color } : el
+        )
+      );
     }
   };
 
@@ -345,17 +419,23 @@ function App() {
   const addTestElement = () => {
     const newElement: ArtworkElement = {
       id: `test_${currentTool}_${Date.now()}`,
-      type: currentTool === 'select' ? 'rectangle' : currentTool,
+      type: currentTool === "select" ? "rectangle" : currentTool,
       x: 500,
       y: 200,
       fillStyle: currentColor,
-      ...(currentTool === 'rectangle' && { width: 100, height: 60 }),
-      ...(currentTool === 'circle' && { radius: 40 }),
-      ...(currentTool === 'triangle' && { size: 50 }),
-      ...(currentTool === 'text' && { text: 'Test Element', font: '20px Arial' }),
-      ...((currentTool === 'select' || currentTool === 'rectangle') && { width: 100, height: 60 }),
+      ...(currentTool === "rectangle" && { width: 100, height: 60 }),
+      ...(currentTool === "circle" && { radius: 40 }),
+      ...(currentTool === "triangle" && { size: 50 }),
+      ...(currentTool === "text" && {
+        text: "Test Element",
+        font: "20px Arial",
+      }),
+      ...((currentTool === "select" || currentTool === "rectangle") && {
+        width: 100,
+        height: 60,
+      }),
     };
-    
+
     setElements([...elements, newElement]);
     setSelectedElementId(newElement.id);
   };
@@ -382,49 +462,68 @@ function App() {
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
       <h1>AI Art - Generation {artworkState.generation}</h1>
       <p>Last updated: {artworkState.lastUpdated}</p>
-      
+
       {/* Interactive Controls */}
-      <div style={{ marginBottom: "1rem", padding: "1rem", backgroundColor: "#f5f5f5", borderRadius: "8px" }}>
+      <div
+        style={{
+          marginBottom: "1rem",
+          padding: "1rem",
+          backgroundColor: "#f5f5f5",
+          borderRadius: "8px",
+        }}
+      >
         <label style={{ marginRight: "1rem" }}>
           <input
             type="checkbox"
             checked={isInteractive}
-            onChange={(e) => setIsInteractive(e.target.checked)}
+            onChange={e => setIsInteractive(e.target.checked)}
             style={{ marginRight: "0.5rem" }}
           />
           Interactive Mode
         </label>
-        
+
         {isInteractive && (
           <>
             <div style={{ marginTop: "1rem" }}>
               <label style={{ marginRight: "1rem" }}>Tool:</label>
-              {(['select', 'rectangle', 'circle', 'triangle', 'text'] as const).map((tool) => (
+              {(
+                ["select", "rectangle", "circle", "triangle", "text"] as const
+              ).map(tool => (
                 <label key={tool} style={{ marginRight: "1rem" }}>
                   <input
                     type="radio"
                     name="tool"
                     value={tool}
                     checked={currentTool === tool}
-                    onChange={(e) => setCurrentTool(e.target.value as typeof currentTool)}
+                    onChange={e =>
+                      setCurrentTool(e.target.value as typeof currentTool)
+                    }
                     style={{ marginRight: "0.25rem" }}
                   />
                   {tool.charAt(0).toUpperCase() + tool.slice(1)}
                 </label>
               ))}
             </div>
-            
+
             <div style={{ marginTop: "1rem" }}>
               <label style={{ marginRight: "1rem" }}>Color:</label>
               <input
                 type="color"
                 value={currentColor}
-                onChange={(e) => setCurrentColor(e.target.value)}
+                onChange={e => setCurrentColor(e.target.value)}
                 style={{ marginRight: "1rem" }}
               />
-              
+
               {/* Quick color palette */}
-              {['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c', '#34495e'].map((color) => (
+              {[
+                "#e74c3c",
+                "#3498db",
+                "#2ecc71",
+                "#f39c12",
+                "#9b59b6",
+                "#1abc9c",
+                "#34495e",
+              ].map(color => (
                 <button
                   key={color}
                   onClick={() => setCurrentColor(color)}
@@ -432,18 +531,30 @@ function App() {
                     width: "30px",
                     height: "30px",
                     backgroundColor: color,
-                    border: currentColor === color ? "3px solid #000" : "1px solid #ccc",
+                    border:
+                      currentColor === color
+                        ? "3px solid #000"
+                        : "1px solid #ccc",
                     borderRadius: "4px",
                     marginRight: "0.5rem",
-                    cursor: "pointer"
+                    cursor: "pointer",
                   }}
                 />
               ))}
             </div>
-            
+
             {selectedElementId && (
-              <div style={{ marginTop: "1rem", padding: "0.5rem", backgroundColor: "#e8f4f8", borderRadius: "4px" }}>
-                <p style={{ margin: "0 0 0.5rem 0", fontWeight: "bold" }}>Selected Element:</p>
+              <div
+                style={{
+                  marginTop: "1rem",
+                  padding: "0.5rem",
+                  backgroundColor: "#e8f4f8",
+                  borderRadius: "4px",
+                }}
+              >
+                <p style={{ margin: "0 0 0.5rem 0", fontWeight: "bold" }}>
+                  Selected Element:
+                </p>
                 <button
                   onClick={deleteSelectedElement}
                   style={{
@@ -453,13 +564,21 @@ function App() {
                     border: "none",
                     borderRadius: "4px",
                     cursor: "pointer",
-                    marginRight: "0.5rem"
+                    marginRight: "0.5rem",
                   }}
                 >
                   Delete
                 </button>
                 <span>Change color:</span>
-                {['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c', '#34495e'].map((color) => (
+                {[
+                  "#e74c3c",
+                  "#3498db",
+                  "#2ecc71",
+                  "#f39c12",
+                  "#9b59b6",
+                  "#1abc9c",
+                  "#34495e",
+                ].map(color => (
                   <button
                     key={color}
                     onClick={() => changeSelectedElementColor(color)}
@@ -470,13 +589,13 @@ function App() {
                       border: "1px solid #ccc",
                       borderRadius: "3px",
                       marginLeft: "0.25rem",
-                      cursor: "pointer"
+                      cursor: "pointer",
                     }}
                   />
                 ))}
               </div>
             )}
-            
+
             <div style={{ marginTop: "1rem" }}>
               <button
                 onClick={addTestElement}
@@ -487,30 +606,35 @@ function App() {
                   border: "none",
                   borderRadius: "4px",
                   cursor: "pointer",
-                  marginRight: "1rem"
+                  marginRight: "1rem",
                 }}
               >
                 Add Test Element
               </button>
               <small style={{ color: "#666" }}>
-                Click to add a new {currentTool === 'select' ? 'rectangle' : currentTool} element
+                Click to add a new{" "}
+                {currentTool === "select" ? "rectangle" : currentTool} element
               </small>
             </div>
           </>
         )}
       </div>
-      
+
       <canvas
         ref={canvasRef}
         width={artworkState.canvas.width}
         height={artworkState.canvas.height}
-        style={{ 
+        style={{
           border: "1px solid #ccc",
-          cursor: isInteractive ? (currentTool === 'select' ? 'pointer' : 'crosshair') : 'default'
+          cursor: isInteractive
+            ? currentTool === "select"
+              ? "pointer"
+              : "crosshair"
+            : "default",
         }}
         onClick={handleCanvasClick}
       />
-      
+
       <div style={{ marginTop: "1rem" }}>
         <button
           onClick={downloadCanvas}
