@@ -167,6 +167,25 @@ function App() {
     }
   };
 
+  // Test function to add an element programmatically
+  const addTestElement = () => {
+    const newElement: ArtworkElement = {
+      id: `test_${currentTool}_${Date.now()}`,
+      type: currentTool === 'select' ? 'rectangle' : currentTool,
+      x: 500,
+      y: 200,
+      fillStyle: currentColor,
+      ...(currentTool === 'rectangle' && { width: 100, height: 60 }),
+      ...(currentTool === 'circle' && { radius: 40 }),
+      ...(currentTool === 'triangle' && { size: 50 }),
+      ...(currentTool === 'text' && { text: 'Test Element', font: '20px Arial' }),
+      ...((currentTool === 'select' || currentTool === 'rectangle') && { width: 100, height: 60 }),
+    };
+    
+    setElements([...elements, newElement]);
+    setSelectedElementId(newElement.id);
+  };
+
   const downloadCanvas = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -283,6 +302,26 @@ function App() {
                 ))}
               </div>
             )}
+            
+            <div style={{ marginTop: "1rem" }}>
+              <button
+                onClick={addTestElement}
+                style={{
+                  padding: "0.5rem 1rem",
+                  backgroundColor: "#27ae60",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "4px",
+                  cursor: "pointer",
+                  marginRight: "1rem"
+                }}
+              >
+                Add Test Element
+              </button>
+              <small style={{ color: "#666" }}>
+                Click to add a new {currentTool === 'select' ? 'rectangle' : currentTool} element
+              </small>
+            </div>
           </>
         )}
       </div>
