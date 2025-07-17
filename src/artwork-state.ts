@@ -8,6 +8,8 @@ export interface ArtworkElement {
   id: string;
   text?: string;
   font?: string;
+  radius?: number; // for circles
+  size?: number; // for triangles
 }
 
 export interface ArtworkState {
@@ -19,6 +21,7 @@ export interface ArtworkState {
   elements: ArtworkElement[];
   generation: number;
   lastUpdated: string;
+  cycleStarted: string;
 }
 
 // Artwork state data
@@ -53,20 +56,44 @@ export const artworkState: ArtworkState = {
       "y": 113.67673561458005,
       "width": 67.1886292641572,
       "height": 41.52257288524915,
-      "fillStyle": "#f39c12",
+      "fillStyle": "#3498db",
       "id": "copilot_complement_1752726527796"
     },
     {
-      "type": "rectangle",
-      "x": 665.8152056986227,
-      "y": 47.882204078584415,
-      "width": 68.00021899592689,
-      "height": 42.02413533948282,
-      "fillStyle": "#f1c40f",
-      "id": "copilot_complement_1752745422409"
+      "type": "triangle",
+      "x": 84.22294213343332,
+      "y": 199.22294213343332,
+      "size": 84.22294213343332,
+      "fillStyle": "#3498db",
+      "id": "triangle_1752745596492"
+    },
+    {
+      "type": "circle",
+      "x": 65.49117662105412,
+      "y": 548.4911766210541,
+      "radius": 42.49117662105412,
+      "fillStyle": "#3498db",
+      "id": "circle_1752745596492"
+    },
+    {
+      "type": "triangle",
+      "x": 331.54357108158706,
+      "y": 48.54357108158703,
+      "size": 47.54357108158703,
+      "fillStyle": "#9b59b6",
+      "id": "triangle_1752745827050"
+    },
+    {
+      "type": "text",
+      "x": 282,
+      "y": 234,
+      "text": "Harmony",
+      "font": "26.56034663032828px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1752745827050"
     }
   ],
-  "generation": 3,
-  "lastUpdated": "2025-07-17T09:43:42.409Z",
+  "generation": 5,
+  "lastUpdated": "2025-07-17T09:50:27.050Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };

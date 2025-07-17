@@ -7,6 +7,9 @@ on:
 jobs:
   copilot-improve-artwork:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
     # Only run if the issue is assigned to the Copilot agent
     if: contains(github.event.issue.assignees.*.login, 'Copilot')
     
