@@ -55,3 +55,17 @@ coverage/
 tmp/
 temp/
 
+# Artwork state management temporary files
+.artwork-lock
+.artwork-backup.json
+src/.artwork-backup.json
+
+# Backup directory (but keep the tools)
+backups/
+
+# Any temporary state files
+*.tmp
+*.temp
+*~
+.#*
+

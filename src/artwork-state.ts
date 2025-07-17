@@ -6,6 +6,25 @@ export interface ArtworkElement {
   height?: number;
   fillStyle: string;
   id: string;
+  // Enhanced visual properties
+  gradient?: {
+    type: "linear" | "radial";
+    colors: string[];
+    direction?: number;
+    centerX?: number;
+    centerY?: number;
+  };
+  shadow?: {
+    blur: number;
+    color: string;
+    offsetX: number;
+    offsetY: number;
+  };
+  opacity?: number;
+  rotation?: number;
+  pattern?: "dots" | "stripes" | "waves";
+  strokeStyle?: string;
+  strokeWidth?: number;
   text?: string;
   font?: string;
   radius?: number; // for circles
@@ -38,7 +57,7 @@ export const artworkState: ArtworkState = {
       "y": 431.5488320650072,
       "width": 200,
       "height": 100,
-      "fillStyle": "#9b59b6",
+      "fillStyle": "#e74c3c",
       "id": "rect1"
     },
     {
@@ -47,7 +66,7 @@ export const artworkState: ArtworkState = {
       "y": 422.49455448587605,
       "text": "Making",
       "font": "26.82886155053166px Arial",
-      "fillStyle": "#e74c3c",
+      "fillStyle": "#f1c40f",
       "id": "copilot_text_1752726527797"
     },
     {
@@ -121,14 +140,6 @@ export const artworkState: ArtworkState = {
         "offsetY": 4.591124729547882
       },
       "opacity": 0.9346972500376448
-    },
-    {
-      "type": "triangle",
-      "x": 131.2030768365079,
-      "y": 499.2030768365079,
-      "size": 86.2030768365079,
-      "fillStyle": "#f39c12",
-      "id": "triangle_1752727309721"
     },
     {
       "type": "triangle",
@@ -670,7 +681,18 @@ export const artworkState: ArtworkState = {
       "y": 398.38750578585314,
       "radius": 44.38750578585311,
       "fillStyle": "#2ecc71",
-      "id": "circle_1752746907655"
+      "id": "circle_1752746907655",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 239.49135398391704,
+        "centerX": 0.39884207097006447,
+        "centerY": 0.3590709061843797
+      }
     },
     {
       "type": "text",
@@ -728,9 +750,35 @@ export const artworkState: ArtworkState = {
       "strokeWidth": 2.523420239819748,
       "opacity": 0.8,
       "id": "curve_1752746941820"
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 209.17181705809645,
+      "text": "Improvement",
+      "font": "28.543994584163578px Arial",
+      "fillStyle": "#9b59b6",
+      "id": "copilot_text_1752760940068",
+      "opacity": 0.822660709402304,
+      "shadow": {
+        "blur": 15.253936361682085,
+        "color": "#9b59b640",
+        "offsetX": 0.03461698359365428,
+        "offsetY": -3.4561681356123763
+      },
+      "strokeStyle": "#9b59b6",
+      "strokeWidth": 1
+    },
+    {
+      "type": "circle",
+      "x": 65.10430656933316,
+      "y": 49.10430656933316,
+      "radius": 39.10430656933316,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1752760947351"
     }
   ],
-  "generation": 60,
-  "lastUpdated": "2025-07-17T13:58:53.693Z",
+  "generation": 66,
+  "lastUpdated": "2025-07-17T14:05:33.637Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };

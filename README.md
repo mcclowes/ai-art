@@ -62,19 +62,43 @@ This project showcases an evolving digital artwork that improves itself every ho
 
 ## Conflict Resolution
 
-To minimize PR conflicts, this project implements several strategies:
+This project implements a comprehensive conflict resolution system to prevent PR conflicts caused by automated artwork updates. **See [CONFLICT_RESOLUTION.md](./CONFLICT_RESOLUTION.md) for detailed documentation.**
+
+### Enhanced State Management
+
+- **File-based Locking**: Prevents simultaneous updates using `ArtworkStateManager`
+- **Retry Logic**: Implements exponential backoff when conflicts are detected  
+- **Automatic Cleanup**: Removes stale locks and fixes data integrity issues
+- **Backup System**: Creates automatic backups before each save operation
 
 ### Build Artifacts Management
 
 - **Build artifacts are not committed**: The `dist/` directory is excluded from git via `.gitignore`
-- **Hash-based filenames**: Vite generates files like `index-0RHxSTq_.js` that change with each build
+- **Hash-based filenames**: Vite generates files like `index-VUVu5RWr.js` that change with each build
 - **Workflows validate builds**: GitHub Actions run `npm run build` to ensure changes are valid, but don't commit the output
 
 ### Artwork State Management
 
-- **Standardized file writing**: Both improvement scripts use a shared utility (`utils/artwork-writer.js`)
+- **Exclusive Access Control**: Uses `.artwork-lock` files to coordinate between automation systems
+- **Standardized file writing**: Both improvement scripts use shared utilities
 - **Consistent interface definitions**: TypeScript interfaces are identical across all scripts
 - **Atomic updates**: Each script updates the artwork state file completely to avoid partial conflicts
+
+### Conflict Resolution Tools
+
+```bash
+# Check system status and health
+node conflict-resolver.js --status
+
+# Clean up any data integrity issues  
+node cleanup-state.js
+
+# Create manual backup
+node conflict-resolver.js --backup
+
+# Force clear stale locks
+node conflict-resolver.js --clear-lock
+```
 
 ### Automated Commit Strategy
 
@@ -82,11 +106,13 @@ To minimize PR conflicts, this project implements several strategies:
 - **Frequent small changes**: Hourly improvements make small, incremental changes
 - **Generation tracking**: Each change increments the generation counter for easy conflict resolution
 
-This approach ensures that:
+This system ensures that:
 
-1. Build artifacts don't create false conflicts between PRs
-2. Artwork state modifications are predictable and consistent
-3. Manual PRs can be merged without conflicts from automated systems
+1. **Build artifacts don't create false conflicts** between PRs
+2. **Automated systems coordinate safely** using file locking
+3. **Manual PRs can be merged without conflicts** from automated systems
+4. **Data integrity is maintained** through validation and cleanup
+5. **Recovery is possible** through automatic backup system
 
 ## Development
 

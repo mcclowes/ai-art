@@ -14,6 +14,25 @@ function writeArtworkState(artworkState, artworkTsPath) {
   height?: number;
   fillStyle: string;
   id: string;
+  // Enhanced visual properties
+  gradient?: {
+    type: "linear" | "radial";
+    colors: string[];
+    direction?: number;
+    centerX?: number;
+    centerY?: number;
+  };
+  shadow?: {
+    blur: number;
+    color: string;
+    offsetX: number;
+    offsetY: number;
+  };
+  opacity?: number;
+  rotation?: number;
+  pattern?: "dots" | "stripes" | "waves";
+  strokeStyle?: string;
+  strokeWidth?: number;
   text?: string;
   font?: string;
   radius?: number; // for circles

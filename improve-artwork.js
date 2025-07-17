@@ -3,21 +3,20 @@
 const fs = require("fs");
 const path = require("path");
 const { writeArtworkState } = require("./utils/artwork-writer");
+const { ArtworkStateManager } = require("./utils/state-manager");
 
-// Read the current artwork state from the TypeScript file
+// Initialize state manager
 const artworkTsPath = path.join(__dirname, "src", "artwork-state.ts");
-const artworkContent = fs.readFileSync(artworkTsPath, "utf8");
+const stateManager = new ArtworkStateManager(artworkTsPath);
 
-// Extract the artwork state data from the TypeScript file
-const match = artworkContent.match(
-  /export const artworkState: ArtworkState = ([\s\S]*?);$/m
-);
-if (!match) {
-  console.error("Could not parse artwork state from TypeScript file");
+// Load current state with conflict protection
+let currentState;
+try {
+  currentState = stateManager.loadState();
+} catch (error) {
+  console.error("Failed to load artwork state:", error.message);
   process.exit(1);
 }
-
-const currentState = eval(`(${match[1]})`);
 
 // Check if we need to start a new cycle (after a week)
 function shouldStartNewCycle(state) {
@@ -828,8 +827,13 @@ async function main() {
     cycleStarted: currentState.cycleStarted,
   });
 
-  // Write back the updated state to the TypeScript file
-  writeArtworkState(currentState, artworkTsPath);
+  // Write back the updated state to the TypeScript file with conflict protection
+  try {
+    await stateManager.saveState(currentState, "improve-artwork.js");
+  } catch (error) {
+    console.error("Failed to save artwork state:", error.message);
+    process.exit(1);
+  }
 }
 
 // Run the main function
