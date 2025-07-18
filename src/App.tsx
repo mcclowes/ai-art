@@ -54,6 +54,7 @@ function App() {
   );
   const [history, setHistory] = useState<ArtworkElement[][]>([elements]);
   const [historyIndex, setHistoryIndex] = useState(0);
+  const [error, setError] = useState<string | null>(null);
 
   const drawCanvas = useCallback(() => {
     try {
@@ -315,6 +316,38 @@ function App() {
     <div style={{ textAlign: "center", marginTop: "2rem" }}>
       <h1>AI Art - Generation {artworkState.generation}</h1>
       <p>Last updated: {artworkState.lastUpdated}</p>
+
+      {/* Error Display */}
+      {error && (
+        <div
+          style={{
+            backgroundColor: "#f8d7da",
+            border: "1px solid #f5c6cb",
+            color: "#721c24",
+            padding: "0.75rem 1rem",
+            marginBottom: "1rem",
+            borderRadius: "4px",
+            maxWidth: "600px",
+            margin: "0 auto 1rem auto",
+          }}
+        >
+          <strong>Error:</strong> {error}
+          <button
+            onClick={() => setError(null)}
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              color: "#721c24",
+              cursor: "pointer",
+              float: "right",
+              fontSize: "16px",
+              fontWeight: "bold",
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
 
       {/* Interactive Controls */}
       <div
