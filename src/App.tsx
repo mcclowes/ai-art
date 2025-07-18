@@ -56,54 +56,60 @@ function App() {
   const [historyIndex, setHistoryIndex] = useState(0);
 
   const drawCanvas = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    try {
+      setError(null); // Clear any previous errors
+      const canvas = canvasRef.current;
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
 
-    // Clear canvas and set background
-    setupCanvasBackground(ctx, canvas, artworkState.canvas.background);
+      // Clear canvas and set background
+      setupCanvasBackground(ctx, canvas, artworkState.canvas.background);
 
-    // Render each element
-    artworkState.elements.forEach((element: ArtworkElement) => {
-      ctx.save(); // Save the current state
+      // Render each element
+      artworkState.elements.forEach((element: ArtworkElement) => {
+        ctx.save(); // Save the current state
 
-      // Apply visual effects (rotation, opacity, shadow)
-      applyElementEffects(ctx, element);
+        // Apply visual effects (rotation, opacity, shadow)
+        applyElementEffects(ctx, element);
 
-      // Set up fill style (gradient or solid color)
-      setupFillStyle(ctx, element);
+        // Set up fill style (gradient or solid color)
+        setupFillStyle(ctx, element);
 
-      // Set up stroke if specified
-      setupStrokeStyle(ctx, element);
+        // Set up stroke if specified
+        setupStrokeStyle(ctx, element);
 
-      // Render the element based on its type
-      switch (element.type) {
-        case "rectangle":
-          renderRectangle(ctx, element);
-          break;
-        case "circle":
-          renderCircle(ctx, element);
-          break;
-        case "triangle":
-          renderTriangle(ctx, element);
-          break;
-        case "text":
-          renderText(ctx, element);
-          break;
-        case "curve":
-          renderCurve(ctx, element);
-          break;
-        case "spiral":
-          renderSpiral(ctx, element);
-          break;
-        case "svg":
-          renderSvg(ctx, element, drawCanvas);
-          break;
-      }
+        // Render the element based on its type
+        switch (element.type) {
+          case "rectangle":
+            renderRectangle(ctx, element);
+            break;
+          case "circle":
+            renderCircle(ctx, element);
+            break;
+          case "triangle":
+            renderTriangle(ctx, element);
+            break;
+          case "text":
+            renderText(ctx, element);
+            break;
+          case "curve":
+            renderCurve(ctx, element);
+            break;
+          case "spiral":
+            renderSpiral(ctx, element);
+            break;
+          case "svg":
+            renderSvg(ctx, element, drawCanvas);
+            break;
+        }
 
-      ctx.restore(); // Restore the previous state
-    });
+        ctx.restore(); // Restore the previous state
+      });
+    } catch (error) {
+      console.error("Canvas rendering error:", error);
+      setError("Failed to render artwork. Please refresh the page.");
+    }
   }, []);
 
   useEffect(() => {
