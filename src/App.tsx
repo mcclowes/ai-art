@@ -365,7 +365,7 @@ function App() {
             onChange={e => setIsInteractive(e.target.checked)}
             style={{ marginRight: "0.5rem" }}
           />
-          Interactive Mode
+          Interactive Mode (Enables canvas editing tools)
         </label>
 
         {isInteractive && (
@@ -542,6 +542,8 @@ function App() {
       </div>
 
       <canvas
+        aria-label="AI-generated evolving artwork canvas"
+        role="img"
         ref={canvasRef}
         width={artworkState.canvas.width}
         height={artworkState.canvas.height}
