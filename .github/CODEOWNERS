@@ -1,0 +1,6 @@
+# CODEOWNERS file for ai-art repository
+# This file defines who owns different parts of the codebase
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global ownership - mcclowes owns all files
+* @mcclowes
