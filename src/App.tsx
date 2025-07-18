@@ -26,6 +26,7 @@ import {
   renderText,
   renderCurve,
   renderSpiral,
+  renderSvg,
 } from "./utils/canvas-rendering";
 import {
   applyElementEffects,
@@ -45,9 +46,12 @@ function App() {
   );
   const [isInteractive, setIsInteractive] = useState(false);
   const [currentTool, setCurrentTool] = useState<
-    "rectangle" | "circle" | "triangle" | "text" | "select"
+    "rectangle" | "circle" | "triangle" | "text" | "svg" | "select"
   >("select");
   const [currentColor, setCurrentColor] = useState("#3498db");
+  const [svgContent, setSvgContent] = useState(
+    "<svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='40' fill='#3498db'/></svg>"
+  );
   const [history, setHistory] = useState<ArtworkElement[][]>([elements]);
   const [historyIndex, setHistoryIndex] = useState(0);
 
@@ -94,6 +98,9 @@ function App() {
             break;
           case "spiral":
             renderSpiral(ctx, element);
+            break;
+          case "svg":
+            renderSvg(ctx, element, drawCanvas);
             break;
         }
 
@@ -151,6 +158,13 @@ function App() {
           y >= element.y - parseInt(element.font || "16px") &&
           y <= element.y
         );
+      case "svg":
+        return (
+          x >= element.x &&
+          x <= element.x + (element.width || 100) &&
+          y >= element.y &&
+          y <= element.y + (element.height || 100)
+        );
       default:
         return false;
     }
@@ -194,6 +208,11 @@ function App() {
         ...(currentTool === "circle" && { radius: 40 }),
         ...(currentTool === "triangle" && { size: 50 }),
         ...(currentTool === "text" && { text: "New Text", font: "20px Arial" }),
+        ...(currentTool === "svg" && {
+          svgContent: svgContent,
+          width: 100,
+          height: 100,
+        }),
       };
 
       setElements([...elements, newElement]);
@@ -259,6 +278,11 @@ function App() {
         text: "Test Element",
         font: "20px Arial",
       }),
+      ...(currentTool === "svg" && {
+        svgContent: svgContent,
+        width: 100,
+        height: 100,
+      }),
       ...((currentTool === "select" || currentTool === "rectangle") && {
         width: 100,
         height: 60,
@@ -316,7 +340,14 @@ function App() {
             <div style={{ marginTop: "1rem" }}>
               <label style={{ marginRight: "1rem" }}>Tool:</label>
               {(
-                ["select", "rectangle", "circle", "triangle", "text"] as const
+                [
+                  "select",
+                  "rectangle",
+                  "circle",
+                  "triangle",
+                  "text",
+                  "svg",
+                ] as const
               ).map(tool => (
                 <label key={tool} style={{ marginRight: "1rem" }}>
                   <input
@@ -333,6 +364,34 @@ function App() {
                 </label>
               ))}
             </div>
+
+            {currentTool === "svg" && (
+              <div style={{ marginTop: "1rem" }}>
+                <label style={{ display: "block", marginBottom: "0.5rem" }}>
+                  SVG Content:
+                </label>
+                <textarea
+                  value={svgContent}
+                  onChange={e => setSvgContent(e.target.value)}
+                  style={{
+                    width: "100%",
+                    height: "100px",
+                    fontFamily: "monospace",
+                    fontSize: "12px",
+                    resize: "vertical",
+                  }}
+                  placeholder="Enter SVG markup here..."
+                />
+                <div style={{ marginTop: "0.5rem" }}>
+                  <small style={{ color: "#666" }}>
+                    Enter valid SVG markup. Example: &lt;svg width='100'
+                    height='100'
+                    xmlns='http://www.w3.org/2000/svg'&gt;&lt;circle cx='50'
+                    cy='50' r='40' fill='#3498db'/&gt;&lt;/svg&gt;
+                  </small>
+                </div>
+              </div>
+            )}
 
             <div style={{ marginTop: "1rem" }}>
               <label style={{ marginRight: "1rem" }}>Color:</label>
