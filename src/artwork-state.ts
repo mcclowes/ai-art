@@ -39,7 +39,19 @@ export const artworkState: ArtworkState = {
       "width": 200,
       "height": 100,
       "fillStyle": "#9b59b6",
-      "id": "rect1"
+      "id": "rect1",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#2ecc71",
+          "#3498db",
+          "#9b59b6"
+        ],
+        "direction": 343.82264532618433,
+        "centerX": 0.4329610124452785,
+        "centerY": 0.408262104575024
+      },
+      "opacity": 0.8816635557106471
     },
     {
       "type": "text",
@@ -1358,7 +1370,7 @@ export const artworkState: ArtworkState = {
       "id": "rotated_triangle_1752962694683"
     }
   ],
-  "generation": 117,
-  "lastUpdated": "2025-07-19T22:04:54.683Z",
+  "generation": 118,
+  "lastUpdated": "2025-07-19T23:05:15.467Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
