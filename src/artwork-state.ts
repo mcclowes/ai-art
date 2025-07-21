@@ -1694,9 +1694,36 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.8815853181154103,
       "id": "gradient_text_1753088951632"
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 350.82818294190355,
+      "text": "METAMORPHOSIS",
+      "font": "bold 34.72331323086698px Arial",
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 309.6135725583452,
+        "centerX": 0.6132642912085171,
+        "centerY": 0.41695229384288934
+      },
+      "shadow": {
+        "blur": 18.66829291834523,
+        "color": "#FF6B3540",
+        "offsetX": 2.3067952346418714,
+        "offsetY": -2.5931269683137836
+      },
+      "opacity": 0.9622352906711956,
+      "id": "gradient_text_1753095912942"
     }
   ],
-  "generation": 153,
-  "lastUpdated": "2025-07-21T10:06:13.607Z",
+  "generation": 154,
+  "lastUpdated": "2025-07-21T11:05:12.942Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
