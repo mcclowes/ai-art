@@ -369,8 +369,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "circle",
-      "x": 356,
-      "y": 356,
+      "x": 616,
+      "y": 534,
       "radius": 356,
       "fillStyle": "#f39c12",
       "gradient": {
@@ -2184,7 +2184,7 @@ export const artworkState: ArtworkState = {
       "id": "spiral_1753261726589"
     }
   ],
-  "generation": 200,
-  "lastUpdated": "2025-07-23T09:08:46.589Z",
+  "generation": 201,
+  "lastUpdated": "2025-07-23T10:05:50.408Z",
   "cycleStarted": "2025-07-16T19:12:58.892Z"
 };
