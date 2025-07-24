@@ -174,8 +174,25 @@ export const artworkState: ArtworkState = {
       "fillStyle": "#e74c3c",
       "strokeStyle": "#e74c3c",
       "strokeWidth": 1.3093407136123427,
-      "opacity": 0.7,
-      "id": "spiral_1753324969740"
+      "opacity": 0.9252312764155626,
+      "id": "spiral_1753324969740",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 346.71603040240603,
+        "centerX": 0.3125807096507288,
+        "centerY": 0.32388820383433675
+      },
+      "shadow": {
+        "blur": 14.826840181934452,
+        "color": "#e74c3c40",
+        "offsetX": -3.607227258400474,
+        "offsetY": 4.368513132295428
+      }
     },
     {
       "type": "spiral",
@@ -245,7 +262,7 @@ export const artworkState: ArtworkState = {
       "id": "rotated_triangle_1753348088307"
     }
   ],
-  "generation": 17,
-  "lastUpdated": "2025-07-24T12:09:17.126Z",
+  "generation": 18,
+  "lastUpdated": "2025-07-24T13:16:51.300Z",
   "cycleStarted": "2025-07-23T20:05:50.866Z"
 };
