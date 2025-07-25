@@ -39,7 +39,19 @@ export const artworkState: ArtworkState = {
       "width": 200,
       "height": 100,
       "fillStyle": "#e67e22",
-      "id": "rect1"
+      "id": "rect1",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 215.7884450212884,
+        "centerX": 0.5159725719180519,
+        "centerY": 0.5725529069350064
+      },
+      "opacity": 0.8367581730716612
     },
     {
       "type": "text",
@@ -427,7 +439,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1753423663538"
     }
   ],
-  "generation": 35,
-  "lastUpdated": "2025-07-25T06:07:43.538Z",
+  "generation": 36,
+  "lastUpdated": "2025-07-25T07:07:35.986Z",
   "cycleStarted": "2025-07-23T20:05:50.866Z"
 };
