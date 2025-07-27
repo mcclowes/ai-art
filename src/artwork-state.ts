@@ -872,9 +872,17 @@ export const artworkState: ArtworkState = {
       "font": "30.355142075225107px Arial",
       "fillStyle": "#e74c3c",
       "id": "text_1753596429985"
+    },
+    {
+      "type": "triangle",
+      "x": 731.9766408267473,
+      "y": 498.97664082674726,
+      "size": 52.976640826747236,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1753599944573"
     }
   ],
-  "generation": 83,
-  "lastUpdated": "2025-07-27T06:07:09.985Z",
+  "generation": 84,
+  "lastUpdated": "2025-07-27T07:05:44.573Z",
   "cycleStarted": "2025-07-23T20:05:50.866Z"
 };
