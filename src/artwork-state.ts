@@ -758,8 +758,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "curve",
-      "x": 205.56242274412858,
-      "y": 320.82818294190355,
+      "x": 350,
+      "y": 465,
       "width": 231.7654737369927,
       "height": 67.80819925943729,
       "fillStyle": "#f1c40f",
@@ -1250,7 +1250,7 @@ export const artworkState: ArtworkState = {
       "id": "gradient_rect_1753736721118"
     }
   ],
-  "generation": 123,
-  "lastUpdated": "2025-07-28T22:05:40.030Z",
+  "generation": 124,
+  "lastUpdated": "2025-07-28T23:05:34.896Z",
   "cycleStarted": "2025-07-23T20:05:50.866Z"
 };
