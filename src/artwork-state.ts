@@ -233,7 +233,13 @@ export const artworkState: ArtworkState = {
       "strokeStyle": "#f1c40f",
       "strokeWidth": 3.1008433648316984,
       "opacity": 0.8498155301799621,
-      "id": "curve_1753330730338"
+      "id": "curve_1753330730338",
+      "shadow": {
+        "blur": 13.913833735450629,
+        "color": "#f1c40f40",
+        "offsetX": 2.2503275408984553,
+        "offsetY": -1.1863109464336818
+      }
     },
     {
       "type": "circle",
@@ -1135,7 +1141,7 @@ export const artworkState: ArtworkState = {
       "id": "element_1753700703224"
     }
   ],
-  "generation": 113,
-  "lastUpdated": "2025-07-28T12:09:24.801Z",
+  "generation": 114,
+  "lastUpdated": "2025-07-28T13:17:32.044Z",
   "cycleStarted": "2025-07-23T20:05:50.866Z"
 };
