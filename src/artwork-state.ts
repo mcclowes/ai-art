@@ -49,9 +49,28 @@ export const artworkState: ArtworkState = {
       "font": "24px Arial",
       "fillStyle": "#fff",
       "id": "text1"
+    },
+    {
+      "type": "circle",
+      "x": 65.07809988600897,
+      "y": 248.07809988600897,
+      "radius": 40.07809988600897,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1753913122799",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 197.42633368407982,
+        "centerX": 0.44125929994144886,
+        "centerY": 0.568632244679195
+      }
     }
   ],
-  "generation": 1,
-  "lastUpdated": "2025-07-30T21:05:00.444Z",
+  "generation": 2,
+  "lastUpdated": "2025-07-30T22:05:22.800Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
