@@ -1723,7 +1723,7 @@ export const artworkState: ArtworkState = {
       "y": 66,
       "width": 24,
       "height": 534,
-      "fillStyle": "#d35400",
+      "fillStyle": "#e74c3c",
       "gradient": {
         "type": "radial",
         "colors": [
@@ -1763,7 +1763,7 @@ export const artworkState: ArtworkState = {
       "id": "rotated_triangle_1753898849874"
     }
   ],
-  "generation": 167,
-  "lastUpdated": "2025-07-30T18:07:29.874Z",
+  "generation": 168,
+  "lastUpdated": "2025-07-30T19:06:22.126Z",
   "cycleStarted": "2025-07-23T20:05:50.866Z"
 };
