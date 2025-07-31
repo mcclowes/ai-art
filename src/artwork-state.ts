@@ -169,8 +169,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 434.4375772558714,
-      "y": 209.17181705809645,
+      "x": 216,
+      "y": 334,
       "text": "EMERGENCE",
       "font": "bold 24.46983355001217px Arial",
       "fillStyle": "#d35400",
@@ -222,7 +222,7 @@ export const artworkState: ArtworkState = {
       "id": "gradient_text_1753932867501"
     }
   ],
-  "generation": 8,
-  "lastUpdated": "2025-07-31T04:20:26.408Z",
+  "generation": 9,
+  "lastUpdated": "2025-07-31T05:10:37.542Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
