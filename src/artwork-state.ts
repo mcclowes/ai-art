@@ -26,68 +26,64 @@ export interface ArtworkState {
 
 // Artwork state data
 export const artworkState: ArtworkState = {
-  "canvas": {
-    "width": 800,
-    "height": 600,
-    "background": "#1a1a1a"
+  canvas: {
+    width: 800,
+    height: 600,
+    background: "#1a1a1a",
   },
-  "elements": [
+  elements: [
     {
-      "type": "rectangle",
-      "x": 50,
-      "y": 50,
-      "width": 200,
-      "height": 100,
-      "fillStyle": "#e67e22",
-      "id": "rect1"
+      type: "rectangle",
+      x: 50,
+      y: 50,
+      width: 200,
+      height: 100,
+      fillStyle: "#e67e22",
+      id: "rect1",
     },
     {
-      "type": "text",
-      "x": 416,
-      "y": 334,
-      "text": "Hello Canvas!",
-      "font": "24px Arial",
-      "fillStyle": "#fff",
-      "id": "text1"
+      type: "text",
+      x: 416,
+      y: 334,
+      text: "Hello Canvas!",
+      font: "24px Arial",
+      fillStyle: "#fff",
+      id: "text1",
     },
     {
-      "type": "circle",
-      "x": 65.07809988600897,
-      "y": 248.07809988600897,
-      "radius": 40.07809988600897,
-      "fillStyle": "#e74c3c",
-      "id": "circle_1753913122799",
-      "gradient": {
-        "type": "linear",
-        "colors": [
-          "#e74c3c",
-          "#f39c12",
-          "#f1c40f"
-        ],
-        "direction": 197.42633368407982,
-        "centerX": 0.44125929994144886,
-        "centerY": 0.568632244679195
-      }
+      type: "circle",
+      x: 65.07809988600897,
+      y: 248.07809988600897,
+      radius: 40.07809988600897,
+      fillStyle: "#e74c3c",
+      id: "circle_1753913122799",
+      gradient: {
+        type: "linear",
+        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
+        direction: 197.42633368407982,
+        centerX: 0.44125929994144886,
+        centerY: 0.568632244679195,
+      },
     },
     {
-      "type": "circle",
-      "x": 65.96038131698558,
-      "y": 348.9603813169856,
-      "radius": 59.960381316985575,
-      "fillStyle": "#f39c12",
-      "id": "circle_1753916727281"
+      type: "circle",
+      x: 65.96038131698558,
+      y: 348.9603813169856,
+      radius: 59.960381316985575,
+      fillStyle: "#f39c12",
+      id: "circle_1753916727281",
     },
     {
-      "type": "text",
-      "x": 82,
-      "y": 484,
-      "text": "Inspire",
-      "font": "21.507208911788933px Arial",
-      "fillStyle": "#f1c40f",
-      "id": "text_1753916727281"
-    }
+      type: "text",
+      x: 82,
+      y: 484,
+      text: "Inspire",
+      font: "21.507208911788933px Arial",
+      fillStyle: "#f1c40f",
+      id: "text_1753916727281",
+    },
   ],
-  "generation": 3,
-  "lastUpdated": "2025-07-30T23:05:27.281Z",
-  "cycleStarted": "2025-07-30T21:05:00.444Z"
+  generation: 3,
+  lastUpdated: "2025-07-30T23:05:27.281Z",
+  cycleStarted: "2025-07-30T21:05:00.444Z",
 };
