@@ -596,9 +596,18 @@ export const artworkState: ArtworkState = {
       "font": "18.045116403530642px Arial",
       "fillStyle": "#f39c12",
       "id": "text_1754078750095"
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 84,
+      "text": "Balance",
+      "font": "32.24370848779826px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1754085920874"
     }
   ],
-  "generation": 49,
-  "lastUpdated": "2025-08-01T21:05:01.623Z",
+  "generation": 50,
+  "lastUpdated": "2025-08-01T22:05:20.874Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
