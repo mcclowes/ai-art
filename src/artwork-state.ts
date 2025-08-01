@@ -495,10 +495,16 @@ export const artworkState: ArtworkState = {
       "width": 116.06083576130308,
       "height": 102.67083536009119,
       "fillStyle": "#e74c3c",
-      "id": "element_1754039322654"
+      "id": "element_1754039322654",
+      "shadow": {
+        "blur": 18.50964155452761,
+        "color": "#e74c3c40",
+        "offsetX": -2.513308498145852,
+        "offsetY": -4.930508318370146
+      }
     }
   ],
-  "generation": 37,
-  "lastUpdated": "2025-08-01T09:08:42.654Z",
+  "generation": 38,
+  "lastUpdated": "2025-08-01T10:05:50.571Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
