@@ -634,7 +634,7 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 82,
+      "x": 616,
       "y": 84,
       "text": "Balance",
       "font": "32.24370848779826px Arial",
@@ -755,7 +755,7 @@ export const artworkState: ArtworkState = {
       "id": "element_1754125547776"
     }
   ],
-  "generation": 62,
-  "lastUpdated": "2025-08-02T10:04:58.229Z",
+  "generation": 63,
+  "lastUpdated": "2025-08-02T11:04:37.129Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
