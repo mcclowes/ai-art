@@ -785,9 +785,21 @@ export const artworkState: ArtworkState = {
       "size": 72.89982592059924,
       "fillStyle": "#f1c40f",
       "id": "triangle_1754140416726"
+    },
+    {
+      "type": "curve",
+      "x": 394.4375772558714,
+      "y": 320.82818294190355,
+      "width": 169.8393304792952,
+      "height": 72.16047383072639,
+      "fillStyle": "#e67e22",
+      "strokeStyle": "#e67e22",
+      "strokeWidth": 2.592916408304278,
+      "opacity": 0.8,
+      "id": "curve_1754147090101"
     }
   ],
-  "generation": 66,
-  "lastUpdated": "2025-08-02T14:04:56.830Z",
+  "generation": 67,
+  "lastUpdated": "2025-08-02T15:04:50.101Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
