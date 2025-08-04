@@ -376,8 +376,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "rectangle",
-      "x": 14,
-      "y": 510,
+      "x": 614,
+      "y": 460,
       "width": 104,
       "height": 78,
       "fillStyle": "#d35400",
@@ -1161,7 +1161,7 @@ export const artworkState: ArtworkState = {
       "id": "rotated_triangle_1754284620635"
     }
   ],
-  "generation": 107,
-  "lastUpdated": "2025-08-04T07:11:49.148Z",
+  "generation": 108,
+  "lastUpdated": "2025-08-04T08:07:45.752Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
