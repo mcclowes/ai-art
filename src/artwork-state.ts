@@ -806,7 +806,18 @@ export const artworkState: ArtworkState = {
       "width": 73.84732928619212,
       "height": 64.00045849413479,
       "fillStyle": "#f39c12",
-      "id": "element_1754125547776"
+      "id": "element_1754125547776",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 346.9171923957801,
+        "centerX": 0.34947241056025896,
+        "centerY": 0.49126828079080864
+      }
     },
     {
       "type": "triangle",
@@ -1627,7 +1638,7 @@ export const artworkState: ArtworkState = {
       "id": "gradient_text_1754427905674"
     }
   ],
-  "generation": 145,
-  "lastUpdated": "2025-08-05T21:05:05.674Z",
+  "generation": 146,
+  "lastUpdated": "2025-08-05T22:05:23.737Z",
   "cycleStarted": "2025-07-30T21:05:00.444Z"
 };
