@@ -110,9 +110,36 @@ export const artworkState: ArtworkState = {
         "offsetY": -2.13399049033151
       },
       "id": "rotated_triangle_1754526263173"
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 209.17181705809645,
+      "text": "EMERGENCE",
+      "font": "bold 25.477252244195405px Arial",
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 47.8782162445963,
+        "centerX": 0.44222961611895817,
+        "centerY": 0.5010691154064417
+      },
+      "shadow": {
+        "blur": 17.269552425564896,
+        "color": "#FF6B3540",
+        "offsetX": -4.060837879012835,
+        "offsetY": 1.9237380862539588
+      },
+      "opacity": 0.8603250239053823,
+      "id": "gradient_text_1754530456542"
     }
   ],
-  "generation": 4,
-  "lastUpdated": "2025-08-07T00:24:23.173Z",
+  "generation": 5,
+  "lastUpdated": "2025-08-07T01:34:16.542Z",
   "cycleStarted": "2025-08-06T21:05:04.268Z"
 };
