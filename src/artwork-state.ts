@@ -857,9 +857,17 @@ export const artworkState: ArtworkState = {
       "height": 78.58039132084242,
       "fillStyle": "#f39c12",
       "id": "element_1754773475088"
+    },
+    {
+      "type": "triangle",
+      "x": 665.7925381963441,
+      "y": 198.79253819634414,
+      "size": 92.79253819634413,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1754780699192"
     }
   ],
-  "generation": 74,
-  "lastUpdated": "2025-08-09T22:05:02.280Z",
+  "generation": 75,
+  "lastUpdated": "2025-08-09T23:04:59.192Z",
   "cycleStarted": "2025-08-06T21:05:04.268Z"
 };
