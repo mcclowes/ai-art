@@ -1045,7 +1045,18 @@ export const artworkState: ArtworkState = {
       "width": 70.53981521424586,
       "height": 101.83488634503482,
       "fillStyle": "#e74c3c",
-      "id": "element_1754827686370"
+      "id": "element_1754827686370",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 100.80633922077064,
+        "centerX": 0.32461581126514927,
+        "centerY": 0.539382401360841
+      }
     },
     {
       "type": "circle",
@@ -1584,7 +1595,7 @@ export const artworkState: ArtworkState = {
       "id": "gradient_circle_1754962399134"
     }
   ],
-  "generation": 125,
-  "lastUpdated": "2025-08-12T01:33:19.134Z",
+  "generation": 126,
+  "lastUpdated": "2025-08-12T02:35:56.764Z",
   "cycleStarted": "2025-08-06T21:05:04.268Z"
 };
