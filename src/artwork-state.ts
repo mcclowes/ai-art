@@ -1667,8 +1667,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "triangle",
-      "x": 305.5624227441286,
-      "y": 370.82818294190355,
+      "x": 682,
+      "y": 484,
       "size": 105,
       "fillStyle": "#d35400",
       "strokeStyle": "#d35400",
@@ -2117,7 +2117,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1755115535803"
     }
   ],
-  "generation": 168,
-  "lastUpdated": "2025-08-13T20:05:35.803Z",
+  "generation": 169,
+  "lastUpdated": "2025-08-13T21:04:47.950Z",
   "cycleStarted": "2025-08-06T21:05:04.268Z"
 };
