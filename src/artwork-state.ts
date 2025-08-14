@@ -88,8 +88,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "curve",
-      "x": 394.4375772558714,
-      "y": 320.82818294190355,
+      "x": 211,
+      "y": 65,
       "width": 240.26265726953267,
       "height": 66.9000951878163,
       "fillStyle": "#d35400",
@@ -141,9 +141,21 @@ export const artworkState: ArtworkState = {
       "font": "27.558200737709768px Arial",
       "fillStyle": "#f1c40f",
       "id": "text_1755135228178"
+    },
+    {
+      "type": "curve",
+      "x": 394.4375772558714,
+      "y": 179.17181705809645,
+      "width": 199.83442859809634,
+      "height": 92.99149289653755,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 3.2391114675384403,
+      "opacity": 0.8,
+      "id": "curve_1755139064368"
     }
   ],
-  "generation": 4,
-  "lastUpdated": "2025-08-14T01:33:48.178Z",
+  "generation": 5,
+  "lastUpdated": "2025-08-14T02:37:44.368Z",
   "cycleStarted": "2025-08-13T22:05:34.253Z"
 };
