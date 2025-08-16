@@ -803,9 +803,17 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.619226089077574,
       "id": "gradient_circle_1755331575605"
+    },
+    {
+      "type": "triangle",
+      "x": 531.5516492013918,
+      "y": 548.5516492013918,
+      "size": 48.55164920139175,
+      "fillStyle": "#e74c3c",
+      "id": "triangle_1755335111995"
     }
   ],
-  "generation": 59,
-  "lastUpdated": "2025-08-16T08:06:15.605Z",
+  "generation": 60,
+  "lastUpdated": "2025-08-16T09:05:11.995Z",
   "cycleStarted": "2025-08-13T22:05:34.253Z"
 };
