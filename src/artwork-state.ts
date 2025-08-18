@@ -1221,9 +1221,36 @@ export const artworkState: ArtworkState = {
       "pattern": "dots",
       "opacity": 0.7870197648988503,
       "id": "pattern_rect_1755500859139"
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 209.17181705809645,
+      "text": "EMERGENCE",
+      "font": "bold 39.05564916779091px Arial",
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 238.9286522094007,
+        "centerX": 0.6129644153069111,
+        "centerY": 0.49313636313959835
+      },
+      "shadow": {
+        "blur": 9.153518601390987,
+        "color": "#e74c3c40",
+        "offsetX": -0.31339610687212804,
+        "offsetY": 0.3596934311928095
+      },
+      "opacity": 0.9176877834299269,
+      "id": "gradient_text_1755504465356"
     }
   ],
-  "generation": 106,
-  "lastUpdated": "2025-08-18T07:07:39.139Z",
+  "generation": 107,
+  "lastUpdated": "2025-08-18T08:07:45.356Z",
   "cycleStarted": "2025-08-13T22:05:34.253Z"
 };
