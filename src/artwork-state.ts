@@ -1483,8 +1483,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 682,
-      "y": 534,
+      "x": 216,
+      "y": 84,
       "text": "Evolve",
       "font": "32.09314996290976px Arial",
       "fillStyle": "#f1c40f",
@@ -1570,7 +1570,7 @@ export const artworkState: ArtworkState = {
       "id": "gradient_rect_1755597925913"
     }
   ],
-  "generation": 133,
-  "lastUpdated": "2025-08-19T10:05:25.913Z",
+  "generation": 134,
+  "lastUpdated": "2025-08-19T11:04:46.201Z",
   "cycleStarted": "2025-08-13T22:05:34.253Z"
 };
