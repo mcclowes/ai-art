@@ -220,9 +220,20 @@ export const artworkState: ArtworkState = {
       "font": "20.18172882248265px Arial",
       "fillStyle": "#e74c3c",
       "id": "text_1755760060652"
+    },
+    {
+      "type": "rectangle",
+      "x": 265.5624227441286,
+      "y": 150.82818294190355,
+      "width": 80,
+      "height": 440,
+      "fillStyle": "#e67e22",
+      "pattern": "dots",
+      "opacity": 0.8729855921328377,
+      "id": "pattern_rect_1755767156638"
     }
   ],
-  "generation": 10,
-  "lastUpdated": "2025-08-21T08:07:20.157Z",
+  "generation": 11,
+  "lastUpdated": "2025-08-21T09:05:56.638Z",
   "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
