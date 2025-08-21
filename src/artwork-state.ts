@@ -264,14 +264,14 @@ export const artworkState: ArtworkState = {
       "x": 305.5624227441286,
       "y": 229.17181705809645,
       "radius": 6,
-      "fillStyle": "#e67e22",
+      "fillStyle": "#d35400",
       "strokeStyle": "#e67e22",
       "strokeWidth": 1.3732431338762208,
       "opacity": 0.7,
       "id": "spiral_1755778117034"
     }
   ],
-  "generation": 14,
-  "lastUpdated": "2025-08-21T12:08:37.034Z",
+  "generation": 15,
+  "lastUpdated": "2025-08-21T13:12:50.335Z",
   "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
