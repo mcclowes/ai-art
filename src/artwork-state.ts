@@ -77,8 +77,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "curve",
-      "x": 205.56242274412858,
-      "y": 320.82818294190355,
+      "x": 10,
+      "y": 360,
       "width": 243.46727906793808,
       "height": 77.16223665106472,
       "fillStyle": "#f39c12",
@@ -176,9 +176,35 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.8289684986599779,
       "id": "gradient_text_1755749171908"
+    },
+    {
+      "type": "circle",
+      "x": 305.5624227441286,
+      "y": 370.82818294190355,
+      "radius": 136,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 101.9186991561771,
+        "centerX": 0.6437575105103053,
+        "centerY": 0.6202573464355626
+      },
+      "shadow": {
+        "blur": 6.085094826643168,
+        "color": "#e74c3c40",
+        "offsetX": -2.2194902908067093,
+        "offsetY": 2.7148599185365763
+      },
+      "opacity": 0.6739987697379267,
+      "id": "gradient_circle_1755752735932"
     }
   ],
-  "generation": 6,
-  "lastUpdated": "2025-08-21T04:06:11.908Z",
+  "generation": 7,
+  "lastUpdated": "2025-08-21T05:05:35.932Z",
   "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
