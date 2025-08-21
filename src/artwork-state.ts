@@ -131,9 +131,27 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.7783251562673661,
       "id": "gradient_rect_1755743650123"
+    },
+    {
+      "type": "text",
+      "x": 16,
+      "y": 534,
+      "text": "Aesthetic",
+      "font": "22.718357957804418px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1755746502843"
+    },
+    {
+      "type": "text",
+      "x": 216,
+      "y": 84,
+      "text": "Evolve",
+      "font": "25.249606297869253px Arial",
+      "fillStyle": "#f1c40f",
+      "id": "text_1755746502843"
     }
   ],
-  "generation": 4,
-  "lastUpdated": "2025-08-21T02:34:10.123Z",
+  "generation": 5,
+  "lastUpdated": "2025-08-21T03:21:42.843Z",
   "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
