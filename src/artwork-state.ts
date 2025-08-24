@@ -488,8 +488,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "curve",
-      "x": 394.4375772558714,
-      "y": 320.82818294190355,
+      "x": 602,
+      "y": 304,
       "width": 197.2633407767825,
       "height": 90.9907631071823,
       "fillStyle": "#f1c40f",
@@ -993,7 +993,7 @@ export const artworkState: ArtworkState = {
       "id": "spiral_1756037269286"
     }
   ],
-  "generation": 86,
-  "lastUpdated": "2025-08-24T12:07:49.286Z",
+  "generation": 87,
+  "lastUpdated": "2025-08-24T13:09:43.702Z",
   "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
