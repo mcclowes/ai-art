@@ -319,7 +319,13 @@ export const artworkState: ArtworkState = {
       "fillStyle": "#f39c12",
       "pattern": "dots",
       "opacity": 0.8139730481400766,
-      "id": "pattern_rect_1755785118941"
+      "id": "pattern_rect_1755785118941",
+      "shadow": {
+        "blur": 8.304484490697106,
+        "color": "#f39c1240",
+        "offsetX": -1.3710023978764396,
+        "offsetY": -3.6103972463450784
+      }
     },
     {
       "type": "rectangle",
@@ -1486,7 +1492,7 @@ export const artworkState: ArtworkState = {
       "id": "curve_1756188465441"
     }
   ],
-  "generation": 128,
-  "lastUpdated": "2025-08-26T06:07:45.441Z",
+  "generation": 129,
+  "lastUpdated": "2025-08-26T08:07:13.285Z",
   "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
