@@ -26,1483 +26,1636 @@ export interface ArtworkState {
 
 // Artwork state data
 export const artworkState: ArtworkState = {
-  canvas: {
-    width: 800,
-    height: 600,
-    background: "#1a1a1a",
+  "canvas": {
+    "width": 800,
+    "height": 600,
+    "background": "#1a1a1a"
   },
-  elements: [
-    {
-      type: "rectangle",
-      x: 50,
-      y: 50,
-      width: 200,
-      height: 100,
-      fillStyle: "#e67e22",
-      id: "rect1",
-    },
-    {
-      type: "text",
-      x: 416,
-      y: 334,
-      text: "Hello Canvas!",
-      font: "24px Arial",
-      fillStyle: "#fff",
-      id: "text1",
-    },
-    {
-      type: "rectangle",
-      x: 88,
-      y: 183,
-      width: 87.70818754631009,
-      height: 131.7904493874807,
-      fillStyle: "#d35400",
-      id: "element_1755735641714",
-    },
-    {
-      type: "rectangle",
-      x: 211,
-      y: 143,
-      width: 108.95532386779065,
-      height: 112.68610666401882,
-      fillStyle: "#f1c40f",
-      id: "element_1755735641714",
-      shadow: {
-        blur: 16.054463850433535,
-        color: "#d3540040",
-        offsetX: 0.02065527438437975,
-        offsetY: -3.841204487166918,
-      },
-      opacity: 0.7074239866173868,
-    },
-    {
-      type: "curve",
-      x: 10,
-      y: 360,
-      width: 243.46727906793808,
-      height: 77.16223665106472,
-      fillStyle: "#f39c12",
-      strokeStyle: "#f39c12",
-      strokeWidth: 2.240719833691605,
-      opacity: 0.9954043581257457,
-      id: "curve_1755739970600",
-      shadow: {
-        blur: 13.832302086111286,
-        color: "#f39c1240",
-        offsetX: -1.9094978102794458,
-        offsetY: 0.0716714209710716,
-      },
-    },
-    {
-      type: "triangle",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      size: 25,
-      fillStyle: "#f1c40f",
-      strokeStyle: "#f1c40f",
-      strokeWidth: 1.4375644184008678,
-      rotation: 336.2277794451593,
-      opacity: 0.9375781339078524,
-      shadow: {
-        blur: 12.602484776472345,
-        color: "#f1c40f40",
-        offsetX: -4.442643796775602,
-        offsetY: 4.622924894283129,
-      },
-      id: "rotated_triangle_1755743650123",
-    },
-    {
-      type: "rectangle",
-      x: 358.4375772558714,
-      y: 331.82818294190355,
-      width: 272,
-      height: 78,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 119.93290338228786,
-        centerX: 0.6437654222432858,
-        centerY: 0.39323700421968877,
-      },
-      shadow: {
-        blur: 16.342647342766355,
-        color: "#e74c3c40",
-        offsetX: -4.852523831773827,
-        offsetY: -1.4593439131774044,
-      },
-      opacity: 0.7783251562673661,
-      id: "gradient_rect_1755743650123",
-    },
-    {
-      type: "text",
-      x: 16,
-      y: 534,
-      text: "Aesthetic",
-      font: "22.718357957804418px Arial",
-      fillStyle: "#f39c12",
-      id: "text_1755746502843",
-    },
-    {
-      type: "text",
-      x: 216,
-      y: 84,
-      text: "Evolve",
-      font: "25.249606297869253px Arial",
-      fillStyle: "#f1c40f",
-      id: "text_1755746502843",
-    },
-    {
-      type: "text",
-      x: 434.4375772558714,
-      y: 350.82818294190355,
-      text: "TRANSCEND",
-      font: "bold 24.313257113565122px Arial",
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 244.67057245435706,
-        centerX: 0.4556936119922141,
-        centerY: 0.652093609992423,
-      },
-      shadow: {
-        blur: 10.058325822385095,
-        color: "#e74c3c40",
-        offsetX: -4.273024026202197,
-        offsetY: 3.2198996406381504,
-      },
-      opacity: 0.8289684986599779,
-      id: "gradient_text_1755749171908",
-    },
-    {
-      type: "circle",
-      x: 305.5624227441286,
-      y: 370.82818294190355,
-      radius: 136,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 101.9186991561771,
-        centerX: 0.6437575105103053,
-        centerY: 0.6202573464355626,
-      },
-      shadow: {
-        blur: 6.085094826643168,
-        color: "#e74c3c40",
-        offsetX: -2.2194902908067093,
-        offsetY: 2.7148599185365763,
-      },
-      opacity: 0.6739987697379267,
-      id: "gradient_circle_1755752735932",
-    },
-    {
-      type: "text",
-      x: 216,
-      y: 234,
-      text: "Aesthetic",
-      font: "31.670072482332838px Arial",
-      fillStyle: "#e67e22",
-      id: "text_1755756476296",
-    },
-    {
-      type: "text",
-      x: 282,
-      y: 534,
-      text: "Inspire",
-      font: "20.18172882248265px Arial",
-      fillStyle: "#e74c3c",
-      id: "text_1755760060652",
-    },
-    {
-      type: "rectangle",
-      x: 692,
-      y: 0,
-      width: 80,
-      height: 440,
-      fillStyle: "#e67e22",
-      pattern: "dots",
-      opacity: 0.8729855921328377,
-      id: "pattern_rect_1755767156638",
-      gradient: {
-        type: "linear",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 329.573705955105,
-        centerX: 0.5297880564460566,
-        centerY: 0.33852497970993917,
-      },
-      shadow: {
-        blur: 10.870613246416887,
-        color: "#e67e2240",
-        offsetX: 0.7013647785911159,
-        offsetY: 2.843137071720154,
-      },
-    },
-    {
-      type: "rectangle",
-      x: 462.4375772558714,
-      y: 166.17181705809645,
-      width: 64,
-      height: 126,
-      fillStyle: "#f39c12",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 65.1057470064171,
-        centerX: 0.6456599042524964,
-        centerY: 0.3082678299849502,
-      },
-      shadow: {
-        blur: 16.177944066344608,
-        color: "#e74c3c40",
-        offsetX: -0.24655966903429238,
-        offsetY: 3.8558437198071704,
-      },
-      opacity: 0.8203982826864309,
-      id: "gradient_rect_1755770740320",
-    },
-    {
-      type: "spiral",
-      x: 305.5624227441286,
-      y: 229.17181705809645,
-      radius: 6,
-      fillStyle: "#d35400",
-      strokeStyle: "#e67e22",
-      strokeWidth: 1.3732431338762208,
-      opacity: 0.8202176867222197,
-      id: "spiral_1755778117034",
-      gradient: {
-        type: "linear",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 254.301396537802,
-        centerX: 0.31856070828149086,
-        centerY: 0.634544153730706,
-      },
-      shadow: {
-        blur: 11.301968395649663,
-        color: "#d3540040",
-        offsetX: -4.370192379353927,
-        offsetY: 0.961922273018665,
-      },
-    },
-    {
-      type: "rectangle",
-      x: 469.4375772558714,
-      y: 221.17181705809645,
-      width: 50,
-      height: 16,
-      fillStyle: "#f39c12",
-      pattern: "dots",
-      opacity: 0.8139730481400766,
-      id: "pattern_rect_1755785118941",
-      shadow: {
-        blur: 8.304484490697106,
-        color: "#f39c1240",
-        offsetX: -1.3710023978764396,
-        offsetY: -3.6103972463450784,
-      },
-    },
-    {
-      type: "rectangle",
-      x: 486.4375772558714,
-      y: 205.82818294190355,
-      width: 16,
-      height: 330,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 287.4248038720678,
-        centerX: 0.5140864679438282,
-        centerY: 0.5651403868274448,
-      },
-      shadow: {
-        blur: 14.787363762009338,
-        color: "#e74c3c40",
-        offsetX: -1.7870481453180465,
-        offsetY: 2.483773580098725,
-      },
-      opacity: 0.8438750358852838,
-      id: "gradient_rect_1755788748208",
-    },
-    {
-      type: "text",
-      x: 245.56242274412858,
-      y: 350.82818294190355,
-      text: "HARMONY",
-      font: "bold 32.604718013356944px Arial",
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 335.48141205880734,
-        centerX: 0.6900127945632273,
-        centerY: 0.431565058831353,
-      },
-      shadow: {
-        blur: 9.142174574765285,
-        color: "#e74c3c40",
-        offsetX: 3.372479401716186,
-        offsetY: 1.024160435539871,
-      },
-      opacity: 0.8447357763657058,
-      id: "gradient_text_1755792652464",
-    },
-    {
-      type: "rectangle",
-      x: 41,
-      y: 0,
-      width: 50,
-      height: 272,
-      fillStyle: "#e74c3c",
-      pattern: "dots",
-      opacity: 0.6408394653380217,
-      id: "pattern_rect_1755796194614",
-    },
-    {
-      type: "circle",
-      x: 494.4375772558714,
-      y: 370.82818294190355,
-      radius: 52,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 158.53068494052522,
-        centerX: 0.40884383602431995,
-        centerY: 0.4243925799726421,
-      },
-      shadow: {
-        blur: 19.625552806479043,
-        color: "#e74c3c40",
-        offsetX: 0.6831099441653787,
-        offsetY: 4.434006928392391,
-      },
-      opacity: 0.6312982777087933,
-      id: "gradient_circle_1755799636280",
-    },
-    {
-      type: "text",
-      x: 434.4375772558714,
-      y: 209.17181705809645,
-      text: "EMERGENCE",
-      font: "bold 28.645961766216182px Arial",
-      fillStyle: "#FF6B35",
-      gradient: {
-        type: "radial",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 149.14899407613834,
-        centerX: 0.49625340897010517,
-        centerY: 0.6023965280715629,
-      },
-      shadow: {
-        blur: 18.478304776944547,
-        color: "#FF6B3540",
-        offsetX: 0.24514631269522802,
-        offsetY: -3.07584367221144,
-      },
-      opacity: 0.878470869684588,
-      id: "gradient_text_1755803074721",
-    },
-    {
-      type: "text",
-      x: 416,
-      y: 34,
-      text: "Create",
-      font: "21.417566629787707px Arial",
-      fillStyle: "#e74c3c",
-      id: "text_1755806871162",
-    },
-    {
-      type: "triangle",
-      x: 465.7792433997048,
-      y: 498.7792433997048,
-      size: 54.77924339970478,
-      fillStyle: "#e74c3c",
-      id: "triangle_1755810280900",
-    },
-    {
-      type: "triangle",
-      x: 665.7109313205775,
-      y: 66.71093132057749,
-      size: 66.71093132057749,
-      fillStyle: "#e74c3c",
-      id: "triangle_1755813897001",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 99.72009382707056,
-        centerX: 0.44731825229782063,
-        centerY: 0.6688878515207641,
-      },
-      shadow: {
-        blur: 13.151279651342861,
-        color: "#e74c3c40",
-        offsetX: -2.074672746510775,
-        offsetY: 2.4982792047887408,
-      },
-      opacity: 0.7051674802548638,
-    },
-    {
-      type: "rectangle",
-      x: 608,
-      y: 135,
-      width: 114.35335766656601,
-      height: 128.84457732409038,
-      fillStyle: "#f1c40f",
-      id: "element_1755822075054",
-      gradient: {
-        type: "radial",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 351.6291261815693,
-        centerX: 0.5789046389729509,
-        centerY: 0.44987006626983916,
-      },
-      shadow: {
-        blur: 16.228380011826836,
-        color: "#f1c40f40",
-        offsetX: -1.9198153500247361,
-        offsetY: 3.209780619074591,
-      },
-      opacity: 0.9659753147912833,
-    },
-    {
-      type: "curve",
-      x: 602,
-      y: 304,
-      width: 197.2633407767825,
-      height: 90.9907631071823,
-      fillStyle: "#e67e22",
-      strokeStyle: "#f1c40f",
-      strokeWidth: 4.909785622857302,
-      opacity: 0.8,
-      id: "curve_1755826383096",
-    },
-    {
-      type: "rectangle",
-      x: 120,
-      y: 493,
-      width: 24,
-      height: 12,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 158.78764941169095,
-        centerX: 0.4852866309331484,
-        centerY: 0.4674995625945247,
-      },
-      shadow: {
-        blur: 9.944114604350325,
-        color: "#e74c3c40",
-        offsetX: -4.076994466830142,
-        offsetY: 3.705358044742731,
-      },
-      opacity: 0.7686710936792536,
-      id: "gradient_rect_1755830040446",
-    },
-    {
-      type: "rectangle",
-      x: 696,
-      y: 206,
-      width: 70.40999324816946,
-      height: 85.66652460366244,
-      fillStyle: "#d35400",
-      id: "element_1755832910585",
-      shadow: {
-        blur: 5.283113546870548,
-        color: "#e67e2240",
-        offsetX: -3.343620713702349,
-        offsetY: -3.601586755840094,
-      },
-    },
-    {
-      type: "circle",
-      x: 82,
-      y: 334,
-      radius: 32,
-      fillStyle: "#FF6B35",
-      gradient: {
-        type: "linear",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 97.76599218759364,
-        centerX: 0.6520367265199503,
-        centerY: 0.5634762310130659,
-      },
-      shadow: {
-        blur: 12.421554714541136,
-        color: "#FF6B3540",
-        offsetX: 2.235123436235515,
-        offsetY: 2.9237819336493427,
-      },
-      opacity: 0.8258556789583018,
-      id: "gradient_circle_1755835546692",
-    },
-    {
-      type: "circle",
-      x: 731.2880710062371,
-      y: 349.28807100623715,
-      radius: 45.28807100623713,
-      fillStyle: "#d35400",
-      id: "circle_1755842861012",
-      gradient: {
-        type: "linear",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 68.58266787098137,
-        centerX: 0.4767282871415185,
-        centerY: 0.31420351430498383,
-      },
-      shadow: {
-        blur: 18.76539904191154,
-        color: "#d3540040",
-        offsetX: 3.860528402888219,
-        offsetY: -0.3699237166797058,
-      },
-      opacity: 0.8282108001523626,
-    },
-    {
-      type: "rectangle",
-      x: 687,
-      y: 211,
-      width: 88.41798523335652,
-      height: 75.91755144525413,
-      fillStyle: "#e74c3c",
-      id: "element_1755846342310",
-    },
-    {
-      type: "triangle",
-      x: 16,
-      y: 184,
-      size: 97.20256031265404,
-      fillStyle: "#e74c3c",
-      id: "triangle_1755853550822",
-    },
-    {
-      type: "spiral",
-      x: 494.4375772558714,
-      y: 370.82818294190355,
-      radius: 24,
-      fillStyle: "#e74c3c",
-      strokeStyle: "#e74c3c",
-      strokeWidth: 2.162638421520463,
-      opacity: 0.7,
-      id: "spiral_1755860685796",
-    },
-    {
-      type: "circle",
-      x: 65.11311903007727,
-      y: 543.1131190300773,
-      radius: 56.11311903007727,
-      fillStyle: "#f39c12",
-      id: "circle_1755871508379",
-    },
-    {
-      type: "circle",
-      x: 331.5496524177727,
-      y: 498.5496524177727,
-      radius: 37.54965241777268,
-      fillStyle: "#e67e22",
-      id: "circle_1755875118660",
-    },
-    {
-      type: "circle",
-      x: 531.8445550255196,
-      y: 48.84455502551958,
-      radius: 37.84455502551958,
-      fillStyle: "#f1c40f",
-      id: "circle_1755878757950",
-    },
-    {
-      type: "rectangle",
-      x: 479.4375772558714,
-      y: 362.82818294190355,
-      width: 30,
-      height: 16,
-      fillStyle: "#f39c12",
-      pattern: "stripes",
-      opacity: 0.9917272816790756,
-      id: "pattern_rect_1755886001160",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 151.91339145620321,
-        centerX: 0.3010539494586876,
-        centerY: 0.5435933573725926,
-      },
-    },
-    {
-      type: "triangle",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      size: 10,
-      fillStyle: "#e74c3c",
-      strokeStyle: "#e74c3c",
-      strokeWidth: 1.187640171362546,
-      rotation: 306.0585825327646,
-      opacity: 0.7022079140312976,
-      shadow: {
-        blur: 13.907246442453946,
-        color: "#e74c3c40",
-        offsetX: 2.1122708169559363,
-        offsetY: 2.9103563939855936,
-      },
-      id: "rotated_triangle_1755889474036",
-    },
-    {
-      type: "rectangle",
-      x: 684,
-      y: 456,
-      width: 94.45510948943907,
-      height: 85.45933120964969,
-      fillStyle: "#f39c12",
-      id: "element_1755893134607",
-    },
-    {
-      type: "rectangle",
-      x: 429.4375772558714,
-      y: 177.17181705809645,
-      width: 130,
-      height: 104,
-      fillStyle: "#f39c12",
-      pattern: "stripes",
-      opacity: 0.7785490174136116,
-      id: "pattern_rect_1755903897802",
-    },
-    {
-      type: "triangle",
-      x: 531.2902191033668,
-      y: 508.2902191033668,
-      size: 91.29021910336681,
-      fillStyle: "#d35400",
-      id: "triangle_1755908457296",
-      gradient: {
-        type: "linear",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 57.09862228225137,
-        centerX: 0.5687182544260961,
-        centerY: 0.3727587070201254,
-      },
-    },
-    {
-      type: "text",
-      x: 245.56242274412858,
-      y: 209.17181705809645,
-      text: "TRANSCEND",
-      font: "bold 34.5497329655352px Arial",
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 68.7722441226251,
-        centerX: 0.6491258257608841,
-        centerY: 0.34421639216253286,
-      },
-      shadow: {
-        blur: 15.575139163621284,
-        color: "#e74c3c40",
-        offsetX: -3.5942357229293864,
-        offsetY: 2.4067797237322264,
-      },
-      opacity: 0.8393062275071558,
-      id: "gradient_text_1755912749423",
-    },
-    {
-      type: "circle",
-      x: 731.9553333964054,
-      y: 348.9553333964055,
-      radius: 60.95533339640547,
-      fillStyle: "#e74c3c",
-      id: "circle_1755916321804",
-    },
-    {
-      type: "rectangle",
-      x: 292,
-      y: 436,
-      width: 78.9580204698264,
-      height: 126.22544947336122,
-      fillStyle: "#e74c3c",
-      id: "element_1755925491760",
-    },
-    {
-      type: "rectangle",
-      x: 72,
-      y: 52,
-      width: 118.72268476953083,
-      height: 92.95084692273636,
-      fillStyle: "#e74c3c",
-      id: "element_1755929195418",
-    },
-    {
-      type: "circle",
-      x: 65.36439230557704,
-      y: 248.36439230557704,
-      radius: 46.364392305577034,
-      fillStyle: "#e67e22",
-      id: "circle_1755936348534",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 51.626632403829305,
-        centerX: 0.30314454231827825,
-        centerY: 0.6108129919265999,
-      },
-      opacity: 0.9214560950924017,
-    },
-    {
-      type: "rectangle",
-      x: 34,
-      y: 367,
-      width: 63.442783056991985,
-      height: 63.8052788351391,
-      fillStyle: "#e74c3c",
-      id: "element_1755943493685",
-    },
-    {
-      type: "rectangle",
-      x: 561,
-      y: 391,
-      width: 210,
-      height: 16,
-      fillStyle: "#f1c40f",
-      pattern: "dots",
-      opacity: 0.7829401937689452,
-      id: "pattern_rect_1755954559946",
-    },
-    {
-      type: "circle",
-      x: 331.27695283330314,
-      y: 98.27695283330314,
-      radius: 54.276952833303135,
-      fillStyle: "#e74c3c",
-      id: "circle_1755957874794",
-    },
-    {
-      type: "rectangle",
-      x: 688,
-      y: 500,
-      width: 86.33959875955989,
-      height: 96.50515046615067,
-      fillStyle: "#f39c12",
-      id: "element_1755968660625",
-    },
-    {
-      type: "rectangle",
-      x: 289,
-      y: 431,
-      width: 85.2760152760615,
-      height: 135.80654121138124,
-      fillStyle: "#d35400",
-      id: "element_1755975857965",
-    },
-    {
-      type: "rectangle",
-      x: 232,
-      y: 512,
-      width: 66.90139827300217,
-      height: 72.3242221080914,
-      fillStyle: "#d35400",
-      id: "element_1755986676715",
-    },
-    {
-      type: "circle",
-      x: 416,
-      y: 484,
-      radius: 71.81244019122916,
-      fillStyle: "#f1c40f",
-      id: "circle_1755990285715",
-      shadow: {
-        blur: 5.786314531913314,
-        color: "#f1c40f40",
-        offsetX: 2.2267109096712563,
-        offsetY: 4.154013834129962,
-      },
-      opacity: 0.7157950079970864,
-    },
-    {
-      type: "circle",
-      x: 531.4851311730362,
-      y: 536.4851311730362,
-      radius: 63.485131173036194,
-      fillStyle: "#e74c3c",
-      id: "circle_1755999192092",
-    },
-    {
-      type: "rectangle",
-      x: 669,
-      y: 459,
-      width: 125.53513443792106,
-      height: 79.39770237252165,
-      fillStyle: "#f39c12",
-      id: "element_1756003051865",
-    },
-    {
-      type: "triangle",
-      x: 731.3837610900481,
-      y: 199.3837610900481,
-      size: 53.38376109004809,
-      fillStyle: "#f39c12",
-      id: "triangle_1756008566112",
-    },
-    {
-      type: "text",
-      x: 245.56242274412858,
-      y: 350.82818294190355,
-      text: "EMERGENCE",
-      font: "bold 28.468588734598303px Arial",
-      fillStyle: "#d35400",
-      gradient: {
-        type: "radial",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 279.13999039285943,
-        centerX: 0.5161295645909745,
-        centerY: 0.3842681157890704,
-      },
-      shadow: {
-        blur: 19.571889539139065,
-        color: "#d3540040",
-        offsetX: -1.3213663387455354,
-        offsetY: -4.177782891457755,
-      },
-      opacity: 0.9317599985308449,
-      id: "gradient_text_1756011905262",
-    },
-    {
-      type: "triangle",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      size: 15,
-      fillStyle: "#d35400",
-      strokeStyle: "#d35400",
-      strokeWidth: 1.510788260856148,
-      rotation: 186.27324503832747,
-      opacity: 0.76972026802768,
-      shadow: {
-        blur: 10.312588626797472,
-        color: "#d3540040",
-        offsetX: 4.30290408407258,
-        offsetY: 4.728069666402078,
-      },
-      id: "rotated_triangle_1756015608120",
-    },
-    {
-      type: "rectangle",
-      x: 253.56242274412858,
-      y: 127.17181705809645,
-      width: 104,
-      height: 204,
-      fillStyle: "#d35400",
-      gradient: {
-        type: "radial",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 351.0215689405189,
-        centerX: 0.3951641338294385,
-        centerY: 0.32107433230159177,
-      },
-      shadow: {
-        blur: 8.665637479245694,
-        color: "#d3540040",
-        offsetX: 4.4197127355191395,
-        offsetY: -4.998930917699063,
-      },
-      opacity: 0.9580909195989125,
-      id: "gradient_rect_1756019102077",
-    },
-    {
-      type: "spiral",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      radius: 102,
-      fillStyle: "#f39c12",
-      strokeStyle: "#f39c12",
-      strokeWidth: 1.9481057707733251,
-      opacity: 0.7,
-      id: "spiral_1756022755995",
-    },
-    {
-      type: "circle",
-      x: 305.5624227441286,
-      y: 370.82818294190355,
-      radius: 8,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 107.93493170501745,
-        centerX: 0.46828560122953944,
-        centerY: 0.6971747326214135,
-      },
-      shadow: {
-        blur: 7.159615801753488,
-        color: "#e74c3c40",
-        offsetX: 2.2246556081784803,
-        offsetY: 2.0341243233015245,
-      },
-      opacity: 0.7533300129236695,
-      id: "gradient_circle_1756029894085",
-    },
-    {
-      type: "rectangle",
-      x: 429.4375772558714,
-      y: 209.17181705809645,
-      width: 130,
-      height: 40,
-      fillStyle: "#d35400",
-      pattern: "waves",
-      opacity: 0.6014727495938028,
-      id: "pattern_rect_1756033472419",
-    },
-    {
-      type: "spiral",
-      x: 682,
-      y: 534,
-      radius: 24,
-      fillStyle: "#f1c40f",
-      strokeStyle: "#f1c40f",
-      strokeWidth: 2.9016702212966328,
-      opacity: 0.7,
-      id: "spiral_1756037269286",
-    },
-    {
-      type: "triangle",
-      x: 77.01575504402912,
-      y: 77.01575504402912,
-      size: 77.01575504402912,
-      fillStyle: "#e74c3c",
-      id: "triangle_1756058758672",
-    },
-    {
-      type: "text",
-      x: 434.4375772558714,
-      y: 350.82818294190355,
-      text: "TRANSCEND",
-      font: "bold 34.142374398206805px Arial",
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 345.7572847320996,
-        centerX: 0.3027560156936565,
-        centerY: 0.6150246257903818,
-      },
-      shadow: {
-        blur: 12.04390589434368,
-        color: "#e74c3c40",
-        offsetX: 4.085545955417258,
-        offsetY: -3.0349378151333206,
-      },
-      opacity: 0.8202345553084045,
-      id: "gradient_text_1756062264258",
-    },
-    {
-      type: "rectangle",
-      x: 169.56242274412858,
-      y: 127.17181705809645,
-      width: 272,
-      height: 204,
-      fillStyle: "#FF6B35",
-      gradient: {
-        type: "linear",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 66.27921322671172,
-        centerX: 0.5222506580999945,
-        centerY: 0.38405850321303925,
-      },
-      shadow: {
-        blur: 11.109072256595587,
-        color: "#FF6B3540",
-        offsetX: 4.994248907691276,
-        offsetY: 2.9167227316791617,
-      },
-      opacity: 0.9290851459910511,
-      id: "gradient_rect_1756065898815",
-    },
-    {
-      type: "circle",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      radius: 52,
-      fillStyle: "#FF6B35",
-      gradient: {
-        type: "linear",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 84.63684896976685,
-        centerX: 0.34851692367021203,
-        centerY: 0.600597137820603,
-      },
-      shadow: {
-        blur: 15.511692324951893,
-        color: "#FF6B3540",
-        offsetX: -0.4392075176616057,
-        offsetY: -4.204437937687777,
-      },
-      opacity: 0.7008141100588705,
-      id: "gradient_circle_1756073086988",
-    },
-    {
-      type: "triangle",
-      x: 305.5624227441286,
-      y: 229.17181705809645,
-      size: 40,
-      fillStyle: "#f39c12",
-      strokeStyle: "#f39c12",
-      strokeWidth: 2.556659722505647,
-      rotation: 318.09408434452916,
-      opacity: 0.8031196158218163,
-      shadow: {
-        blur: 18.979802769776455,
-        color: "#f39c1240",
-        offsetX: -3.540034759640074,
-        offsetY: 3.2265938512702714,
-      },
-      id: "rotated_triangle_1756076693874",
-    },
-    {
-      type: "circle",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      radius: 8,
-      fillStyle: "#d35400",
-      gradient: {
-        type: "radial",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 349.7072036734755,
-        centerX: 0.36722267731957514,
-        centerY: 0.382173390544368,
-      },
-      shadow: {
-        blur: 13.465755394989966,
-        color: "#d3540040",
-        offsetX: -1.8449092462586658,
-        offsetY: 2.0175581569563654,
-      },
-      opacity: 0.6456151482318643,
-      id: "gradient_circle_1756089347277",
-    },
-    {
-      type: "text",
-      x: 82,
-      y: 234,
-      text: "Vision",
-      font: "19.428949687982797px Arial",
-      fillStyle: "#f1c40f",
-      id: "text_1756092358379",
-    },
-    {
-      type: "rectangle",
-      x: 280.5624227441286,
-      y: 0,
-      width: 50,
-      height: 712,
-      fillStyle: "#e74c3c",
-      pattern: "stripes",
-      opacity: 0.6173785427876105,
-      id: "pattern_rect_1756094982003",
-    },
-    {
-      type: "triangle",
-      x: 305.5624227441286,
-      y: 229.17181705809645,
-      size: 105,
-      fillStyle: "#f39c12",
-      strokeStyle: "#f39c12",
-      strokeWidth: 2.7419854366829495,
-      rotation: 43.60331835507946,
-      opacity: 0.880718208263768,
-      shadow: {
-        blur: 5.425588803762147,
-        color: "#f39c1240",
-        offsetX: -4.1684549663341315,
-        offsetY: 1.2829419358805039,
-      },
-      id: "rotated_triangle_1756102082751",
-    },
-    {
-      type: "rectangle",
-      x: 0,
-      y: 543,
-      width: 272,
-      height: 12,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 189.5361668610817,
-        centerX: 0.5747093680176477,
-        centerY: 0.6392617673095253,
-      },
-      shadow: {
-        blur: 12.602440654138993,
-        color: "#e74c3c40",
-        offsetX: 1.2423405392261984,
-        offsetY: 4.4937597842384935,
-      },
-      opacity: 0.8412977366242105,
-      id: "gradient_rect_1756105552240",
-    },
-    {
-      type: "triangle",
-      x: 305.5624227441286,
-      y: 229.17181705809645,
-      size: 40,
-      fillStyle: "#e74c3c",
-      strokeStyle: "#e74c3c",
-      strokeWidth: 1.2855895938287176,
-      rotation: 137.8165460686542,
-      opacity: 0.9726463203530293,
-      shadow: {
-        blur: 13.379117289962325,
-        color: "#e74c3c40",
-        offsetX: -0.901577401604305,
-        offsetY: 1.153377864633642,
-      },
-      id: "rotated_triangle_1756112787900",
-    },
-    {
-      type: "circle",
-      x: 305.5624227441286,
-      y: 370.82818294190355,
-      radius: 84,
-      fillStyle: "#d35400",
-      gradient: {
-        type: "radial",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 313.5623434994068,
-        centerX: 0.609015135209973,
-        centerY: 0.33725342991007706,
-      },
-      shadow: {
-        blur: 6.53819820137464,
-        color: "#d3540040",
-        offsetX: -2.440768126037949,
-        offsetY: -3.1717211518537125,
-      },
-      opacity: 0.6573037765726931,
-      id: "gradient_circle_1756116374798",
-    },
-    {
-      type: "rectangle",
-      x: 5,
-      y: 363,
-      width: 120.59733926857592,
-      height: 71.94254457238759,
-      fillStyle: "#f1c40f",
-      id: "element_1756123732483",
-    },
-    {
-      type: "circle",
-      x: 331.3444863940649,
-      y: 548.3444863940649,
-      radius: 35.344486394064916,
-      fillStyle: "#f1c40f",
-      id: "circle_1756127630718",
-    },
-    {
-      type: "rectangle",
-      x: 475,
-      y: 5,
-      width: 113.08754513598899,
-      height: 88.08643008492636,
-      fillStyle: "#e67e22",
-      id: "element_1756130715307",
-    },
-    {
-      type: "circle",
-      x: 465.99137243761226,
-      y: 48.99137243761225,
-      radius: 30.99137243761225,
-      fillStyle: "#e67e22",
-      id: "circle_1756137959346",
-    },
-    {
-      type: "triangle",
-      x: 731.3128303725964,
-      y: 199.31283037259644,
-      size: 52.312830372596444,
-      fillStyle: "#e74c3c",
-      id: "triangle_1756141448488",
-    },
-    {
-      type: "text",
-      x: 434.4375772558714,
-      y: 209.17181705809645,
-      text: "SYNTHESIS",
-      font: "bold 37.54003197444049px Arial",
-      fillStyle: "#FF6B35",
-      gradient: {
-        type: "radial",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 198.18506210956568,
-        centerX: 0.65102129074161,
-        centerY: 0.35788551741491637,
-      },
-      shadow: {
-        blur: 12.590560793089493,
-        color: "#FF6B3540",
-        offsetX: 4.123329283004926,
-        offsetY: -1.5936443246235177,
-      },
-      opacity: 0.9145614426693611,
-      id: "gradient_text_1756145223737",
-    },
-    {
-      type: "curve",
-      x: 205.56242274412858,
-      y: 320.82818294190355,
-      width: 230.0503591944104,
-      height: 84.20532995801605,
-      fillStyle: "#f1c40f",
-      strokeStyle: "#f1c40f",
-      strokeWidth: 2.2147009767850534,
-      opacity: 0.8,
-      id: "curve_1756152352127",
-    },
-    {
-      type: "circle",
-      x: 305.5624227441286,
-      y: 370.82818294190355,
-      radius: 136,
-      fillStyle: "#FF6B35",
-      gradient: {
-        type: "linear",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 79.75352344369888,
-        centerX: 0.42304333893848556,
-        centerY: 0.38355418507743383,
-      },
-      shadow: {
-        blur: 17.78337174510968,
-        color: "#FF6B3540",
-        offsetX: 4.947147453043817,
-        offsetY: -2.0725400070713995,
-      },
-      opacity: 0.838293608434181,
-      id: "gradient_circle_1756155881043",
-    },
-    {
-      type: "rectangle",
-      x: 597,
-      y: 355,
-      width: 136.69882187206858,
-      height: 87.54075949448077,
-      fillStyle: "#f1c40f",
-      id: "element_1756159513937",
-    },
-    {
-      type: "text",
-      x: 682,
-      y: 334,
-      text: "Vision",
-      font: "30.027029816373226px Arial",
-      fillStyle: "#e67e22",
-      id: "text_1756163098620",
-    },
-    {
-      type: "circle",
-      x: 305.5624227441286,
-      y: 370.82818294190355,
-      radius: 220,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 310.49902547137896,
-        centerX: 0.32133698984204323,
-        centerY: 0.3307008152457694,
-      },
-      shadow: {
-        blur: 12.757836466680192,
-        color: "#e74c3c40",
-        offsetX: 2.9590193741198174,
-        offsetY: -1.485230818562382,
-      },
-      opacity: 0.6536098808904369,
-      id: "gradient_circle_1756167694188",
-    },
-    {
-      type: "text",
-      x: 682,
-      y: 84,
-      text: "Evolve",
-      font: "31.77760202408257px Arial",
-      fillStyle: "#f1c40f",
-      id: "text_1756175661036",
-    },
-    {
-      type: "rectangle",
-      x: 88,
-      y: 361.82818294190355,
-      width: 712,
-      height: 18,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 63.64884309242278,
-        centerX: 0.5648036250427869,
-        centerY: 0.5962081062909201,
-      },
-      shadow: {
-        blur: 15.449719401559435,
-        color: "#e74c3c40",
-        offsetX: -2.6153824347617727,
-        offsetY: 2.656437509525354,
-      },
-      opacity: 0.957078402070249,
-      id: "gradient_rect_1756181180272",
-    },
-    {
-      type: "curve",
-      x: 205.56242274412858,
-      y: 179.17181705809645,
-      width: 223.10695733461472,
-      height: 61.17591814161882,
-      fillStyle: "#f1c40f",
-      strokeStyle: "#f1c40f",
-      strokeWidth: 2.4701160183314883,
-      opacity: 0.8,
-      id: "curve_1756188465441",
-    },
-    {
-      type: "curve",
-      x: 205.56242274412858,
-      y: 179.17181705809645,
-      width: 249.50498305278595,
-      height: 74.63190085866475,
-      fillStyle: "#e67e22",
-      strokeStyle: "#e67e22",
-      strokeWidth: 3.7630832514267345,
-      opacity: 0.8,
-      id: "curve_1756199242561",
-    },
-    {
-      type: "text",
-      x: 245.56242274412858,
-      y: 209.17181705809645,
-      text: "SYNTHESIS",
-      font: "bold 38.2112112708839px Arial",
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 85.70382381861955,
-        centerX: 0.674197989416456,
-        centerY: 0.6946460811652491,
-      },
-      shadow: {
-        blur: 13.333710342397918,
-        color: "#e74c3c40",
-        offsetX: 4.87228102084565,
-        offsetY: -3.11285941483477,
-      },
-      opacity: 0.9494248021126752,
-      id: "gradient_text_1756202774714",
-    },
-    {
-      type: "text",
-      x: 434.4375772558714,
-      y: 350.82818294190355,
-      text: "SYNTHESIS",
-      font: "bold 35.130019990170425px Arial",
-      fillStyle: "#FF6B35",
-      gradient: {
-        type: "radial",
-        colors: ["#FF6B35", "#F7931E", "#FFD23F"],
-        direction: 116.3904518045229,
-        centerX: 0.472952246222935,
-        centerY: 0.5346046288161339,
-      },
-      shadow: {
-        blur: 5.377258054664745,
-        color: "#FF6B3540",
-        offsetX: -0.9315288418527645,
-        offsetY: 3.487943071481844,
-      },
-      opacity: 0.9435967928381161,
-      id: "gradient_text_1756206378705",
-    },
-    {
-      type: "triangle",
-      x: 66.83350249644532,
-      y: 198.8335024964453,
-      size: 66.83350249644532,
-      fillStyle: "#f39c12",
-      id: "triangle_1756210140250",
-    },
-    {
-      type: "triangle",
-      x: 494.4375772558714,
-      y: 275,
-      size: 275,
-      fillStyle: "#f39c12",
-      strokeStyle: "#f39c12",
-      strokeWidth: 1.7394299382160456,
-      rotation: 303.59116193003535,
-      opacity: 0.923969395599951,
-      shadow: {
-        blur: 12.994178910091033,
-        color: "#f39c1240",
-        offsetX: -3.237269994244514,
-        offsetY: 2.1039009866093377,
-      },
-      id: "rotated_triangle_1756217120426",
-    },
-    {
-      type: "text",
-      x: 82,
-      y: 484,
-      text: "Harmony",
-      font: "28.13387277831562px Arial",
-      fillStyle: "#e74c3c",
-      id: "text_1756220738893",
-    },
-    {
-      type: "rectangle",
-      x: 474.4375772558714,
-      y: 220.17181705809645,
-      width: 40,
-      height: 18,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "radial",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 245.7360989110983,
-        centerX: 0.6511166725151563,
-        centerY: 0.5540885412293676,
-      },
-      shadow: {
-        blur: 10.741388452066687,
-        color: "#e74c3c40",
-        offsetX: -2.97656781654966,
-        offsetY: 0.9732315449630224,
-      },
-      opacity: 0.9197572850564282,
-      id: "gradient_rect_1756224362109",
-    },
-    {
-      type: "circle",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      radius: 12,
-      fillStyle: "#e74c3c",
-      gradient: {
-        type: "linear",
-        colors: ["#e74c3c", "#f39c12", "#f1c40f"],
-        direction: 261.9891939066313,
-        centerX: 0.4424920775015806,
-        centerY: 0.4227529853494231,
-      },
-      shadow: {
-        blur: 18.648079018987342,
-        color: "#e74c3c40",
-        offsetX: -4.224568951266665,
-        offsetY: -1.117492204928523,
-      },
-      opacity: 0.915585933861517,
-      id: "gradient_circle_1756227892752",
-    },
+  "elements": [
+    {
+      "type": "rectangle",
+      "x": 50,
+      "y": 50,
+      "width": 200,
+      "height": 100,
+      "fillStyle": "#e67e22",
+      "id": "rect1"
+    },
+    {
+      "type": "text",
+      "x": 416,
+      "y": 334,
+      "text": "Hello Canvas!",
+      "font": "24px Arial",
+      "fillStyle": "#fff",
+      "id": "text1"
+    },
+    {
+      "type": "rectangle",
+      "x": 88,
+      "y": 183,
+      "width": 87.70818754631009,
+      "height": 131.7904493874807,
+      "fillStyle": "#d35400",
+      "id": "element_1755735641714"
+    },
+    {
+      "type": "rectangle",
+      "x": 211,
+      "y": 143,
+      "width": 108.95532386779065,
+      "height": 112.68610666401882,
+      "fillStyle": "#f1c40f",
+      "id": "element_1755735641714",
+      "shadow": {
+        "blur": 16.054463850433535,
+        "color": "#d3540040",
+        "offsetX": 0.02065527438437975,
+        "offsetY": -3.841204487166918
+      },
+      "opacity": 0.7074239866173868
+    },
+    {
+      "type": "curve",
+      "x": 10,
+      "y": 360,
+      "width": 243.46727906793808,
+      "height": 77.16223665106472,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 2.240719833691605,
+      "opacity": 0.9954043581257457,
+      "id": "curve_1755739970600",
+      "shadow": {
+        "blur": 13.832302086111286,
+        "color": "#f39c1240",
+        "offsetX": -1.9094978102794458,
+        "offsetY": 0.0716714209710716
+      }
+    },
+    {
+      "type": "triangle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "size": 25,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 1.4375644184008678,
+      "rotation": 336.2277794451593,
+      "opacity": 0.9375781339078524,
+      "shadow": {
+        "blur": 12.602484776472345,
+        "color": "#f1c40f40",
+        "offsetX": -4.442643796775602,
+        "offsetY": 4.622924894283129
+      },
+      "id": "rotated_triangle_1755743650123"
+    },
+    {
+      "type": "rectangle",
+      "x": 358.4375772558714,
+      "y": 331.82818294190355,
+      "width": 272,
+      "height": 78,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 119.93290338228786,
+        "centerX": 0.6437654222432858,
+        "centerY": 0.39323700421968877
+      },
+      "shadow": {
+        "blur": 16.342647342766355,
+        "color": "#e74c3c40",
+        "offsetX": -4.852523831773827,
+        "offsetY": -1.4593439131774044
+      },
+      "opacity": 0.7783251562673661,
+      "id": "gradient_rect_1755743650123"
+    },
+    {
+      "type": "text",
+      "x": 16,
+      "y": 534,
+      "text": "Aesthetic",
+      "font": "22.718357957804418px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1755746502843"
+    },
+    {
+      "type": "text",
+      "x": 216,
+      "y": 84,
+      "text": "Evolve",
+      "font": "25.249606297869253px Arial",
+      "fillStyle": "#f1c40f",
+      "id": "text_1755746502843"
+    },
+    {
+      "type": "text",
+      "x": 434.4375772558714,
+      "y": 350.82818294190355,
+      "text": "TRANSCEND",
+      "font": "bold 24.313257113565122px Arial",
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 244.67057245435706,
+        "centerX": 0.4556936119922141,
+        "centerY": 0.652093609992423
+      },
+      "shadow": {
+        "blur": 10.058325822385095,
+        "color": "#e74c3c40",
+        "offsetX": -4.273024026202197,
+        "offsetY": 3.2198996406381504
+      },
+      "opacity": 0.8289684986599779,
+      "id": "gradient_text_1755749171908"
+    },
+    {
+      "type": "circle",
+      "x": 305.5624227441286,
+      "y": 370.82818294190355,
+      "radius": 136,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 101.9186991561771,
+        "centerX": 0.6437575105103053,
+        "centerY": 0.6202573464355626
+      },
+      "shadow": {
+        "blur": 6.085094826643168,
+        "color": "#e74c3c40",
+        "offsetX": -2.2194902908067093,
+        "offsetY": 2.7148599185365763
+      },
+      "opacity": 0.6739987697379267,
+      "id": "gradient_circle_1755752735932"
+    },
+    {
+      "type": "text",
+      "x": 216,
+      "y": 234,
+      "text": "Aesthetic",
+      "font": "31.670072482332838px Arial",
+      "fillStyle": "#e67e22",
+      "id": "text_1755756476296"
+    },
+    {
+      "type": "text",
+      "x": 282,
+      "y": 534,
+      "text": "Inspire",
+      "font": "20.18172882248265px Arial",
+      "fillStyle": "#e74c3c",
+      "id": "text_1755760060652"
+    },
+    {
+      "type": "rectangle",
+      "x": 692,
+      "y": 0,
+      "width": 80,
+      "height": 440,
+      "fillStyle": "#e67e22",
+      "pattern": "dots",
+      "opacity": 0.8729855921328377,
+      "id": "pattern_rect_1755767156638",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 329.573705955105,
+        "centerX": 0.5297880564460566,
+        "centerY": 0.33852497970993917
+      },
+      "shadow": {
+        "blur": 10.870613246416887,
+        "color": "#e67e2240",
+        "offsetX": 0.7013647785911159,
+        "offsetY": 2.843137071720154
+      }
+    },
+    {
+      "type": "rectangle",
+      "x": 462.4375772558714,
+      "y": 166.17181705809645,
+      "width": 64,
+      "height": 126,
+      "fillStyle": "#f39c12",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 65.1057470064171,
+        "centerX": 0.6456599042524964,
+        "centerY": 0.3082678299849502
+      },
+      "shadow": {
+        "blur": 16.177944066344608,
+        "color": "#e74c3c40",
+        "offsetX": -0.24655966903429238,
+        "offsetY": 3.8558437198071704
+      },
+      "opacity": 0.8203982826864309,
+      "id": "gradient_rect_1755770740320"
+    },
+    {
+      "type": "spiral",
+      "x": 305.5624227441286,
+      "y": 229.17181705809645,
+      "radius": 6,
+      "fillStyle": "#d35400",
+      "strokeStyle": "#e67e22",
+      "strokeWidth": 1.3732431338762208,
+      "opacity": 0.8202176867222197,
+      "id": "spiral_1755778117034",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 254.301396537802,
+        "centerX": 0.31856070828149086,
+        "centerY": 0.634544153730706
+      },
+      "shadow": {
+        "blur": 11.301968395649663,
+        "color": "#d3540040",
+        "offsetX": -4.370192379353927,
+        "offsetY": 0.961922273018665
+      }
+    },
+    {
+      "type": "rectangle",
+      "x": 469.4375772558714,
+      "y": 221.17181705809645,
+      "width": 50,
+      "height": 16,
+      "fillStyle": "#f39c12",
+      "pattern": "dots",
+      "opacity": 0.8139730481400766,
+      "id": "pattern_rect_1755785118941",
+      "shadow": {
+        "blur": 8.304484490697106,
+        "color": "#f39c1240",
+        "offsetX": -1.3710023978764396,
+        "offsetY": -3.6103972463450784
+      }
+    },
+    {
+      "type": "rectangle",
+      "x": 486.4375772558714,
+      "y": 205.82818294190355,
+      "width": 16,
+      "height": 330,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 287.4248038720678,
+        "centerX": 0.5140864679438282,
+        "centerY": 0.5651403868274448
+      },
+      "shadow": {
+        "blur": 14.787363762009338,
+        "color": "#e74c3c40",
+        "offsetX": -1.7870481453180465,
+        "offsetY": 2.483773580098725
+      },
+      "opacity": 0.8438750358852838,
+      "id": "gradient_rect_1755788748208"
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 350.82818294190355,
+      "text": "HARMONY",
+      "font": "bold 32.604718013356944px Arial",
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 335.48141205880734,
+        "centerX": 0.6900127945632273,
+        "centerY": 0.431565058831353
+      },
+      "shadow": {
+        "blur": 9.142174574765285,
+        "color": "#e74c3c40",
+        "offsetX": 3.372479401716186,
+        "offsetY": 1.024160435539871
+      },
+      "opacity": 0.8447357763657058,
+      "id": "gradient_text_1755792652464"
+    },
+    {
+      "type": "rectangle",
+      "x": 41,
+      "y": 0,
+      "width": 50,
+      "height": 272,
+      "fillStyle": "#e74c3c",
+      "pattern": "dots",
+      "opacity": 0.6408394653380217,
+      "id": "pattern_rect_1755796194614"
+    },
+    {
+      "type": "circle",
+      "x": 494.4375772558714,
+      "y": 370.82818294190355,
+      "radius": 52,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 158.53068494052522,
+        "centerX": 0.40884383602431995,
+        "centerY": 0.4243925799726421
+      },
+      "shadow": {
+        "blur": 19.625552806479043,
+        "color": "#e74c3c40",
+        "offsetX": 0.6831099441653787,
+        "offsetY": 4.434006928392391
+      },
+      "opacity": 0.6312982777087933,
+      "id": "gradient_circle_1755799636280"
+    },
+    {
+      "type": "text",
+      "x": 434.4375772558714,
+      "y": 209.17181705809645,
+      "text": "EMERGENCE",
+      "font": "bold 28.645961766216182px Arial",
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 149.14899407613834,
+        "centerX": 0.49625340897010517,
+        "centerY": 0.6023965280715629
+      },
+      "shadow": {
+        "blur": 18.478304776944547,
+        "color": "#FF6B3540",
+        "offsetX": 0.24514631269522802,
+        "offsetY": -3.07584367221144
+      },
+      "opacity": 0.878470869684588,
+      "id": "gradient_text_1755803074721"
+    },
+    {
+      "type": "text",
+      "x": 416,
+      "y": 34,
+      "text": "Create",
+      "font": "21.417566629787707px Arial",
+      "fillStyle": "#e74c3c",
+      "id": "text_1755806871162"
+    },
+    {
+      "type": "triangle",
+      "x": 465.7792433997048,
+      "y": 498.7792433997048,
+      "size": 54.77924339970478,
+      "fillStyle": "#e74c3c",
+      "id": "triangle_1755810280900"
+    },
+    {
+      "type": "triangle",
+      "x": 665.7109313205775,
+      "y": 66.71093132057749,
+      "size": 66.71093132057749,
+      "fillStyle": "#e74c3c",
+      "id": "triangle_1755813897001",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 99.72009382707056,
+        "centerX": 0.44731825229782063,
+        "centerY": 0.6688878515207641
+      },
+      "shadow": {
+        "blur": 13.151279651342861,
+        "color": "#e74c3c40",
+        "offsetX": -2.074672746510775,
+        "offsetY": 2.4982792047887408
+      },
+      "opacity": 0.7051674802548638
+    },
+    {
+      "type": "rectangle",
+      "x": 608,
+      "y": 135,
+      "width": 114.35335766656601,
+      "height": 128.84457732409038,
+      "fillStyle": "#f1c40f",
+      "id": "element_1755822075054",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 351.6291261815693,
+        "centerX": 0.5789046389729509,
+        "centerY": 0.44987006626983916
+      },
+      "shadow": {
+        "blur": 16.228380011826836,
+        "color": "#f1c40f40",
+        "offsetX": -1.9198153500247361,
+        "offsetY": 3.209780619074591
+      },
+      "opacity": 0.9659753147912833
+    },
+    {
+      "type": "curve",
+      "x": 602,
+      "y": 304,
+      "width": 197.2633407767825,
+      "height": 90.9907631071823,
+      "fillStyle": "#e67e22",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 4.909785622857302,
+      "opacity": 0.8,
+      "id": "curve_1755826383096"
+    },
+    {
+      "type": "rectangle",
+      "x": 120,
+      "y": 493,
+      "width": 24,
+      "height": 12,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 158.78764941169095,
+        "centerX": 0.4852866309331484,
+        "centerY": 0.4674995625945247
+      },
+      "shadow": {
+        "blur": 9.944114604350325,
+        "color": "#e74c3c40",
+        "offsetX": -4.076994466830142,
+        "offsetY": 3.705358044742731
+      },
+      "opacity": 0.7686710936792536,
+      "id": "gradient_rect_1755830040446"
+    },
+    {
+      "type": "rectangle",
+      "x": 696,
+      "y": 206,
+      "width": 70.40999324816946,
+      "height": 85.66652460366244,
+      "fillStyle": "#d35400",
+      "id": "element_1755832910585",
+      "shadow": {
+        "blur": 5.283113546870548,
+        "color": "#e67e2240",
+        "offsetX": -3.343620713702349,
+        "offsetY": -3.601586755840094
+      }
+    },
+    {
+      "type": "circle",
+      "x": 82,
+      "y": 334,
+      "radius": 32,
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 97.76599218759364,
+        "centerX": 0.6520367265199503,
+        "centerY": 0.5634762310130659
+      },
+      "shadow": {
+        "blur": 12.421554714541136,
+        "color": "#FF6B3540",
+        "offsetX": 2.235123436235515,
+        "offsetY": 2.9237819336493427
+      },
+      "opacity": 0.8258556789583018,
+      "id": "gradient_circle_1755835546692"
+    },
+    {
+      "type": "circle",
+      "x": 731.2880710062371,
+      "y": 349.28807100623715,
+      "radius": 45.28807100623713,
+      "fillStyle": "#d35400",
+      "id": "circle_1755842861012",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 68.58266787098137,
+        "centerX": 0.4767282871415185,
+        "centerY": 0.31420351430498383
+      },
+      "shadow": {
+        "blur": 18.76539904191154,
+        "color": "#d3540040",
+        "offsetX": 3.860528402888219,
+        "offsetY": -0.3699237166797058
+      },
+      "opacity": 0.8282108001523626
+    },
+    {
+      "type": "rectangle",
+      "x": 687,
+      "y": 211,
+      "width": 88.41798523335652,
+      "height": 75.91755144525413,
+      "fillStyle": "#e74c3c",
+      "id": "element_1755846342310"
+    },
+    {
+      "type": "triangle",
+      "x": 16,
+      "y": 184,
+      "size": 97.20256031265404,
+      "fillStyle": "#e74c3c",
+      "id": "triangle_1755853550822"
+    },
+    {
+      "type": "spiral",
+      "x": 494.4375772558714,
+      "y": 370.82818294190355,
+      "radius": 24,
+      "fillStyle": "#e74c3c",
+      "strokeStyle": "#e74c3c",
+      "strokeWidth": 2.162638421520463,
+      "opacity": 0.7,
+      "id": "spiral_1755860685796"
+    },
+    {
+      "type": "circle",
+      "x": 65.11311903007727,
+      "y": 543.1131190300773,
+      "radius": 56.11311903007727,
+      "fillStyle": "#f39c12",
+      "id": "circle_1755871508379"
+    },
+    {
+      "type": "circle",
+      "x": 331.5496524177727,
+      "y": 498.5496524177727,
+      "radius": 37.54965241777268,
+      "fillStyle": "#e67e22",
+      "id": "circle_1755875118660"
+    },
+    {
+      "type": "circle",
+      "x": 531.8445550255196,
+      "y": 48.84455502551958,
+      "radius": 37.84455502551958,
+      "fillStyle": "#f1c40f",
+      "id": "circle_1755878757950"
+    },
+    {
+      "type": "rectangle",
+      "x": 479.4375772558714,
+      "y": 362.82818294190355,
+      "width": 30,
+      "height": 16,
+      "fillStyle": "#f39c12",
+      "pattern": "stripes",
+      "opacity": 0.9917272816790756,
+      "id": "pattern_rect_1755886001160",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 151.91339145620321,
+        "centerX": 0.3010539494586876,
+        "centerY": 0.5435933573725926
+      }
+    },
+    {
+      "type": "triangle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "size": 10,
+      "fillStyle": "#e74c3c",
+      "strokeStyle": "#e74c3c",
+      "strokeWidth": 1.187640171362546,
+      "rotation": 306.0585825327646,
+      "opacity": 0.7022079140312976,
+      "shadow": {
+        "blur": 13.907246442453946,
+        "color": "#e74c3c40",
+        "offsetX": 2.1122708169559363,
+        "offsetY": 2.9103563939855936
+      },
+      "id": "rotated_triangle_1755889474036"
+    },
+    {
+      "type": "rectangle",
+      "x": 684,
+      "y": 456,
+      "width": 94.45510948943907,
+      "height": 85.45933120964969,
+      "fillStyle": "#f39c12",
+      "id": "element_1755893134607"
+    },
+    {
+      "type": "rectangle",
+      "x": 429.4375772558714,
+      "y": 177.17181705809645,
+      "width": 130,
+      "height": 104,
+      "fillStyle": "#f39c12",
+      "pattern": "stripes",
+      "opacity": 0.7785490174136116,
+      "id": "pattern_rect_1755903897802"
+    },
+    {
+      "type": "triangle",
+      "x": 531.2902191033668,
+      "y": 508.2902191033668,
+      "size": 91.29021910336681,
+      "fillStyle": "#d35400",
+      "id": "triangle_1755908457296",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 57.09862228225137,
+        "centerX": 0.5687182544260961,
+        "centerY": 0.3727587070201254
+      }
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 209.17181705809645,
+      "text": "TRANSCEND",
+      "font": "bold 34.5497329655352px Arial",
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 68.7722441226251,
+        "centerX": 0.6491258257608841,
+        "centerY": 0.34421639216253286
+      },
+      "shadow": {
+        "blur": 15.575139163621284,
+        "color": "#e74c3c40",
+        "offsetX": -3.5942357229293864,
+        "offsetY": 2.4067797237322264
+      },
+      "opacity": 0.8393062275071558,
+      "id": "gradient_text_1755912749423"
+    },
+    {
+      "type": "circle",
+      "x": 731.9553333964054,
+      "y": 348.9553333964055,
+      "radius": 60.95533339640547,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1755916321804"
+    },
+    {
+      "type": "rectangle",
+      "x": 292,
+      "y": 436,
+      "width": 78.9580204698264,
+      "height": 126.22544947336122,
+      "fillStyle": "#e74c3c",
+      "id": "element_1755925491760"
+    },
+    {
+      "type": "rectangle",
+      "x": 72,
+      "y": 52,
+      "width": 118.72268476953083,
+      "height": 92.95084692273636,
+      "fillStyle": "#e74c3c",
+      "id": "element_1755929195418"
+    },
+    {
+      "type": "circle",
+      "x": 65.36439230557704,
+      "y": 248.36439230557704,
+      "radius": 46.364392305577034,
+      "fillStyle": "#e67e22",
+      "id": "circle_1755936348534",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 51.626632403829305,
+        "centerX": 0.30314454231827825,
+        "centerY": 0.6108129919265999
+      },
+      "opacity": 0.9214560950924017
+    },
+    {
+      "type": "rectangle",
+      "x": 34,
+      "y": 367,
+      "width": 63.442783056991985,
+      "height": 63.8052788351391,
+      "fillStyle": "#e74c3c",
+      "id": "element_1755943493685"
+    },
+    {
+      "type": "rectangle",
+      "x": 561,
+      "y": 391,
+      "width": 210,
+      "height": 16,
+      "fillStyle": "#f1c40f",
+      "pattern": "dots",
+      "opacity": 0.7829401937689452,
+      "id": "pattern_rect_1755954559946"
+    },
+    {
+      "type": "circle",
+      "x": 331.27695283330314,
+      "y": 98.27695283330314,
+      "radius": 54.276952833303135,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1755957874794"
+    },
+    {
+      "type": "rectangle",
+      "x": 688,
+      "y": 500,
+      "width": 86.33959875955989,
+      "height": 96.50515046615067,
+      "fillStyle": "#f39c12",
+      "id": "element_1755968660625"
+    },
+    {
+      "type": "rectangle",
+      "x": 289,
+      "y": 431,
+      "width": 85.2760152760615,
+      "height": 135.80654121138124,
+      "fillStyle": "#d35400",
+      "id": "element_1755975857965"
+    },
+    {
+      "type": "rectangle",
+      "x": 232,
+      "y": 512,
+      "width": 66.90139827300217,
+      "height": 72.3242221080914,
+      "fillStyle": "#d35400",
+      "id": "element_1755986676715"
+    },
+    {
+      "type": "circle",
+      "x": 416,
+      "y": 484,
+      "radius": 71.81244019122916,
+      "fillStyle": "#f1c40f",
+      "id": "circle_1755990285715",
+      "shadow": {
+        "blur": 5.786314531913314,
+        "color": "#f1c40f40",
+        "offsetX": 2.2267109096712563,
+        "offsetY": 4.154013834129962
+      },
+      "opacity": 0.7157950079970864
+    },
+    {
+      "type": "circle",
+      "x": 531.4851311730362,
+      "y": 536.4851311730362,
+      "radius": 63.485131173036194,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1755999192092"
+    },
+    {
+      "type": "rectangle",
+      "x": 669,
+      "y": 459,
+      "width": 125.53513443792106,
+      "height": 79.39770237252165,
+      "fillStyle": "#f39c12",
+      "id": "element_1756003051865"
+    },
+    {
+      "type": "triangle",
+      "x": 731.3837610900481,
+      "y": 199.3837610900481,
+      "size": 53.38376109004809,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1756008566112"
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 350.82818294190355,
+      "text": "EMERGENCE",
+      "font": "bold 28.468588734598303px Arial",
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 279.13999039285943,
+        "centerX": 0.5161295645909745,
+        "centerY": 0.3842681157890704
+      },
+      "shadow": {
+        "blur": 19.571889539139065,
+        "color": "#d3540040",
+        "offsetX": -1.3213663387455354,
+        "offsetY": -4.177782891457755
+      },
+      "opacity": 0.9317599985308449,
+      "id": "gradient_text_1756011905262"
+    },
+    {
+      "type": "triangle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "size": 15,
+      "fillStyle": "#d35400",
+      "strokeStyle": "#d35400",
+      "strokeWidth": 1.510788260856148,
+      "rotation": 186.27324503832747,
+      "opacity": 0.76972026802768,
+      "shadow": {
+        "blur": 10.312588626797472,
+        "color": "#d3540040",
+        "offsetX": 4.30290408407258,
+        "offsetY": 4.728069666402078
+      },
+      "id": "rotated_triangle_1756015608120"
+    },
+    {
+      "type": "rectangle",
+      "x": 253.56242274412858,
+      "y": 127.17181705809645,
+      "width": 104,
+      "height": 204,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 351.0215689405189,
+        "centerX": 0.3951641338294385,
+        "centerY": 0.32107433230159177
+      },
+      "shadow": {
+        "blur": 8.665637479245694,
+        "color": "#d3540040",
+        "offsetX": 4.4197127355191395,
+        "offsetY": -4.998930917699063
+      },
+      "opacity": 0.9580909195989125,
+      "id": "gradient_rect_1756019102077"
+    },
+    {
+      "type": "spiral",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "radius": 102,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 1.9481057707733251,
+      "opacity": 0.7,
+      "id": "spiral_1756022755995"
+    },
+    {
+      "type": "circle",
+      "x": 305.5624227441286,
+      "y": 370.82818294190355,
+      "radius": 8,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 107.93493170501745,
+        "centerX": 0.46828560122953944,
+        "centerY": 0.6971747326214135
+      },
+      "shadow": {
+        "blur": 7.159615801753488,
+        "color": "#e74c3c40",
+        "offsetX": 2.2246556081784803,
+        "offsetY": 2.0341243233015245
+      },
+      "opacity": 0.7533300129236695,
+      "id": "gradient_circle_1756029894085"
+    },
+    {
+      "type": "rectangle",
+      "x": 429.4375772558714,
+      "y": 209.17181705809645,
+      "width": 130,
+      "height": 40,
+      "fillStyle": "#d35400",
+      "pattern": "waves",
+      "opacity": 0.6014727495938028,
+      "id": "pattern_rect_1756033472419"
+    },
+    {
+      "type": "spiral",
+      "x": 682,
+      "y": 534,
+      "radius": 24,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 2.9016702212966328,
+      "opacity": 0.7,
+      "id": "spiral_1756037269286"
+    },
+    {
+      "type": "triangle",
+      "x": 77.01575504402912,
+      "y": 77.01575504402912,
+      "size": 77.01575504402912,
+      "fillStyle": "#e74c3c",
+      "id": "triangle_1756058758672"
+    },
+    {
+      "type": "text",
+      "x": 434.4375772558714,
+      "y": 350.82818294190355,
+      "text": "TRANSCEND",
+      "font": "bold 34.142374398206805px Arial",
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 345.7572847320996,
+        "centerX": 0.3027560156936565,
+        "centerY": 0.6150246257903818
+      },
+      "shadow": {
+        "blur": 12.04390589434368,
+        "color": "#e74c3c40",
+        "offsetX": 4.085545955417258,
+        "offsetY": -3.0349378151333206
+      },
+      "opacity": 0.8202345553084045,
+      "id": "gradient_text_1756062264258"
+    },
+    {
+      "type": "rectangle",
+      "x": 169.56242274412858,
+      "y": 127.17181705809645,
+      "width": 272,
+      "height": 204,
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 66.27921322671172,
+        "centerX": 0.5222506580999945,
+        "centerY": 0.38405850321303925
+      },
+      "shadow": {
+        "blur": 11.109072256595587,
+        "color": "#FF6B3540",
+        "offsetX": 4.994248907691276,
+        "offsetY": 2.9167227316791617
+      },
+      "opacity": 0.9290851459910511,
+      "id": "gradient_rect_1756065898815"
+    },
+    {
+      "type": "circle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "radius": 52,
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 84.63684896976685,
+        "centerX": 0.34851692367021203,
+        "centerY": 0.600597137820603
+      },
+      "shadow": {
+        "blur": 15.511692324951893,
+        "color": "#FF6B3540",
+        "offsetX": -0.4392075176616057,
+        "offsetY": -4.204437937687777
+      },
+      "opacity": 0.7008141100588705,
+      "id": "gradient_circle_1756073086988"
+    },
+    {
+      "type": "triangle",
+      "x": 305.5624227441286,
+      "y": 229.17181705809645,
+      "size": 40,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 2.556659722505647,
+      "rotation": 318.09408434452916,
+      "opacity": 0.8031196158218163,
+      "shadow": {
+        "blur": 18.979802769776455,
+        "color": "#f39c1240",
+        "offsetX": -3.540034759640074,
+        "offsetY": 3.2265938512702714
+      },
+      "id": "rotated_triangle_1756076693874"
+    },
+    {
+      "type": "circle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "radius": 8,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 349.7072036734755,
+        "centerX": 0.36722267731957514,
+        "centerY": 0.382173390544368
+      },
+      "shadow": {
+        "blur": 13.465755394989966,
+        "color": "#d3540040",
+        "offsetX": -1.8449092462586658,
+        "offsetY": 2.0175581569563654
+      },
+      "opacity": 0.6456151482318643,
+      "id": "gradient_circle_1756089347277"
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 234,
+      "text": "Vision",
+      "font": "19.428949687982797px Arial",
+      "fillStyle": "#f1c40f",
+      "id": "text_1756092358379"
+    },
+    {
+      "type": "rectangle",
+      "x": 280.5624227441286,
+      "y": 0,
+      "width": 50,
+      "height": 712,
+      "fillStyle": "#e74c3c",
+      "pattern": "stripes",
+      "opacity": 0.6173785427876105,
+      "id": "pattern_rect_1756094982003"
+    },
+    {
+      "type": "triangle",
+      "x": 305.5624227441286,
+      "y": 229.17181705809645,
+      "size": 105,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 2.7419854366829495,
+      "rotation": 43.60331835507946,
+      "opacity": 0.880718208263768,
+      "shadow": {
+        "blur": 5.425588803762147,
+        "color": "#f39c1240",
+        "offsetX": -4.1684549663341315,
+        "offsetY": 1.2829419358805039
+      },
+      "id": "rotated_triangle_1756102082751"
+    },
+    {
+      "type": "rectangle",
+      "x": 0,
+      "y": 543,
+      "width": 272,
+      "height": 12,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 189.5361668610817,
+        "centerX": 0.5747093680176477,
+        "centerY": 0.6392617673095253
+      },
+      "shadow": {
+        "blur": 12.602440654138993,
+        "color": "#e74c3c40",
+        "offsetX": 1.2423405392261984,
+        "offsetY": 4.4937597842384935
+      },
+      "opacity": 0.8412977366242105,
+      "id": "gradient_rect_1756105552240"
+    },
+    {
+      "type": "triangle",
+      "x": 305.5624227441286,
+      "y": 229.17181705809645,
+      "size": 40,
+      "fillStyle": "#e74c3c",
+      "strokeStyle": "#e74c3c",
+      "strokeWidth": 1.2855895938287176,
+      "rotation": 137.8165460686542,
+      "opacity": 0.9726463203530293,
+      "shadow": {
+        "blur": 13.379117289962325,
+        "color": "#e74c3c40",
+        "offsetX": -0.901577401604305,
+        "offsetY": 1.153377864633642
+      },
+      "id": "rotated_triangle_1756112787900"
+    },
+    {
+      "type": "circle",
+      "x": 305.5624227441286,
+      "y": 370.82818294190355,
+      "radius": 84,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 313.5623434994068,
+        "centerX": 0.609015135209973,
+        "centerY": 0.33725342991007706
+      },
+      "shadow": {
+        "blur": 6.53819820137464,
+        "color": "#d3540040",
+        "offsetX": -2.440768126037949,
+        "offsetY": -3.1717211518537125
+      },
+      "opacity": 0.6573037765726931,
+      "id": "gradient_circle_1756116374798"
+    },
+    {
+      "type": "rectangle",
+      "x": 5,
+      "y": 363,
+      "width": 120.59733926857592,
+      "height": 71.94254457238759,
+      "fillStyle": "#f1c40f",
+      "id": "element_1756123732483"
+    },
+    {
+      "type": "circle",
+      "x": 331.3444863940649,
+      "y": 548.3444863940649,
+      "radius": 35.344486394064916,
+      "fillStyle": "#f1c40f",
+      "id": "circle_1756127630718"
+    },
+    {
+      "type": "rectangle",
+      "x": 475,
+      "y": 5,
+      "width": 113.08754513598899,
+      "height": 88.08643008492636,
+      "fillStyle": "#e67e22",
+      "id": "element_1756130715307"
+    },
+    {
+      "type": "circle",
+      "x": 465.99137243761226,
+      "y": 48.99137243761225,
+      "radius": 30.99137243761225,
+      "fillStyle": "#e67e22",
+      "id": "circle_1756137959346"
+    },
+    {
+      "type": "triangle",
+      "x": 731.3128303725964,
+      "y": 199.31283037259644,
+      "size": 52.312830372596444,
+      "fillStyle": "#e74c3c",
+      "id": "triangle_1756141448488"
+    },
+    {
+      "type": "text",
+      "x": 434.4375772558714,
+      "y": 209.17181705809645,
+      "text": "SYNTHESIS",
+      "font": "bold 37.54003197444049px Arial",
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 198.18506210956568,
+        "centerX": 0.65102129074161,
+        "centerY": 0.35788551741491637
+      },
+      "shadow": {
+        "blur": 12.590560793089493,
+        "color": "#FF6B3540",
+        "offsetX": 4.123329283004926,
+        "offsetY": -1.5936443246235177
+      },
+      "opacity": 0.9145614426693611,
+      "id": "gradient_text_1756145223737"
+    },
+    {
+      "type": "curve",
+      "x": 205.56242274412858,
+      "y": 320.82818294190355,
+      "width": 230.0503591944104,
+      "height": 84.20532995801605,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 2.2147009767850534,
+      "opacity": 0.8,
+      "id": "curve_1756152352127"
+    },
+    {
+      "type": "circle",
+      "x": 305.5624227441286,
+      "y": 370.82818294190355,
+      "radius": 136,
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 79.75352344369888,
+        "centerX": 0.42304333893848556,
+        "centerY": 0.38355418507743383
+      },
+      "shadow": {
+        "blur": 17.78337174510968,
+        "color": "#FF6B3540",
+        "offsetX": 4.947147453043817,
+        "offsetY": -2.0725400070713995
+      },
+      "opacity": 0.838293608434181,
+      "id": "gradient_circle_1756155881043"
+    },
+    {
+      "type": "rectangle",
+      "x": 597,
+      "y": 355,
+      "width": 136.69882187206858,
+      "height": 87.54075949448077,
+      "fillStyle": "#f1c40f",
+      "id": "element_1756159513937"
+    },
+    {
+      "type": "text",
+      "x": 682,
+      "y": 334,
+      "text": "Vision",
+      "font": "30.027029816373226px Arial",
+      "fillStyle": "#e67e22",
+      "id": "text_1756163098620"
+    },
+    {
+      "type": "circle",
+      "x": 305.5624227441286,
+      "y": 370.82818294190355,
+      "radius": 220,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 310.49902547137896,
+        "centerX": 0.32133698984204323,
+        "centerY": 0.3307008152457694
+      },
+      "shadow": {
+        "blur": 12.757836466680192,
+        "color": "#e74c3c40",
+        "offsetX": 2.9590193741198174,
+        "offsetY": -1.485230818562382
+      },
+      "opacity": 0.6536098808904369,
+      "id": "gradient_circle_1756167694188"
+    },
+    {
+      "type": "text",
+      "x": 682,
+      "y": 84,
+      "text": "Evolve",
+      "font": "31.77760202408257px Arial",
+      "fillStyle": "#f1c40f",
+      "id": "text_1756175661036"
+    },
+    {
+      "type": "rectangle",
+      "x": 88,
+      "y": 361.82818294190355,
+      "width": 712,
+      "height": 18,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 63.64884309242278,
+        "centerX": 0.5648036250427869,
+        "centerY": 0.5962081062909201
+      },
+      "shadow": {
+        "blur": 15.449719401559435,
+        "color": "#e74c3c40",
+        "offsetX": -2.6153824347617727,
+        "offsetY": 2.656437509525354
+      },
+      "opacity": 0.957078402070249,
+      "id": "gradient_rect_1756181180272"
+    },
+    {
+      "type": "curve",
+      "x": 205.56242274412858,
+      "y": 179.17181705809645,
+      "width": 223.10695733461472,
+      "height": 61.17591814161882,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 2.4701160183314883,
+      "opacity": 0.8,
+      "id": "curve_1756188465441"
+    },
+    {
+      "type": "curve",
+      "x": 205.56242274412858,
+      "y": 179.17181705809645,
+      "width": 249.50498305278595,
+      "height": 74.63190085866475,
+      "fillStyle": "#e67e22",
+      "strokeStyle": "#e67e22",
+      "strokeWidth": 3.7630832514267345,
+      "opacity": 0.8,
+      "id": "curve_1756199242561"
+    },
+    {
+      "type": "text",
+      "x": 245.56242274412858,
+      "y": 209.17181705809645,
+      "text": "SYNTHESIS",
+      "font": "bold 38.2112112708839px Arial",
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 85.70382381861955,
+        "centerX": 0.674197989416456,
+        "centerY": 0.6946460811652491
+      },
+      "shadow": {
+        "blur": 13.333710342397918,
+        "color": "#e74c3c40",
+        "offsetX": 4.87228102084565,
+        "offsetY": -3.11285941483477
+      },
+      "opacity": 0.9494248021126752,
+      "id": "gradient_text_1756202774714"
+    },
+    {
+      "type": "text",
+      "x": 434.4375772558714,
+      "y": 350.82818294190355,
+      "text": "SYNTHESIS",
+      "font": "bold 35.130019990170425px Arial",
+      "fillStyle": "#FF6B35",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#FF6B35",
+          "#F7931E",
+          "#FFD23F"
+        ],
+        "direction": 116.3904518045229,
+        "centerX": 0.472952246222935,
+        "centerY": 0.5346046288161339
+      },
+      "shadow": {
+        "blur": 5.377258054664745,
+        "color": "#FF6B3540",
+        "offsetX": -0.9315288418527645,
+        "offsetY": 3.487943071481844
+      },
+      "opacity": 0.9435967928381161,
+      "id": "gradient_text_1756206378705"
+    },
+    {
+      "type": "triangle",
+      "x": 66.83350249644532,
+      "y": 198.8335024964453,
+      "size": 66.83350249644532,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1756210140250"
+    },
+    {
+      "type": "triangle",
+      "x": 494.4375772558714,
+      "y": 275,
+      "size": 275,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 1.7394299382160456,
+      "rotation": 303.59116193003535,
+      "opacity": 0.923969395599951,
+      "shadow": {
+        "blur": 12.994178910091033,
+        "color": "#f39c1240",
+        "offsetX": -3.237269994244514,
+        "offsetY": 2.1039009866093377
+      },
+      "id": "rotated_triangle_1756217120426"
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 484,
+      "text": "Harmony",
+      "font": "28.13387277831562px Arial",
+      "fillStyle": "#e74c3c",
+      "id": "text_1756220738893"
+    },
+    {
+      "type": "rectangle",
+      "x": 474.4375772558714,
+      "y": 220.17181705809645,
+      "width": 40,
+      "height": 18,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 245.7360989110983,
+        "centerX": 0.6511166725151563,
+        "centerY": 0.5540885412293676
+      },
+      "shadow": {
+        "blur": 10.741388452066687,
+        "color": "#e74c3c40",
+        "offsetX": -2.97656781654966,
+        "offsetY": 0.9732315449630224
+      },
+      "opacity": 0.9197572850564282,
+      "id": "gradient_rect_1756224362109"
+    },
+    {
+      "type": "circle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "radius": 12,
+      "fillStyle": "#e74c3c",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 261.9891939066313,
+        "centerX": 0.4424920775015806,
+        "centerY": 0.4227529853494231
+      },
+      "shadow": {
+        "blur": 18.648079018987342,
+        "color": "#e74c3c40",
+        "offsetX": -4.224568951266665,
+        "offsetY": -1.117492204928523
+      },
+      "opacity": 0.915585933861517,
+      "id": "gradient_circle_1756227892752"
+    },
+    {
+      "type": "rectangle",
+      "x": 218,
+      "y": 450,
+      "width": 94.77121820789313,
+      "height": 98.48558705143118,
+      "fillStyle": "#f1c40f",
+      "id": "element_1756231609459"
+    }
   ],
-  generation: 137,
-  lastUpdated: "2025-08-26T17:04:52.752Z",
-  cycleStarted: "2025-08-20T23:04:48.875Z",
+  "generation": 138,
+  "lastUpdated": "2025-08-26T18:06:49.459Z",
+  "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
