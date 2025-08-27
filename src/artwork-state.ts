@@ -1949,9 +1949,21 @@ export const artworkState: ArtworkState = {
       "pattern": "waves",
       "opacity": 0.7294286666385221,
       "id": "pattern_rect_1756321471106"
+    },
+    {
+      "type": "curve",
+      "x": 394.4375772558714,
+      "y": 179.17181705809645,
+      "width": 223.23372041119347,
+      "height": 50.95357437931518,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 3.602284150847182,
+      "opacity": 0.8,
+      "id": "curve_1756328692139"
     }
   ],
-  "generation": 164,
-  "lastUpdated": "2025-08-27T20:05:30.730Z",
+  "generation": 165,
+  "lastUpdated": "2025-08-27T21:04:52.139Z",
   "cycleStarted": "2025-08-20T23:04:48.875Z"
 };
