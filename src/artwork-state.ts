@@ -26,32 +26,32 @@ export interface ArtworkState {
 
 // Artwork state data
 export const artworkState: ArtworkState = {
-  "canvas": {
-    "width": 800,
-    "height": 600,
-    "background": "#1a1a1a"
+  canvas: {
+    width: 800,
+    height: 600,
+    background: "#1a1a1a",
   },
-  "elements": [
+  elements: [
     {
-      "type": "rectangle",
-      "x": 50,
-      "y": 50,
-      "width": 200,
-      "height": 100,
-      "fillStyle": "#e67e22",
-      "id": "rect1"
+      type: "rectangle",
+      x: 50,
+      y: 50,
+      width: 200,
+      height: 100,
+      fillStyle: "#e67e22",
+      id: "rect1",
     },
     {
-      "type": "text",
-      "x": 416,
-      "y": 334,
-      "text": "Hello Canvas!",
-      "font": "24px Arial",
-      "fillStyle": "#fff",
-      "id": "text1"
-    }
+      type: "text",
+      x: 416,
+      y: 334,
+      text: "Hello Canvas!",
+      font: "24px Arial",
+      fillStyle: "#fff",
+      id: "text1",
+    },
   ],
-  "generation": 1,
-  "lastUpdated": "2025-08-27T23:05:44.806Z",
-  "cycleStarted": "2025-08-27T23:05:44.806Z"
+  generation: 1,
+  lastUpdated: "2025-08-27T23:05:44.806Z",
+  cycleStarted: "2025-08-27T23:05:44.806Z",
 };
