@@ -69,9 +69,27 @@ export const artworkState: ArtworkState = {
       "strokeWidth": 2.187494462776094,
       "opacity": 0.8,
       "id": "curve_1756340476592"
+    },
+    {
+      "type": "text",
+      "x": 16,
+      "y": 334,
+      "text": "Vision",
+      "font": "28.764798013586564px Arial",
+      "fillStyle": "#f1c40f",
+      "id": "text_1756344769681"
+    },
+    {
+      "type": "text",
+      "x": 82,
+      "y": 534,
+      "text": "Balance",
+      "font": "29.78687484196817px Arial",
+      "fillStyle": "#f1c40f",
+      "id": "text_1756344769681"
     }
   ],
-  "generation": 2,
-  "lastUpdated": "2025-08-28T00:21:16.592Z",
+  "generation": 3,
+  "lastUpdated": "2025-08-28T01:32:49.681Z",
   "cycleStarted": "2025-08-27T23:05:44.806Z"
 };
