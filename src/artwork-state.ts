@@ -359,9 +359,20 @@ export const artworkState: ArtworkState = {
       "strokeWidth": 2.733404186212188,
       "opacity": 0.8,
       "id": "curve_1756404405400"
+    },
+    {
+      "type": "spiral",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "radius": 165,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 1.137984948041304,
+      "opacity": 0.7,
+      "id": "spiral_1756407871774"
     }
   ],
-  "generation": 20,
-  "lastUpdated": "2025-08-28T18:06:45.400Z",
+  "generation": 21,
+  "lastUpdated": "2025-08-28T19:04:31.774Z",
   "cycleStarted": "2025-08-27T23:05:44.806Z"
 };
