@@ -196,7 +196,14 @@ export const artworkState: ArtworkState = {
       "y": 498.7812047013954,
       "radius": 44.7812047013954,
       "fillStyle": "#d35400",
-      "id": "circle_1756357524498"
+      "id": "circle_1756357524498",
+      "shadow": {
+        "blur": 14.962266639681353,
+        "color": "#d3540040",
+        "offsetX": 2.7119143697699277,
+        "offsetY": 3.589399701637115
+      },
+      "opacity": 0.9864727555976289
     },
     {
       "type": "curve",
@@ -601,7 +608,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1756469324480"
     }
   ],
-  "generation": 38,
-  "lastUpdated": "2025-08-29T12:08:44.480Z",
+  "generation": 39,
+  "lastUpdated": "2025-08-29T13:11:07.249Z",
   "cycleStarted": "2025-08-27T23:05:44.806Z"
 };
