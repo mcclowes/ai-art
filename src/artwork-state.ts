@@ -476,8 +476,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 245.56242274412858,
-      "y": 209.17181705809645,
+      "x": 82,
+      "y": 384,
       "text": "EMERGENCE",
       "font": "bold 25.246194443852783px Arial",
       "fillStyle": "#FF6B35",
@@ -748,7 +748,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1756541139106"
     }
   ],
-  "generation": 58,
-  "lastUpdated": "2025-08-30T08:05:39.106Z",
+  "generation": 59,
+  "lastUpdated": "2025-08-30T09:04:58.582Z",
   "cycleStarted": "2025-08-27T23:05:44.806Z"
 };
