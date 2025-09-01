@@ -138,8 +138,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "circle",
-      "x": 494.4375772558714,
-      "y": 229.17181705809645,
+      "x": 482,
+      "y": 34,
       "radius": 20,
       "fillStyle": "#d35400",
       "gradient": {
@@ -1274,7 +1274,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1756728543092"
     }
   ],
-  "generation": 110,
-  "lastUpdated": "2025-09-01T12:09:03.092Z",
+  "generation": 111,
+  "lastUpdated": "2025-09-01T13:12:40.537Z",
   "cycleStarted": "2025-08-27T23:05:44.806Z"
 };
