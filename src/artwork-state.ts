@@ -1757,9 +1757,21 @@ export const artworkState: ArtworkState = {
       "font": "24.860642528335998px Arial",
       "fillStyle": "#d35400",
       "id": "text_1756905088127"
+    },
+    {
+      "type": "curve",
+      "x": 394.4375772558714,
+      "y": 179.17181705809645,
+      "width": 219.33911703427918,
+      "height": 76.97549956860765,
+      "fillStyle": "#d35400",
+      "strokeStyle": "#d35400",
+      "strokeWidth": 3.835413331633881,
+      "opacity": 0.8,
+      "id": "curve_1756908308537"
     }
   ],
-  "generation": 159,
-  "lastUpdated": "2025-09-03T13:11:28.127Z",
+  "generation": 160,
+  "lastUpdated": "2025-09-03T14:05:08.537Z",
   "cycleStarted": "2025-08-27T23:05:44.806Z"
 };
