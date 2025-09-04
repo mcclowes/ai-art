@@ -26,118 +26,165 @@ export interface ArtworkState {
 
 // Artwork state data
 export const artworkState: ArtworkState = {
-  canvas: {
-    width: 800,
-    height: 600,
-    background: "#1a1a1a",
+  "canvas": {
+    "width": 800,
+    "height": 600,
+    "background": "#1a1a1a"
   },
-  elements: [
+  "elements": [
     {
-      type: "rectangle",
-      x: 50,
-      y: 50,
-      width: 200,
-      height: 100,
-      fillStyle: "#e67e22",
-      id: "rect1",
+      "type": "rectangle",
+      "x": 50,
+      "y": 50,
+      "width": 200,
+      "height": 100,
+      "fillStyle": "#e67e22",
+      "id": "rect1"
     },
     {
-      type: "text",
-      x: 82,
-      y: 334,
-      text: "Hello Canvas!",
-      font: "24px Arial",
-      fillStyle: "#fff",
-      id: "text1",
+      "type": "text",
+      "x": 82,
+      "y": 334,
+      "text": "Hello Canvas!",
+      "font": "24px Arial",
+      "fillStyle": "#fff",
+      "id": "text1"
     },
     {
-      type: "circle",
-      x: 494.4375772558714,
-      y: 229.17181705809645,
-      radius: 32,
-      fillStyle: "#d35400",
-      gradient: {
-        type: "linear",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 63.97305610301271,
-        centerX: 0.3660980993202287,
-        centerY: 0.40315138198503353,
+      "type": "circle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "radius": 32,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 63.97305610301271,
+        "centerX": 0.3660980993202287,
+        "centerY": 0.40315138198503353
       },
-      shadow: {
-        blur: 15.880291140456052,
-        color: "#d3540040",
-        offsetX: -3.9572466862352162,
-        offsetY: 1.6111255169292305,
+      "shadow": {
+        "blur": 15.880291140456052,
+        "color": "#d3540040",
+        "offsetX": -3.9572466862352162,
+        "offsetY": 1.6111255169292305
       },
-      opacity: 0.7712827142457442,
-      id: "gradient_circle_1756949554665",
+      "opacity": 0.7712827142457442,
+      "id": "gradient_circle_1756949554665"
     },
     {
-      type: "triangle",
-      x: 79.2361984511839,
-      y: 199.2361984511839,
-      size: 79.2361984511839,
-      fillStyle: "#f1c40f",
-      id: "triangle_1756952977967",
+      "type": "triangle",
+      "x": 79.2361984511839,
+      "y": 199.2361984511839,
+      "size": 79.2361984511839,
+      "fillStyle": "#f1c40f",
+      "id": "triangle_1756952977967"
     },
     {
-      type: "text",
-      x: 16,
-      y: 484,
-      text: "Evolve",
-      font: "20.807520446658827px Arial",
-      fillStyle: "#f39c12",
-      id: "text_1756955604512",
+      "type": "text",
+      "x": 16,
+      "y": 484,
+      "text": "Evolve",
+      "font": "20.807520446658827px Arial",
+      "fillStyle": "#f39c12",
+      "id": "text_1756955604512"
     },
     {
-      type: "circle",
-      x: 265.75614879022265,
-      y: 48.75614879022264,
-      radius: 45.75614879022264,
-      fillStyle: "#e74c3c",
-      id: "circle_1756958756947",
+      "type": "circle",
+      "x": 265.75614879022265,
+      "y": 48.75614879022264,
+      "radius": 45.75614879022264,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1756958756947"
     },
     {
-      type: "circle",
-      x: 331.3428052398723,
-      y: 248.34280523987232,
-      radius: 56.34280523987232,
-      fillStyle: "#e74c3c",
-      id: "circle_1756958756947",
+      "type": "circle",
+      "x": 331.3428052398723,
+      "y": 248.34280523987232,
+      "radius": 56.34280523987232,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1756958756947"
     },
     {
-      type: "rectangle",
-      x: 442.4375772558714,
-      y: 205.17181705809645,
-      width: 104,
-      height: 48,
-      fillStyle: "#d35400",
-      gradient: {
-        type: "linear",
-        colors: ["#d35400", "#e67e22", "#f39c12"],
-        direction: 309.490179724304,
-        centerX: 0.6422361760993504,
-        centerY: 0.6392773565255947,
+      "type": "rectangle",
+      "x": 442.4375772558714,
+      "y": 205.17181705809645,
+      "width": 104,
+      "height": 48,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 309.490179724304,
+        "centerX": 0.6422361760993504,
+        "centerY": 0.6392773565255947
       },
-      shadow: {
-        blur: 13.097634670043028,
-        color: "#d3540040",
-        offsetX: 1.1504445149976021,
-        offsetY: -0.5162127058349775,
+      "shadow": {
+        "blur": 13.097634670043028,
+        "color": "#d3540040",
+        "offsetX": 1.1504445149976021,
+        "offsetY": -0.5162127058349775
       },
-      opacity: 0.9920695336305998,
-      id: "gradient_rect_1756962337574",
+      "opacity": 0.9920695336305998,
+      "id": "gradient_rect_1756962337574"
     },
     {
-      type: "circle",
-      x: 331.6285564020512,
-      y: 398.6285564020512,
-      radius: 54.628556402051196,
-      fillStyle: "#e74c3c",
-      id: "circle_1756962337574",
+      "type": "circle",
+      "x": 331.6285564020512,
+      "y": 398.6285564020512,
+      "radius": 54.628556402051196,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1756962337574"
     },
+    {
+      "type": "rectangle",
+      "x": 486.4375772558714,
+      "y": 346.82818294190355,
+      "width": 16,
+      "height": 48,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 30.21680254184765,
+        "centerX": 0.4651132640484873,
+        "centerY": 0.5925477877112735
+      },
+      "shadow": {
+        "blur": 18.41722168788636,
+        "color": "#d3540040",
+        "offsetX": 0.5746338583867043,
+        "offsetY": -4.954275584845355
+      },
+      "opacity": 0.9812530576651701,
+      "id": "gradient_rect_1756966038225"
+    },
+    {
+      "type": "curve",
+      "x": 394.4375772558714,
+      "y": 179.17181705809645,
+      "width": 205.94771762559424,
+      "height": 79.25437494251807,
+      "fillStyle": "#e67e22",
+      "strokeStyle": "#e67e22",
+      "strokeWidth": 2.129936958527579,
+      "opacity": 0.8,
+      "id": "curve_1756966038225"
+    }
   ],
-  generation: 6,
-  lastUpdated: "2025-09-04T05:05:37.575Z",
-  cycleStarted: "2025-09-04T00:19:55.543Z",
+  "generation": 7,
+  "lastUpdated": "2025-09-04T06:07:18.225Z",
+  "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
