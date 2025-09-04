@@ -180,8 +180,25 @@ export const artworkState: ArtworkState = {
       "fillStyle": "#e67e22",
       "strokeStyle": "#e67e22",
       "strokeWidth": 2.129936958527579,
-      "opacity": 0.8,
-      "id": "curve_1756966038225"
+      "opacity": 0.8553316126226711,
+      "id": "curve_1756966038225",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 270.70719953694544,
+        "centerX": 0.6070923223360927,
+        "centerY": 0.511033559407961
+      },
+      "shadow": {
+        "blur": 13.61177171145718,
+        "color": "#e67e2240",
+        "offsetX": 1.8466006510612765,
+        "offsetY": 2.619645589375306
+      }
     },
     {
       "type": "text",
@@ -218,9 +235,20 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.9070931304814971,
       "id": "gradient_text_1756973207103"
+    },
+    {
+      "type": "spiral",
+      "x": 494.4375772558714,
+      "y": 370.82818294190355,
+      "radius": 24,
+      "fillStyle": "#d35400",
+      "strokeStyle": "#d35400",
+      "strokeWidth": 1.7831926218754273,
+      "opacity": 0.7,
+      "id": "spiral_1756976742376"
     }
   ],
-  "generation": 9,
-  "lastUpdated": "2025-09-04T08:06:47.103Z",
+  "generation": 10,
+  "lastUpdated": "2025-09-04T09:05:42.376Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
