@@ -92,9 +92,25 @@ export const artworkState: ArtworkState = {
       "font": "20.807520446658827px Arial",
       "fillStyle": "#f39c12",
       "id": "text_1756955604512"
+    },
+    {
+      "type": "circle",
+      "x": 265.75614879022265,
+      "y": 48.75614879022264,
+      "radius": 45.75614879022264,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1756958756947"
+    },
+    {
+      "type": "circle",
+      "x": 331.3428052398723,
+      "y": 248.34280523987232,
+      "radius": 56.34280523987232,
+      "fillStyle": "#e74c3c",
+      "id": "circle_1756958756947"
     }
   ],
-  "generation": 4,
-  "lastUpdated": "2025-09-04T03:13:24.512Z",
+  "generation": 5,
+  "lastUpdated": "2025-09-04T04:05:56.947Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
