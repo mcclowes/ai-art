@@ -43,15 +43,41 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 416,
-      "y": 334,
+      "x": 16,
+      "y": 184,
       "text": "Hello Canvas!",
       "font": "24px Arial",
       "fillStyle": "#fff",
       "id": "text1"
+    },
+    {
+      "type": "circle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "radius": 32,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 63.97305610301271,
+        "centerX": 0.3660980993202287,
+        "centerY": 0.40315138198503353
+      },
+      "shadow": {
+        "blur": 15.880291140456052,
+        "color": "#d3540040",
+        "offsetX": -3.9572466862352162,
+        "offsetY": 1.6111255169292305
+      },
+      "opacity": 0.7712827142457442,
+      "id": "gradient_circle_1756949554665"
     }
   ],
-  "generation": 1,
-  "lastUpdated": "2025-09-04T00:19:55.543Z",
+  "generation": 2,
+  "lastUpdated": "2025-09-04T01:32:34.665Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
