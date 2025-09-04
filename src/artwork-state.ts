@@ -43,8 +43,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 16,
-      "y": 184,
+      "x": 82,
+      "y": 334,
       "text": "Hello Canvas!",
       "font": "24px Arial",
       "fillStyle": "#fff",
@@ -75,9 +75,17 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.7712827142457442,
       "id": "gradient_circle_1756949554665"
+    },
+    {
+      "type": "triangle",
+      "x": 79.2361984511839,
+      "y": 199.2361984511839,
+      "size": 79.2361984511839,
+      "fillStyle": "#e74c3c",
+      "id": "triangle_1756952977967"
     }
   ],
-  "generation": 2,
-  "lastUpdated": "2025-09-04T01:32:34.665Z",
+  "generation": 3,
+  "lastUpdated": "2025-09-04T02:29:37.967Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
