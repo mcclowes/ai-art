@@ -484,9 +484,27 @@ export const artworkState: ArtworkState = {
       "font": "29.458949196798134px Arial",
       "fillStyle": "#d35400",
       "id": "text_1757048739161"
+    },
+    {
+      "type": "triangle",
+      "x": 305.5624227441286,
+      "y": 229.17181705809645,
+      "size": 170,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 2.1819352782725434,
+      "rotation": 138.21643759329044,
+      "opacity": 0.7807686339025919,
+      "shadow": {
+        "blur": 7.68091269344846,
+        "color": "#f1c40f40",
+        "offsetX": 3.581628439087618,
+        "offsetY": 1.9997862225897434
+      },
+      "id": "rotated_triangle_1757059605768"
     }
   ],
-  "generation": 32,
-  "lastUpdated": "2025-09-05T07:05:41.164Z",
+  "generation": 33,
+  "lastUpdated": "2025-09-05T08:06:45.768Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
