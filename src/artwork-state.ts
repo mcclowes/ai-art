@@ -295,7 +295,7 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "circle",
-      "x": 616,
+      "x": 16,
       "y": 84,
       "radius": 52.12378646928149,
       "fillStyle": "#f39c12",
@@ -888,7 +888,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1757199872003"
     }
   ],
-  "generation": 73,
-  "lastUpdated": "2025-09-07T00:22:42.420Z",
+  "generation": 74,
+  "lastUpdated": "2025-09-07T01:32:48.103Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
