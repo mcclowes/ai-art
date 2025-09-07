@@ -892,7 +892,7 @@ export const artworkState: ArtworkState = {
       "x": 131.59988647198793,
       "y": 248.59988647198793,
       "size": 49.599886471987936,
-      "fillStyle": "#e67e22",
+      "fillStyle": "#f39c12",
       "id": "triangle_1757212354828"
     },
     {
@@ -986,7 +986,7 @@ export const artworkState: ArtworkState = {
       "id": "curve_1757243068108"
     }
   ],
-  "generation": 86,
-  "lastUpdated": "2025-09-07T13:07:42.429Z",
+  "generation": 87,
+  "lastUpdated": "2025-09-07T14:04:36.109Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
