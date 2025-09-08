@@ -432,8 +432,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "curve",
-      "x": 394.4375772558714,
-      "y": 179.17181705809645,
+      "x": 450,
+      "y": 22,
       "width": 162.58037239895592,
       "height": 54.11351671535463,
       "fillStyle": "#e67e22",
@@ -1391,7 +1391,7 @@ export const artworkState: ArtworkState = {
       "id": "curve_1757361921690"
     }
   ],
-  "generation": 118,
-  "lastUpdated": "2025-09-08T21:04:51.917Z",
+  "generation": 119,
+  "lastUpdated": "2025-09-08T22:04:59.478Z",
   "cycleStarted": "2025-09-04T00:19:55.543Z"
 };
