@@ -609,9 +609,17 @@ export const artworkState: ArtworkState = {
       "strokeWidth": 2.794255681534177,
       "opacity": 0.7,
       "id": "spiral_1757703894247"
+    },
+    {
+      "type": "triangle",
+      "x": 531.8948721165684,
+      "y": 98.89487211656842,
+      "size": 90.89487211656842,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1757707527525"
     }
   ],
-  "generation": 44,
-  "lastUpdated": "2025-09-12T19:04:54.247Z",
+  "generation": 45,
+  "lastUpdated": "2025-09-12T20:05:27.525Z",
   "cycleStarted": "2025-09-11T00:20:59.429Z"
 };
