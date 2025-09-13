@@ -60,8 +60,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 416,
-      "y": 334,
+      "x": 682,
+      "y": 34,
       "text": "Hello Canvas!",
       "font": "24px Arial",
       "fillStyle": "#fff",
@@ -704,7 +704,7 @@ export const artworkState: ArtworkState = {
       "id": "spiral_1757730263951"
     }
   ],
-  "generation": 51,
-  "lastUpdated": "2025-09-13T02:24:23.952Z",
+  "generation": 52,
+  "lastUpdated": "2025-09-13T03:08:52.546Z",
   "cycleStarted": "2025-09-11T00:20:59.429Z"
 };
