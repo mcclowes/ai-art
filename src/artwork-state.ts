@@ -693,7 +693,7 @@ export const artworkState: ArtworkState = {
       "id": "curve_1757722741996"
     }
   ],
-  "generation": 49,
-  "lastUpdated": "2025-09-13T00:19:01.996Z",
+  "generation": 50,
+  "lastUpdated": "2025-09-13T01:32:14.354Z",
   "cycleStarted": "2025-09-11T00:20:59.429Z"
 };
