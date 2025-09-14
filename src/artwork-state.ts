@@ -536,8 +536,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 245.56242274412858,
-      "y": 350.82818294190355,
+      "x": 216,
+      "y": 484,
       "text": "EVOLVE",
       "font": "bold 25.245030134693728px Arial",
       "fillStyle": "#d35400",
@@ -1103,7 +1103,7 @@ export const artworkState: ArtworkState = {
       "id": "triangle_1757873165988"
     }
   ],
-  "generation": 91,
-  "lastUpdated": "2025-09-14T18:06:05.988Z",
+  "generation": 92,
+  "lastUpdated": "2025-09-14T19:04:41.802Z",
   "cycleStarted": "2025-09-11T00:20:59.429Z"
 };
