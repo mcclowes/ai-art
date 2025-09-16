@@ -60,8 +60,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "text",
-      "x": 682,
-      "y": 484,
+      "x": 82,
+      "y": 384,
       "text": "Hello Canvas!",
       "font": "24px Arial",
       "fillStyle": "#fff",
@@ -1540,7 +1540,7 @@ export const artworkState: ArtworkState = {
       "id": "pattern_rect_1758046059105"
     }
   ],
-  "generation": 140,
-  "lastUpdated": "2025-09-16T19:04:48.682Z",
+  "generation": 141,
+  "lastUpdated": "2025-09-16T20:05:41.224Z",
   "cycleStarted": "2025-09-11T00:20:59.429Z"
 };
