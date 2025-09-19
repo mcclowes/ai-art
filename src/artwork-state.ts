@@ -39,7 +39,19 @@ export const artworkState: ArtworkState = {
       "width": 200,
       "height": 100,
       "fillStyle": "#e67e22",
-      "id": "rect1"
+      "id": "rect1",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 68.7719415254513,
+        "centerX": 0.6476768412745333,
+        "centerY": 0.34335098077589093
+      },
+      "opacity": 0.9614538078843304
     },
     {
       "type": "text",
@@ -459,7 +471,7 @@ export const artworkState: ArtworkState = {
       "id": "pattern_rect_1758297948973"
     }
   ],
-  "generation": 40,
-  "lastUpdated": "2025-09-19T16:05:48.973Z",
+  "generation": 41,
+  "lastUpdated": "2025-09-19T17:05:11.628Z",
   "cycleStarted": "2025-09-18T01:32:28.775Z"
 };
