@@ -34,8 +34,8 @@ export const artworkState: ArtworkState = {
   "elements": [
     {
       "type": "rectangle",
-      "x": 50,
-      "y": 50,
+      "x": 566,
+      "y": 449,
       "width": 200,
       "height": 100,
       "fillStyle": "#e67e22",
@@ -1375,7 +1375,7 @@ export const artworkState: ArtworkState = {
       "id": "circle_1758597358800"
     }
   ],
-  "generation": 123,
-  "lastUpdated": "2025-09-23T03:15:58.800Z",
+  "generation": 124,
+  "lastUpdated": "2025-09-23T04:06:40.900Z",
   "cycleStarted": "2025-09-18T01:32:28.775Z"
 };
