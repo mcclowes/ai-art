@@ -862,9 +862,17 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.882065428820615,
       "id": "gradient_rect_1759010693670"
+    },
+    {
+      "type": "triangle",
+      "x": 713.734930359343,
+      "y": 248.73493035934297,
+      "size": 85.73493035934297,
+      "fillStyle": "#e67e22",
+      "id": "triangle_1759014306742"
     }
   ],
-  "generation": 70,
-  "lastUpdated": "2025-09-27T22:04:53.670Z",
+  "generation": 71,
+  "lastUpdated": "2025-09-27T23:05:06.742Z",
   "cycleStarted": "2025-09-25T01:33:04.169Z"
 };
