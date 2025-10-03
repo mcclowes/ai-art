@@ -414,9 +414,21 @@ export const artworkState: ArtworkState = {
       },
       "opacity": 0.9067716741004512,
       "id": "gradient_circle_1759475123758"
+    },
+    {
+      "type": "curve",
+      "x": 205.56242274412858,
+      "y": 179.17181705809645,
+      "width": 198.6887531568425,
+      "height": 90.07961018897566,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 2.938838200947088,
+      "opacity": 0.8,
+      "id": "curve_1759478818056"
     }
   ],
-  "generation": 30,
-  "lastUpdated": "2025-10-03T07:05:23.758Z",
+  "generation": 31,
+  "lastUpdated": "2025-10-03T08:06:58.056Z",
   "cycleStarted": "2025-10-02T02:29:58.080Z"
 };
