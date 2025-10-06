@@ -1399,9 +1399,21 @@ export const artworkState: ArtworkState = {
       "radius": 54.68939994551758,
       "fillStyle": "#f39c12",
       "id": "circle_1759781125599"
+    },
+    {
+      "type": "curve",
+      "x": 205.56242274412858,
+      "y": 320.82818294190355,
+      "width": 199.27761642665894,
+      "height": 53.809060429605026,
+      "fillStyle": "#e74c3c",
+      "strokeStyle": "#e74c3c",
+      "strokeWidth": 4.599333294311414,
+      "opacity": 0.8,
+      "id": "curve_1759784697576"
     }
   ],
-  "generation": 115,
-  "lastUpdated": "2025-10-06T20:05:25.599Z",
+  "generation": 116,
+  "lastUpdated": "2025-10-06T21:04:57.576Z",
   "cycleStarted": "2025-10-02T02:29:58.080Z"
 };
