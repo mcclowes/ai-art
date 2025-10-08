@@ -993,7 +993,18 @@ export const artworkState: ArtworkState = {
       "y": 55.97772540337853,
       "radius": 55.97772540337853,
       "fillStyle": "#f39c12",
-      "id": "circle_1759627974468"
+      "id": "circle_1759627974468",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#e74c3c",
+          "#f39c12",
+          "#f1c40f"
+        ],
+        "direction": 219.61848985190198,
+        "centerX": 0.3976720307331257,
+        "centerY": 0.5797956022893286
+      }
     },
     {
       "type": "text",
@@ -1753,7 +1764,7 @@ export const artworkState: ArtworkState = {
       "id": "spiral_1759882857207"
     }
   ],
-  "generation": 143,
-  "lastUpdated": "2025-10-08T00:20:57.207Z",
+  "generation": 144,
+  "lastUpdated": "2025-10-08T01:32:46.120Z",
   "cycleStarted": "2025-10-02T02:29:58.080Z"
 };
