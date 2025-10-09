@@ -49,9 +49,54 @@ export const artworkState: ArtworkState = {
       "font": "24px Arial",
       "fillStyle": "#fff",
       "id": "text1"
+    },
+    {
+      "type": "rectangle",
+      "x": 273.5624227441286,
+      "y": 127.17181705809645,
+      "width": 64,
+      "height": 204,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "linear",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 67.56005341751808,
+        "centerX": 0.5075657552356008,
+        "centerY": 0.5650074536504348
+      },
+      "shadow": {
+        "blur": 8.581303472118654,
+        "color": "#d3540040",
+        "offsetX": -2.521180305896209,
+        "offsetY": -2.852889054401393
+      },
+      "opacity": 0.9428011694967205,
+      "id": "gradient_rect_1759979850069"
+    },
+    {
+      "type": "triangle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "size": 65,
+      "fillStyle": "#f1c40f",
+      "strokeStyle": "#f1c40f",
+      "strokeWidth": 1.815752568134371,
+      "rotation": 45.25422616125563,
+      "opacity": 0.8129828747610428,
+      "shadow": {
+        "blur": 12.468695485880712,
+        "color": "#f1c40f40",
+        "offsetX": 2.9057190822756285,
+        "offsetY": 2.7950757117700338
+      },
+      "id": "rotated_triangle_1759979850069"
     }
   ],
-  "generation": 1,
-  "lastUpdated": "2025-10-09T02:31:30.758Z",
+  "generation": 2,
+  "lastUpdated": "2025-10-09T03:17:30.069Z",
   "cycleStarted": "2025-10-09T02:31:30.758Z"
 };
