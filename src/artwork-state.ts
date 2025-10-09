@@ -56,7 +56,7 @@ export const artworkState: ArtworkState = {
       "y": 127.17181705809645,
       "width": 64,
       "height": 204,
-      "fillStyle": "#d35400",
+      "fillStyle": "#f39c12",
       "gradient": {
         "type": "linear",
         "colors": [
@@ -94,9 +94,17 @@ export const artworkState: ArtworkState = {
         "offsetY": 2.7950757117700338
       },
       "id": "rotated_triangle_1759979850069"
+    },
+    {
+      "type": "triangle",
+      "x": 70.03751226495464,
+      "y": 248.03751226495464,
+      "size": 70.03751226495464,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1759982778795"
     }
   ],
-  "generation": 2,
-  "lastUpdated": "2025-10-09T03:17:30.069Z",
+  "generation": 3,
+  "lastUpdated": "2025-10-09T04:06:18.795Z",
   "cycleStarted": "2025-10-09T02:31:30.758Z"
 };
