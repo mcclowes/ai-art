@@ -620,10 +620,16 @@ export const artworkState: ArtworkState = {
       "y": 548.3526412565491,
       "radius": 46.35264125654902,
       "fillStyle": "#f1c40f",
-      "id": "circle_1760146346522"
+      "id": "circle_1760146346522",
+      "shadow": {
+        "blur": 7.540162638011648,
+        "color": "#f1c40f40",
+        "offsetX": 2.8563528426184988,
+        "offsetY": -4.146776238583674
+      }
     }
   ],
-  "generation": 48,
-  "lastUpdated": "2025-10-11T01:32:26.522Z",
+  "generation": 49,
+  "lastUpdated": "2025-10-11T02:28:09.773Z",
   "cycleStarted": "2025-10-09T02:31:30.758Z"
 };
