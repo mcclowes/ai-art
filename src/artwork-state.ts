@@ -741,9 +741,17 @@ export const artworkState: ArtworkState = {
       "radius": 53.534993657814326,
       "fillStyle": "#f39c12",
       "id": "circle_1760781911471"
+    },
+    {
+      "type": "triangle",
+      "x": 465.8792679016301,
+      "y": 98.87926790163013,
+      "size": 58.87926790163013,
+      "fillStyle": "#f1c40f",
+      "id": "triangle_1760792916918"
     }
   ],
-  "generation": 59,
-  "lastUpdated": "2025-10-18T12:08:11.340Z",
+  "generation": 60,
+  "lastUpdated": "2025-10-18T13:08:36.918Z",
   "cycleStarted": "2025-10-16T02:32:55.705Z"
 };
