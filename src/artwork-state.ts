@@ -78,8 +78,8 @@ export const artworkState: ArtworkState = {
     },
     {
       "type": "spiral",
-      "x": 305.5624227441286,
-      "y": 370.82818294190355,
+      "x": 282,
+      "y": 234,
       "radius": 39,
       "fillStyle": "#f39c12",
       "strokeStyle": "#f39c12",
@@ -111,9 +111,27 @@ export const artworkState: ArtworkState = {
       "font": "19.919894911088143px Arial",
       "fillStyle": "#e67e22",
       "id": "text_1761199684484"
+    },
+    {
+      "type": "triangle",
+      "x": 494.4375772558714,
+      "y": 229.17181705809645,
+      "size": 65,
+      "fillStyle": "#e67e22",
+      "strokeStyle": "#e67e22",
+      "strokeWidth": 1.9506283564448492,
+      "rotation": 296.93518082384344,
+      "opacity": 0.9689630261215991,
+      "shadow": {
+        "blur": 18.434063484099518,
+        "color": "#e67e2240",
+        "offsetX": -0.7643205827572981,
+        "offsetY": 1.4045013993095967
+      },
+      "id": "rotated_triangle_1761203152725"
     }
   ],
-  "generation": 5,
-  "lastUpdated": "2025-10-23T06:08:04.484Z",
+  "generation": 6,
+  "lastUpdated": "2025-10-23T07:05:52.725Z",
   "cycleStarted": "2025-10-23T02:33:03.243Z"
 };
