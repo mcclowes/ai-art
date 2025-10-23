@@ -34,8 +34,8 @@ export const artworkState: ArtworkState = {
   "elements": [
     {
       "type": "rectangle",
-      "x": 50,
-      "y": 50,
+      "x": 32,
+      "y": 349,
       "width": 200,
       "height": 100,
       "fillStyle": "#e67e22",
@@ -75,9 +75,20 @@ export const artworkState: ArtworkState = {
       "size": 72.37047009811296,
       "fillStyle": "#e74c3c",
       "id": "triangle_1761189618130"
+    },
+    {
+      "type": "spiral",
+      "x": 305.5624227441286,
+      "y": 370.82818294190355,
+      "radius": 39,
+      "fillStyle": "#f39c12",
+      "strokeStyle": "#f39c12",
+      "strokeWidth": 2.2263068745436456,
+      "opacity": 0.7,
+      "id": "spiral_1761192387769"
     }
   ],
-  "generation": 2,
-  "lastUpdated": "2025-10-23T03:20:18.130Z",
+  "generation": 3,
+  "lastUpdated": "2025-10-23T04:06:27.769Z",
   "cycleStarted": "2025-10-23T02:33:03.243Z"
 };
