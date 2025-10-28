@@ -1299,7 +1299,7 @@ export const artworkState: ArtworkState = {
       "id": "triangle_1761638833141"
     }
   ],
-  "generation": 128,
-  "lastUpdated": "2025-10-28T09:05:52.840Z",
+  "generation": 129,
+  "lastUpdated": "2025-10-28T10:05:59.588Z",
   "cycleStarted": "2025-10-23T02:33:03.243Z"
 };
