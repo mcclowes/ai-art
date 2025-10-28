@@ -509,7 +509,14 @@ export const artworkState: ArtworkState = {
       "y": 541.053381051611,
       "size": 58.05338105161103,
       "fillStyle": "#f1c40f",
-      "id": "triangle_1761343530131"
+      "id": "triangle_1761343530131",
+      "shadow": {
+        "blur": 8.108131144822632,
+        "color": "#f1c40f40",
+        "offsetX": -4.763153909588375,
+        "offsetY": 3.4377752761477787
+      },
+      "opacity": 0.7028905387268334
     },
     {
       "type": "circle",
@@ -1292,7 +1299,7 @@ export const artworkState: ArtworkState = {
       "id": "triangle_1761638833141"
     }
   ],
-  "generation": 127,
-  "lastUpdated": "2025-10-28T08:07:13.141Z",
+  "generation": 128,
+  "lastUpdated": "2025-10-28T09:05:52.840Z",
   "cycleStarted": "2025-10-23T02:33:03.243Z"
 };
