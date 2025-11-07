@@ -220,7 +220,7 @@ export const artworkState: ArtworkState = {
       "y": 205.17181705809645,
       "width": 40,
       "height": 48,
-      "fillStyle": "#f1c40f",
+      "fillStyle": "#f39c12",
       "gradient": {
         "type": "radial",
         "colors": [
@@ -464,7 +464,7 @@ export const artworkState: ArtworkState = {
       "id": "gradient_text_1762495681361"
     }
   ],
-  "generation": 31,
-  "lastUpdated": "2025-11-07T08:07:06.651Z",
+  "generation": 32,
+  "lastUpdated": "2025-11-07T09:05:53.588Z",
   "cycleStarted": "2025-11-06T02:35:49.500Z"
 };
