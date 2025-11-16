@@ -893,9 +893,36 @@ export const artworkState: ArtworkState = {
       "font": "30.28312871187263px Arial",
       "fillStyle": "#e67e22",
       "id": "text_1763260619779"
+    },
+    {
+      "type": "rectangle",
+      "x": 88,
+      "y": 268.82818294190355,
+      "width": 712,
+      "height": 204,
+      "fillStyle": "#d35400",
+      "gradient": {
+        "type": "radial",
+        "colors": [
+          "#d35400",
+          "#e67e22",
+          "#f39c12"
+        ],
+        "direction": 196.63954150455365,
+        "centerX": 0.3421209102258298,
+        "centerY": 0.6144537136660061
+      },
+      "shadow": {
+        "blur": 9.756755549059122,
+        "color": "#d3540040",
+        "offsetX": 0.553760632244698,
+        "offsetY": 0.7661525002700431
+      },
+      "opacity": 0.7533061214908815,
+      "id": "gradient_rect_1763263709473"
     }
   ],
-  "generation": 73,
-  "lastUpdated": "2025-11-16T02:36:59.779Z",
+  "generation": 74,
+  "lastUpdated": "2025-11-16T03:28:29.473Z",
   "cycleStarted": "2025-11-13T02:36:06.206Z"
 };
