@@ -2079,9 +2079,21 @@ export const artworkState: ArtworkState = {
         "offsetY": -1.8720961352926424
       },
       "id": "rotated_triangle_1763582745984"
+    },
+    {
+      "type": "curve",
+      "x": 394.4375772558714,
+      "y": 320.82818294190355,
+      "width": 150.10549191603272,
+      "height": 65.9038745707147,
+      "fillStyle": "#e74c3c",
+      "strokeStyle": "#e74c3c",
+      "strokeWidth": 3.194199993474712,
+      "opacity": 0.8,
+      "id": "curve_1763586300897"
     }
   ],
-  "generation": 162,
-  "lastUpdated": "2025-11-19T20:05:45.984Z",
+  "generation": 163,
+  "lastUpdated": "2025-11-19T21:05:00.897Z",
   "cycleStarted": "2025-11-13T02:36:06.206Z"
 };
