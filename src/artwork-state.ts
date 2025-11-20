@@ -182,11 +182,17 @@ export const artworkState: ArtworkState = {
       "height": 64,
       "fillStyle": "#e67e22",
       "pattern": "stripes",
-      "opacity": 0.7933373780232007,
-      "id": "pattern_rect_1763636731905"
+      "opacity": 0.7405249361736169,
+      "id": "pattern_rect_1763636731905",
+      "shadow": {
+        "blur": 19.692692630306222,
+        "color": "#e67e2240",
+        "offsetX": 1.2352247347511458,
+        "offsetY": 4.473306647741996
+      }
     }
   ],
-  "generation": 11,
-  "lastUpdated": "2025-11-20T13:13:44.753Z",
+  "generation": 12,
+  "lastUpdated": "2025-11-20T14:05:19.986Z",
   "cycleStarted": "2025-11-20T03:24:04.582Z"
 };
