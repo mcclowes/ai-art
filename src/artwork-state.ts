@@ -500,9 +500,17 @@ export const artworkState: ArtworkState = {
         "offsetY": 4.69585738165846
       },
       "id": "rotated_triangle_1763741188941"
+    },
+    {
+      "type": "triangle",
+      "x": 265.87900679623,
+      "y": 548.87900679623,
+      "size": 40.87900679622996,
+      "fillStyle": "#f39c12",
+      "id": "triangle_1763744712890"
     }
   ],
-  "generation": 38,
-  "lastUpdated": "2025-11-21T16:06:28.941Z",
+  "generation": 39,
+  "lastUpdated": "2025-11-21T17:05:12.890Z",
   "cycleStarted": "2025-11-20T03:24:04.582Z"
 };
